@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import logo from "../assets/images/logo.svg"
@@ -13,76 +14,88 @@ import NavbarLinks from '../assets/constants/NavbarLinks'
 
 const StyledHeader = styled.header`
 	background: var(--white);
-	padding: 1em;
+	padding: 2em;
+	width: 100%;
+	position: fixed;
+
+	display: flex;
+	justify-content: space-between;
+`;
+
+const StyledNav = styled.nav`
+	position: relative;
+	background: var(--white);
+	width: 100%;
+
+	display: flex;
 
 	img {
 		margin: 0 2em;
 		max-height: 5em;
 		max-width: 10em;
-	}
-`;
-
-const StyledNav = styled.nav`
-	position: fixed;
-	z-index: 999;
-	width: 66%;
-	right: 0;
-	top: 0;
-	background: var(--colour);
-	height: 100vh;
-	padding: 1em;
-
-	ol {
-		list-style-type: none;
+		cursor: pointer;
 	}
 
-	li {
-		a {
-			color: var(--grey);
-			text-decoration: none;
-			display: block;
-			padding: .7em;
-			font-size: 4em;
-			text-align: right;
+	.link-container {
+		display: flex;
 
-			&:hover {
-				background-color: var(--dark-blue);
-				color: var(--white)
+		margin-right: 0;
+		margin-left: auto;
+
+		ol {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				float: left;
+
+				.links {
+					color: var(--grey);
+					text-decoration: none;
+					display: block;
+					padding: 1em;
+					font-size: 1.5em;
+					text-align: right;
+				}
+
+				&:hover {
+					// background-color: var(--light-blue);
+					cursor: pointer;
+				}
+
+				.links:hover {
+					// color: white;
+					color: var(--light-blue);	
+				}
 			}
 		}
 	}
-}
 `;
-
-
-const Title = styled.h1`
-	font-size: 1.5em;
- 	text-align: center;
-  	color: var(--light-blue);
-`;
-
-const Wrapper = styled.section`
-  	padding: 4em;
-  	background: papayawhip;
-`;
-
 
 const Navbar = () => {
 	const [navOpen, setNavOpen] = useState(false);
 	console.log(navOpen);
+
+	{/* Mobile compatability -> create hamburger menu component
+		Implement with themeing from styled components??      */}
 	return (
 		  	<StyledHeader>
 			  {/* ISSUE: change to raw svg import from icons folder */}
-			  <img src={logo} alt="Logo" />
+			  
 			  <StyledNav>
-				<ol>
-					{NavbarLinks && 
-					NavbarLinks.map(({name, url}, i) => (
-						<li key={i}>
-							<Link to={url}>{name}</Link>
-						</li>
-					))}
-				</ol>
+			 	{/* link to home menu using Link component */}
+				<img src={logo} alt="Logo" />
+				<div className="link-container">
+					<ol>
+						{NavbarLinks && 
+						NavbarLinks.map(({name, url}, i) => (
+							<li key={i} className="menu-item">
+								<Link className="links" to={url}>{name}</Link>
+							</li>
+						))}
+					</ol>
+				</div>
 			  </StyledNav>
   			</StyledHeader>
 	)
