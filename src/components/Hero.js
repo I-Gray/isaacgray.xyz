@@ -1,7 +1,6 @@
 import React from "react"
 import { link } from "gatsby"
 
-
 const Hero = () => {
 	return (
 		<div className="hero">

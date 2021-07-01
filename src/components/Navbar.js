@@ -1,41 +1,90 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 
 import logo from "../assets/images/logo.svg"
 import menuLogo from "../assets/images/menu.svg"
 import closeLogo from "../assets/images/close.svg"
 
 
+import styled, { css } from 'styled-components';
+//import grayisaacLogo from '../assets/Icons/grayisaacLogo';
+
+import NavbarLinks from '../assets/constants/NavbarLinks'
+
+const StyledHeader = styled.header`
+	background: var(--white);
+	padding: 1em;
+
+	img {
+		margin: 0 2em;
+		max-height: 5em;
+		max-width: 10em;
+	}
+`;
+
+const StyledNav = styled.nav`
+	position: fixed;
+	z-index: 999;
+	width: 66%;
+	right: 0;
+	top: 0;
+	background: var(--colour);
+	height: 100vh;
+	padding: 1em;
+
+	ol {
+		list-style-type: none;
+	}
+
+	li {
+		a {
+			color: var(--grey);
+			text-decoration: none;
+			display: block;
+			padding: .7em;
+			font-size: 4em;
+			text-align: right;
+
+			&:hover {
+				background-color: var(--dark-blue);
+				color: var(--white)
+			}
+		}
+	}
+}
+`;
+
+
+const Title = styled.h1`
+	font-size: 1.5em;
+ 	text-align: center;
+  	color: var(--light-blue);
+`;
+
+const Wrapper = styled.section`
+  	padding: 4em;
+  	background: papayawhip;
+`;
+
+
 const Navbar = () => {
 	const [navOpen, setNavOpen] = useState(false);
 	console.log(navOpen);
 	return (
-		<div className="navbar">
-			<div className="nav-container">
-				<img src={logo} alt="Logo" className="nav-logo" />
-				
-				<svg setNavOpen={navOpen} onClick={() => setNavOpen(!navOpen)} className="mobile-menu" version="1.1" viewBox="0 0 50 50">
-					<path fill="#231F20" d="M8.667,15h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,15,8.667,15z"/>
-					<path fill="#231F20" d="M8.667,37h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,37,8.667,37z"/>
-					<path fill="#231F20" d="M8.667,26h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,26,8.667,26z"/>
-		   		</svg>
-		   
-				{/* <img src={menuLogo} className="mobile-menu" alt="Burger Menu" /> */}
-
-				<nav>
-					{/* <img src={closeLogo} className="mobile-menu-exit" alt="Close button" /> */}
-					<svg className="mobile-menu-exit" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"  role="img" viewBox="0 0 352 512">
-						<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-						</path>
-					</svg>
-					<ul className="nav-menu">
-						<li><a className="current_page_item" href="#home">HOME</a></li>
-						<li><a className="current_page_item" href="#about">ABOUT</a></li>
-						<li><a className="current_page_item" href="#projects">PROJECTS</a></li>
-						<li><a className="current_page_item" href="#contact">CONTACT</a></li>
-					</ul>
-				</nav>
-			</div> 
-		</div>
+		  	<StyledHeader>
+			  {/* ISSUE: change to raw svg import from icons folder */}
+			  <img src={logo} alt="Logo" />
+			  <StyledNav>
+				<ol>
+					{NavbarLinks && 
+					NavbarLinks.map(({name, url}, i) => (
+						<li key={i}>
+							<Link to={url}>{name}</Link>
+						</li>
+					))}
+				</ol>
+			  </StyledNav>
+  			</StyledHeader>
 	)
 }
 
