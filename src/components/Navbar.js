@@ -1,18 +1,12 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
+import React from "react"
+import theme from '../assets/styles/theme';
 import { Link } from "gatsby"
-
 import logo from "../assets/images/logo.svg"
-import menuLogo from "../assets/images/menu.svg"
-import closeLogo from "../assets/images/close.svg"
-
-
-import styled, { css } from 'styled-components';
-//import grayisaacLogo from '../assets/Icons/grayisaacLogo';
-
+import styled from 'styled-components';
 import NavbarLinks from '../assets/constants/NavbarLinks'
+import MobileMenu from './MobileMenu';
 
-const StyledHeader = styled.header`
+const Header = styled.header`
 	background: var(--white);
 	padding: 2em;
 	width: 100%;
@@ -22,7 +16,7 @@ const StyledHeader = styled.header`
 	justify-content: space-between;
 `;
 
-const StyledNav = styled.nav`
+const NavbarPanel = styled.nav`
 	position: relative;
 	background: var(--white);
 	width: 100%;
@@ -35,10 +29,17 @@ const StyledNav = styled.nav`
 		max-width: 10em;
 		cursor: pointer;
 	}
+`;
+
+const NavLinks = styled.div`
+	display: flex;
+	width: 100%;
+
+	@media ${theme.sizes.mobile} {
+		display: none;
+	}
 
 	.link-container {
-		display: flex;
-
 		margin-right: 0;
 		margin-left: auto;
 
@@ -74,18 +75,18 @@ const StyledNav = styled.nav`
 `;
 
 const Navbar = () => {
-	const [navOpen, setNavOpen] = useState(false);
-	console.log(navOpen);
 
 	{/* Mobile compatability -> create hamburger menu component
 		Implement with themeing from styled components??      */}
+
 	return (
-		  	<StyledHeader>
-			  {/* ISSUE: change to raw svg import from icons folder */}
-			  
-			  <StyledNav>
-			 	{/* link to home menu using Link component */}
-				<img src={logo} alt="Logo" />
+		<Header>
+			{/* ISSUE: change to raw svg import from icons folder */}
+			
+			<NavbarPanel>
+			{/* link to home menu using Link component */}
+			<img src={logo} alt="Logo" />
+			<NavLinks>
 				<div className="link-container">
 					<ol>
 						{NavbarLinks && 
@@ -96,8 +97,12 @@ const Navbar = () => {
 						))}
 					</ol>
 				</div>
-			  </StyledNav>
-  			</StyledHeader>
+			</NavLinks>
+				<MobileMenu>
+					hi
+				</MobileMenu>
+			</NavbarPanel>
+		</Header>
 	)
 }
 

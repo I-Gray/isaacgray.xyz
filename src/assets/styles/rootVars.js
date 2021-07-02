@@ -16,8 +16,6 @@ const rootVars = css`
 		--light-blue: #26C1E7;
 		--dark-blue: #3C6AB3;
 	}
-
-
 `;
 
 export default rootVars;

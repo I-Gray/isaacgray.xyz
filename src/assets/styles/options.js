@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import { css } from 'styled-components';
 
 // Use 'mix-ins' to switch between devices
@@ -10,7 +11,6 @@ import { css } from 'styled-components';
 // Tablet
 // Phone 
 // Small phone
-
 
 const options = {
 	centerFlex: css`
