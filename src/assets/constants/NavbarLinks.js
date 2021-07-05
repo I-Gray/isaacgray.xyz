@@ -1,22 +1,20 @@
-export const NavbarLinks = [
+const NavbarLinks = [
 	{
-	  text: "home",
+	  name: "HOME",
 	  url: "/",
-	  className: "nav-menu",
 	},
 	{
-	  text: "about",
+	  name: "ABOUT",
 	  url: "/about/",
-	  className: "nav-menu",
 	},
 	{
-	  text: "projects",
+	  name: "PROJECTS",
 	  url: "/projects/",
-	  className: "nav-menu",
 	},
 	{
-	  text: "contact",
+	  name: "CONTACT",
 	  url: "/contact/",
-	  className: "nav-menu",
 	},
 ]
+
+export default NavbarLinks;

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
+// Fix inline styles to use styled components
 const pageStyles = {
   color: "#232129",
   padding: "96px",
@@ -47,7 +47,7 @@ const NotFoundPage = () => {
         <br />
         <Link to="/">Go home</Link>.
       </p>
-    </main>
+    </main> 
   )
 }
 
