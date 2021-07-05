@@ -3,7 +3,7 @@ import Burger from '../assets/Icons/Burger'
 import styled from 'styled-components';
 import NavbarLinks from '../assets/constants/NavbarLinks'
 import { Link } from "gatsby"
-import { bool, func } from 'prop-types';
+import { bool } from 'prop-types';
 import { useOnClickOutside } from './hooks/useOnClickOutside';
 
 const Sidebar = styled.nav`
@@ -57,7 +57,7 @@ const MobileMenu = () => {
 
 	return (
 		<>
-		<div>
+		<div ref={node} >
 			<Burger open={open} setOpen={setOpen} />
 			<Sidebar open={open} setOpen={setOpen}>
 				<ol>

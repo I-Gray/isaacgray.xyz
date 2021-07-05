@@ -75,14 +75,13 @@ const NavLinks = styled.div`
 `;
 
 const Navbar = () => {
-
+	
 	{/* Mobile compatability -> create hamburger menu component
 		Implement with themeing from styled components??      */}
 
 	return (
 		<Header>
 			{/* ISSUE: change to raw svg import from icons folder */}
-			
 			<NavbarPanel>
 			{/* link to home menu using Link component */}
 			<img src={logo} alt="Logo" />
@@ -98,9 +97,7 @@ const Navbar = () => {
 					</ol>
 				</div>
 			</NavLinks>
-				<MobileMenu>
-					hi
-				</MobileMenu>
+			<MobileMenu></MobileMenu>	
 			</NavbarPanel>
 		</Header>
 	)

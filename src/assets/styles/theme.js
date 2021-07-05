@@ -7,7 +7,7 @@ const theme = {
 	// Add dark theme ??
 	// Change to em values ?
 	sizes : {	
-		mobile: '(max-width: 830px)', 
+		mobile: '(max-width: 900px)', 
 		desktop: '(max-width: 1200px)',
 	}, 
 	colours : {

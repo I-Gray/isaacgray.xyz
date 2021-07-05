@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { bool, func } from 'prop-types';
+import theme from '../styles/theme';
 
 // Styling Animation from 
 // https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/
@@ -19,31 +20,35 @@ export const StyledBurger = styled.button`
 	cursor: pointer;
 	padding: 0;
 	z-index: 1000;
+	font-size: inherit;
 
-	&:focus {
-		outline: none;
-	}
+	// Deal with really small mobile sizes (text doesnt scale down on sidebar)
+	@media ${theme.sizes.mobile} {
+		&:focus {
+			outline: none;
+		}
 
-	div {
-		width: 2rem;
-		height: 0.25rem;
-		background: ${({ theme, open }) => open ? theme.colours.white : theme.colours.darkGrey};
-		border-radius: 10px;
-		transition: all 0.3s linear;
-		position: relative;
-		transform-origin: 1px;
+		div {
+			width: 2rem;
+			height: 0.25rem;
+			background: ${({ theme, open }) => open ? theme.colours.white : theme.colours.darkGrey};
+			border-radius: 10px;
+			transition: all 0.3s linear;
+			position: relative;
+			transform-origin: 1px;
 
-	:first-child {
-		transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
-	}
+		:first-child {
+			transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+		}
 
-	:nth-child(2) {
-		opacity: ${({ open }) => open ? '0' : '1'};
-		transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
-	}
+		:nth-child(2) {
+			opacity: ${({ open }) => open ? '0' : '1'};
+			transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+		}
 
-	:nth-child(3) {
-		transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+		:nth-child(3) {
+			transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+		}
 	}
 }
 `;
