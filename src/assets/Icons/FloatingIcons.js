@@ -5,6 +5,7 @@ const StyledFloatingIcons = styled.div`
 	
 	svg {
 		z-index: -200;
+		
 		.icon1 {
 			stroke: white;
 		}

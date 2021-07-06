@@ -15,9 +15,8 @@ const HeroSection = styled.section`
 		
 		.rectangle {
 			height: 150px;
-			width: 100px;
-			background-color:: ${theme.colours.white};
-			z-index: 200000;
+			width: 2px;
+			background-color: ${theme.colours.lightGrey};
 		}
 
 		h1 {

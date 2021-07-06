@@ -6,6 +6,7 @@ import theme from '../assets/styles/theme';
 
 import Navbar from './Navbar';
 import Hero from './Hero';
+import About from './About'
 
 const Layout = ({ children }) => {
   
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
 						<Navbar />
 						{children}
 						<Hero />
+						<About />
 
 				</ThemeProvider>
 			</div>

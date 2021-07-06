@@ -3,8 +3,6 @@ import theme from '../styles/theme'
 import styled from 'styled-components';
 
 const StyledHeroOrbit = styled.div`
-
-
 	.container {
 		width: 100%;
 		height: 100%;
@@ -27,7 +25,6 @@ const StyledHeroOrbit = styled.div`
 		}
 	}
 `;
-
 
 const HeroOrbit = () => {
 	return (
