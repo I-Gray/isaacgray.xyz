@@ -1,5 +1,3 @@
-
-
 // Maybe add colour variables here too ??
 const theme = {
 	// Fill in values in between for more devices later on

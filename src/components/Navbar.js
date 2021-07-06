@@ -11,9 +11,12 @@ const Header = styled.header`
 	padding: 2em;
 	width: 100%;
 	position: fixed;
+	z-index: 998;
 
 	display: flex;
 	justify-content: space-between;
+
+	border-bottom: 2px solid ${theme.colours.darkGrey};
 `;
 
 const NavbarPanel = styled.nav`

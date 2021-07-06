@@ -1,5 +1,5 @@
 import React, { useState, useRef }from 'react';
-import Burger from '../assets/Icons/Burger'
+import Burger from '../assets/icons/Burger'
 import styled from 'styled-components';
 import NavbarLinks from '../assets/constants/NavbarLinks'
 import { Link } from "gatsby"
@@ -25,7 +25,7 @@ const Sidebar = styled.nav`
 		margin: 0;
 		margin-right: 0;
 		margin-left: 2em;
-		margin-top: 4em;
+		margin-top: 5em;
 		display: block;
 
 		.links {
