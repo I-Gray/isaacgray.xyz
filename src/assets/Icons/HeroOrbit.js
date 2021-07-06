@@ -20,8 +20,8 @@ const StyledHeroOrbit = styled.div`
 			
 			/* set some maximum size (width and height need to match
 			* aspect ratio, 1:1 in this case */
-			max-width: 200px;
-			max-height: 200px;
+			max-width: 650px;
+			max-height: 650px;
 		}
 	}
 `;

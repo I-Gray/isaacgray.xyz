@@ -25,18 +25,12 @@ const AboutSection = styled.section`
 			font-size: 48px;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.grey};
-			padding: 0;
-			margin: 0;
 			list-style: none;
-			text-decoration: none;
-			
-			overflow: hidden;
 
 			li {
 				float: left;
 				display: flex;
 				padding: 1vh;
-				text-decoration: none;
 
 				div {
 					height: 2px;
@@ -47,11 +41,15 @@ const AboutSection = styled.section`
 		}
 
 		.about-text {
-			padding-top: 10vh;
+			padding-top: 20vh;
 			font-size: 26px;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			text-align: left;
+
+			span {
+				color: ${theme.colours.lightBlue};
+			}
 		}
 
 		.about-learning {
@@ -66,8 +64,10 @@ const AboutSection = styled.section`
 	}
 
 	.about-right-container {
+		padding-top: 20vh;
 		margin-left: 2vw;
 		margin-right: 10vw;
+
 		h1 {
 			font-size: 120px;
 			color: ${theme.colours.white};
@@ -75,6 +75,10 @@ const AboutSection = styled.section`
 				color: ${theme.colours.lightBlue};
 				font-weight: bold;
 			}
+		}
+
+		.accent {
+			visibility:hidden;
 		}
 	}
 `;
@@ -95,13 +99,13 @@ const About = () => {
 						Hi, I’m Isaac.
 						<br/>
 						<br/>
-						I am an Australian developer currently living in Wollongong with a B.E & B.CS. I enjoy the design and development process in a range of topics such as computer vision, web-development, security & hardware projects.
+						I am an Australian developer currently living in <span>Wollongong</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as computer vision, web-development, security & hardware projects.
 						<br/>
 						<br/>
 						I have experience creating things in teams as well as many solo-projects, all of which you can read about on this site!
 						<br/>
 						<br/>
-						Other than tech, I enjoy reading, rock-climbing & making music. 
+						<span>Other than tech</span>, I enjoy reading, rock-climbing & making music. 
 					</p>
 					<p class="about-learning">
 						<br/>
@@ -112,7 +116,7 @@ const About = () => {
 				<div className="about-right-container">
 					<h1>about <br/><span>me.</span></h1>
 					<img src={AboutImage} alt="Picture of Isaac G"></img>
-					<CircleAccent/>
+					<CircleAccent className="accent" />
 				</div>
 		</AboutSection>
 		</>
