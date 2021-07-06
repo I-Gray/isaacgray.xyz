@@ -17,9 +17,9 @@ const Layout = ({ children }) => {
 					<GlobalStyle />
 						{/* Add Theme prop to ThemeProvider for device handling, using the options.js file */}
 						
-						{/* <Navbar /> */}
+						<Navbar />
 						{children}
-						{/* <Hero /> */}
+						<Hero />
 						<About />
 
 				</ThemeProvider>

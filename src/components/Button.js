@@ -10,13 +10,20 @@ const StyledButton = styled.button`
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	font-weight: bold;
 	cursor: pointer;
 	color: ${theme.colours.white};
 	border-color: ${theme.colours.white};
 	border-radius: 8px;
+	transition-duration: 0.4s;
 
 	span {
 		color: ${theme.colours.lightBlue};
+	}
+
+	&:hover {
+		background-color: ${theme.colours.white};
+		color: ${theme.colours.darkGrey};
 	}
 `;
 

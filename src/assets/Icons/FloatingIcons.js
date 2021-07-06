@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledFloatingIcons = styled.div`
-	
-	svg {
-		z-index: -200;
+	// position: relative;	
+
+	// svg {
+	// 	z-index: -200;
 		
-		.icon1 {
-			stroke: white;
-		}
-	}
+	// 	.icon1 {
+	// 		stroke: white;
+	// 	}
+	// }
 `;
 
 const FloatingIcons = () => {
