@@ -6,8 +6,9 @@ import theme from '../assets/styles/theme';
 
 import Navbar from './Navbar';
 import Hero from './Hero';
-import About from './About'
+import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
 
 const Layout = ({ children }) => {
   
@@ -22,8 +23,9 @@ const Layout = ({ children }) => {
 						{children}
 						{/* <Hero />
 						<About /> */}
-						<Projects />
-
+						{/* <Projects /> */}
+						<Contact />
+						
 				</ThemeProvider>
 			</div>
 		</>
