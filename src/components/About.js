@@ -89,7 +89,7 @@ const About = () => {
 		<>
 		<AboutSection>
 				<div className="section-rectangle"/>
-				<div className="y-rectangle"/>
+				{/* <div className="y-rectangle"/> */}
 				<div className="about-left-container">
 					<ul>
 						<li><p>01</p></li>
