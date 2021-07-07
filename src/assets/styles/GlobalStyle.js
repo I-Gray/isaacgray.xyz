@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 	/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-
+	
 	*, *:before, *:after {
 		margin: 0;
     	padding: 0;

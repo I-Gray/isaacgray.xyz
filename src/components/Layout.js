@@ -9,6 +9,7 @@ import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   
@@ -19,12 +20,13 @@ const Layout = ({ children }) => {
 					<GlobalStyle />
 						{/* Add Theme prop to ThemeProvider for device handling, using the options.js file */}
 						
-						{/* <Navbar /> */}
+						<Navbar />
 						{children}
-						{/* <Hero />
-						<About /> */}
-						{/* <Projects /> */}
+						<Hero />
+						<About />
+						<Projects />
 						<Contact />
+						<Footer />
 						
 				</ThemeProvider>
 			</div>

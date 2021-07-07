@@ -1,9 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-import styled, { ThemeProvider }  from 'styled-components'
+import styled from 'styled-components'
 import CircleAccent from '../assets/icons/CircleAccent';
 import theme from '../assets/styles/theme';
 import AboutImage from '../assets/images/AboutPicture.png';
+
 
 const AboutSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -89,7 +90,7 @@ const About = () => {
 		<>
 		<AboutSection>
 				<div className="section-rectangle"/>
-				{/* <div className="y-rectangle"/> */}
+				<div className="y-rectangle"/>
 				<div className="about-left-container">
 					<ul>
 						<li><p>01</p></li>
@@ -114,7 +115,7 @@ const About = () => {
 					</p>
 				</div>
 				<div className="about-right-container">
-					<h1>about <br/><span>me.</span></h1>
+					<h1><span>about <br/>me.</span></h1>
 					<img src={AboutImage} alt="Picture of Isaac G"></img>
 					<CircleAccent className="accent" />
 				</div>
