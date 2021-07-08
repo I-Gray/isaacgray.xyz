@@ -66,12 +66,12 @@ const Contact = () => {
 						</li>
 					</ul>
 			</div>
-			{/* <div className="contact-right-container">
-				<p>Let's chat!</p> */}
+			<div className="contact-right-container">
+				<p>Let's chat!</p>
 				{/* Form component */}
-				{/* <Form /> */}
-				{/* <Button text="Send!" blueText=">" />	
-			</div> */}
+				<Form />
+				<Button text="Send!" blueText=">" />	
+			</div>
 		</ContactSection>
 		</>
 	);
