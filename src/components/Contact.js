@@ -40,7 +40,7 @@ const ContactSection = styled.section`
 				font-family: 'Space Mono', sans-serif;
 				color: ${theme.colours.lightGrey};	
 				text-decoration: underline;
-				
+				transition: fill 0.4s ease;
 			}
 			a:hover {
 				color: ${theme.colours.white};

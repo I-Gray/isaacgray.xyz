@@ -25,12 +25,14 @@ const StyledSocials = styled.ul`
 	}
 	
 	li {
+		
 		a {
 			padding: 10px;
 			svg {
 				width: ${props => props.size}px;
 				height: ${props => props.size}px;
 				path {
+					transition: fill 0.4s ease;
 					fill: ${props => props.alt ? theme.colours.lightGrey : theme.colours.grey};
 					stroke: 0;
 				}

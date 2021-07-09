@@ -27,17 +27,17 @@ const NavbarPanel = styled.nav`
 	display: flex;
 
 	img {
-		margin: 0 2em;
 		max-height: 5em;
 		max-width: 10em;
 		cursor: pointer;
+		margin-left: 8em;
 	}
 `;
 
 const NavLinks = styled.div`
 	display: flex;
 	width: 100%;
-
+	margin-right: 10em;
 	@media ${theme.sizes.mobile} {
 		display: none;
 	}
@@ -78,10 +78,6 @@ const NavLinks = styled.div`
 `;
 
 const Navbar = () => {
-	
-	{/* Mobile compatability -> create hamburger menu component
-		Implement with themeing from styled components??      */}
-
 	return (
 		<Header>
 			{/* ISSUE: change to raw svg import from icons folder */}

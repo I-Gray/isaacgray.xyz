@@ -14,6 +14,11 @@ const StyledFooter = styled.footer`
 		color: ${theme.colours.grey};
 		text-align: right;
 		padding-right: 2vw;
+
+		&:hover {
+			color: ${theme.colours.white};
+			cursor: pointer;
+		}
 	}
 
 	.social {
@@ -27,7 +32,7 @@ const Footer = () => {
 		<>
 			<StyledFooter>
 				<p>DESIGNED & DEVELOPED <br/>BY ISAAC GRAY</p>
-				<Logo size={80}/>
+				<Logo className="logo" size={80}/>
 				<div className="social" >
 					<Socials size={25} alt={false}/>
 				</div>
