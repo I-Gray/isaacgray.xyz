@@ -13,7 +13,7 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
-		<SectionHeading/>
+		<SectionHeading section_num="02"/>
 		<ProjectsSection>
 			<div className="section-rectangle"/>
 			<div className="projects-left-container">
