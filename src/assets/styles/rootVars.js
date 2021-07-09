@@ -3,9 +3,9 @@ import { css } from 'styled-components';
 const rootVars = css`
 	/* Change this to import fonts from download 
 	(through fonts.js and ../fonts/Roboto.. etc. */ 
-
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-
+	
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+	
 	:root {
 		--white: #ffffff;
 

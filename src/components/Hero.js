@@ -10,6 +10,7 @@ const HeroSection = styled.section`
 	display: grid;
     grid-template-columns: 70vw 30vw;
 	position: relative;
+	padding-top: 5vh;
 
 	.wrapper {	
 		.icons {

@@ -4,59 +4,84 @@ import theme from '../assets/styles/theme';
 import Button from './Button';
 import Form from './Form';
 import Socials from './Socials';
+import SectionHeading from './SectionHeading';
 
 const ContactSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: grid;
 	grid-template-columns: 60vw 40vw;
 
-	.section-rectangle {
-		height: 2vh;
-		width: 8vw;
-		background: ${theme.colours.lightBlue};
+	// .section-rectangle {
+	// 	height: 2vh;
+	// 	width: 8vw;
+	// 	background: ${theme.colours.lightBlue};
+	// }
+
+	.contact-top-container {
+		top: 0;
+		left: 0;
+		height: 10vh;
 	}
 
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 100vh;
-
+		height: 50vh;
+		
 		ul {
 			list-style: none;
+			text-align: left;
+
 			h1 {
-				font-size: 48px;
-				color: ${theme.colours.lightBlue};	
+				font-size: 9em;
+				color: ${theme.colours.white};
+
+				span {
+					color: ${theme.colours.lightBlue};
+				}
 			}
 
 			a {
-				font-size: 24px
+				font-size: 2em;
 				font-family: 'Space Mono', sans-serif;
-				color: ${theme.colours.lightBlue};	
+				color: ${theme.colours.lightGrey};	
+				text-decoration: underline;
+				
+			}
+			a:hover {
+				color: ${theme.colours.white};
+				cursor: pointer;	
 			}
 		}
 	}
 
 	.contact-right-container {
-		padding-top: 20vh;
+		padding-top: 10vh;
 		margin-left: 2vw;
 		margin-right: 10vw;
-	}
 
+		p {
+			color: ${theme.colours.white};
+			padding-left: 10px;
+			font-size: 1.25em;
+		}
+	}
 `;
 
 const Contact = () => {
-
 	return (
 		<>
+		<SectionHeading />
 		<ContactSection>
 			
-			<div className="section-rectangle" />
+			{/* <div className="section-rectangle" /> */}
 			<div className="contact-left-container">
 					<ul>
 						<li>
-							<h1><span>contact</span>
-								<br/>me.
-							</h1>
+							<h1>contact</h1>
+						</li>
+						<li>
+							<h1><span>me.</span></h1>
 						</li>
 						<li>
 							<a src="">hello@grayisaac.com</a>	
@@ -68,8 +93,7 @@ const Contact = () => {
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
-				{/* Form component */}
-				<Form />
+				<Form className="form" />
 				<Button text="Send!" blueText=">" />	
 			</div>
 		</ContactSection>

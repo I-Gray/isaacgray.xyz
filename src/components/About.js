@@ -1,53 +1,28 @@
 import React from 'react'
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 import CircleAccent from '../assets/icons/CircleAccent';
 import theme from '../assets/styles/theme';
 import AboutImage from '../assets/images/AboutPicture.png';
-
+import SectionHeading from './SectionHeading';
 
 const AboutSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: grid;
     grid-template-columns: 60vw 40vw;
-
-	.section-rectangle {
-		height: 2vh;
-		width: 8vw;
-		background: ${theme.colours.lightBlue};
-	}
-
+	padding-top: 5vh;
+	
 	.about-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 100vh;
-
-		ul {
-			font-size: 48px;
-			font-family: 'Space Mono', sans-serif;
-			color: ${theme.colours.grey};
-			list-style: none;
-
-			li {
-				float: left;
-				display: flex;
-				padding: 1vh;
-
-				div {
-					height: 2px;
-					width: 50vw;
-					background: ${theme.colours.grey};
-				}
-			}
-		}
+		height: 70vh;
 
 		.about-text {
-			padding-top: 20vh;
 			font-size: 26px;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			text-align: left;
-
+			
 			span {
 				color: ${theme.colours.lightBlue};
 			}
@@ -65,13 +40,17 @@ const AboutSection = styled.section`
 	}
 
 	.about-right-container {
-		padding-top: 20vh;
 		margin-left: 2vw;
 		margin-right: 10vw;
-
+	
 		h1 {
-			font-size: 120px;
+			font-size: 9em;
 			color: ${theme.colours.white};
+
+			// Temp stroke
+			-webkit-text-stroke-width: 2px;
+ 			-webkit-text-stroke-color: ${theme.colours.darkGrey};
+
 			span {
 				color: ${theme.colours.lightBlue};
 				font-weight: bold;
@@ -88,14 +67,9 @@ const About = () => {
 
 	return (
 		<>
+		<SectionHeading />
 		<AboutSection>
-				<div className="section-rectangle"/>
-				<div className="y-rectangle"/>
 				<div className="about-left-container">
-					<ul>
-						<li><p>01</p></li>
-						<li><div/></li>
-					</ul>
 					<p className="about-text">
 						Hi, I’m Isaac.
 						<br/>
@@ -108,16 +82,16 @@ const About = () => {
 						<br/>
 						<span>Other than tech</span>, I enjoy reading, rock-climbing & making music. 
 					</p>
-					<p class="about-learning">
+					<p className="about-learning">
 						<br/>
 						<br/>
 						Currently I am learning: <span>Vue</span>|
 					</p>
 				</div>
 				<div className="about-right-container">
-					<h1><span>about <br/>me.</span></h1>
+					<h1>about<br/><span>me.</span></h1>
 					<img src={AboutImage} alt="Picture of Isaac G"></img>
-					<CircleAccent className="accent" />
+					{/* <CircleAccent className="accent" /> */}
 				</div>
 		</AboutSection>
 		</>

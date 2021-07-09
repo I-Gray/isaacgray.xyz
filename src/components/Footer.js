@@ -6,21 +6,19 @@ import Logo from '../assets/icons/Logo';
 
 const StyledFooter = styled.footer`
 	display: flex;
-	height: auto;
-	min-height: 70px;
-	padding: 15px;
-	text-align: center;
+    align-items: center;
+	justify-content: center;
 	background: ${theme.colours.darkGrey};
-
+	
 	p {
 		color: ${theme.colours.grey};
+		text-align: right;
+		padding-right: 2vw;
 	}
 
-	ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		text-align: center;
+	.social {
+		padding-left: 1.5vw;
+		padding-bottom: 1vh;
 	}
 `;
 
@@ -28,11 +26,11 @@ const Footer = () => {
 	return (
 		<>
 			<StyledFooter>
-				<ul>
-					<li><p>DESIGNED & DEVELOPED <br/>BY ISAAC GRAY</p></li>
-					<li><Logo size={80}/></li>
-					<li><Socials size={25} alt={false}/></li>
-				</ul>
+				<p>DESIGNED & DEVELOPED <br/>BY ISAAC GRAY</p>
+				<Logo size={80}/>
+				<div className="social" >
+					<Socials size={25} alt={false}/>
+				</div>
 			</StyledFooter>
 		</>
 	);

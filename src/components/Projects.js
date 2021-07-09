@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../assets/styles/theme';
+import SectionHeading from './SectionHeading';
 
 const ProjectsSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -12,9 +13,9 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
+		<SectionHeading/>
 		<ProjectsSection>
 			<div className="section-rectangle"/>
-			{/* <div className="y-rectangle"/> */}
 			<div className="projects-left-container">
 				<ul>
 					<li><p>02</p></li>

@@ -27,7 +27,7 @@ const StyledForm = styled.div`
 		}
 
 		input[type=text]:focus, input[type=email]:focus  {
-			width: 100%;
+			width: 84%;
 			outline: 2px solid ${theme.colours.lightBlue};
 		}
 

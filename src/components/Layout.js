@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react';
 
-import { ThemeProvider }  from 'styled-components'
+import { ThemeProvider }  from 'styled-components';
 import GlobalStyle from '../assets/styles/GlobalStyle';
 import theme from '../assets/styles/theme';
 
@@ -24,10 +24,9 @@ const Layout = ({ children }) => {
 						{children}
 						<Hero />
 						<About />
-						<Projects />
+						{/* <Projects /> */}
 						<Contact />
 						<Footer />
-						
 				</ThemeProvider>
 			</div>
 		</>
