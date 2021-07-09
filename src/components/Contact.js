@@ -17,12 +17,6 @@ const ContactSection = styled.section`
 	// 	background: ${theme.colours.lightBlue};
 	// }
 
-	.contact-top-container {
-		top: 0;
-		left: 0;
-		height: 10vh;
-	}
-
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
@@ -71,7 +65,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
-		<SectionHeading />
+		<SectionHeading section_num="03"/>
 		<ContactSection>
 			
 			{/* <div className="section-rectangle" /> */}

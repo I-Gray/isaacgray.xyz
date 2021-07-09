@@ -34,7 +34,7 @@ const StyledHeading = styled.div`
 	}
 `;
 
-const SectionHeading = () => {
+const SectionHeading = ({section_num}) => {
 	
 	return (
 		<>
@@ -42,7 +42,7 @@ const SectionHeading = () => {
 				<ul>
 					<li><div className="section-rectangle" /></li>
 					<li><div className="thin-rectangle" /></li>
-					<li><p>03</p></li>
+					<li><p>{section_num}</p></li>
 				</ul>
 			</StyledHeading>
 		</>

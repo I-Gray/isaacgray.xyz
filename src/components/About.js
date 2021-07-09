@@ -67,7 +67,7 @@ const About = () => {
 
 	return (
 		<>
-		<SectionHeading />
+		<SectionHeading section_num="01"/>
 		<AboutSection>
 				<div className="about-left-container">
 					<p className="about-text">
