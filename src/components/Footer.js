@@ -9,21 +9,28 @@ const StyledFooter = styled.footer`
     align-items: center;
 	justify-content: center;
 	background: ${theme.colours.darkGrey};
-	
-	p {
+	width: 100vw;
+
+	a {
 		color: ${theme.colours.grey};
 		text-align: right;
 		padding-right: 2vw;
+		transition: color 0.8s ease-in-out;
+		font-weight: 500;
+		font-style: italic;
 
 		&:hover {
-			color: ${theme.colours.white};
 			cursor: pointer;
+			color: ${theme.colours.white};
+			span {
+				color: ${theme.colours.lightBlue};
+			}
 		}
 	}
 
 	.social {
 		padding-left: 1.5vw;
-		padding-bottom: 1vh;
+		padding-bottom: 1.5vh;
 	}
 `;
 
@@ -31,7 +38,8 @@ const Footer = () => {
 	return (
 		<>
 			<StyledFooter>
-				<p>DESIGNED & DEVELOPED <br/>BY ISAAC GRAY</p>
+				<div className="rect" />
+				<a>DESIGNED & DEVELOPED <br/>BY <span>ISAAC GRAY</span></a>
 				<Logo className="logo" size={80}/>
 				<div className="social" >
 					<Socials size={25} alt={false}/>

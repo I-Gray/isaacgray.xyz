@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		overflow-x: scroll; 
 		padding: 0;
-		font-family: 'Roboto', sans-serif;
+		font-family: Roboto, sans-serif;
 	}
 `;
 

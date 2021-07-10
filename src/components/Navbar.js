@@ -21,7 +21,7 @@ const Header = styled.header`
 
 const NavbarPanel = styled.nav`
 	position: relative;
-	background: var(--white);
+	background: ${theme.colours.white};
 	width: 100%;
 
 	display: flex;
@@ -53,24 +53,25 @@ const NavLinks = styled.div`
 
 			li {
 				float: left;
+				
 
 				.links {
-					color: var(--grey);
+					color: ${theme.colours.grey};
 					text-decoration: none;
 					display: block;
 					padding: 1em;
 					font-size: 1.5em;
 					text-align: right;
+					font-weight: 500;
+					transition: color 0.4 ease-in-out;
 				}
 
 				&:hover {
-					// background-color: var(--light-blue);
 					cursor: pointer;
 				}
 
 				.links:hover {
-					// color: white;
-					color: var(--light-blue);	
+					color: ${theme.colours.lightBlue};	
 				}
 			}
 		}
