@@ -7,6 +7,7 @@ import Typer from './Typer';
 import image from '../assets/images/projectexample.jpg';
 import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
+import Button from './Button';
 
 const ProjectsSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -26,6 +27,7 @@ const ProjectsSection = styled.section`
 			font-size: 100px;
 		}
 	}
+
 	.projects-left-container {
 		text-align: left;
 		margin-left: 10vw;
@@ -34,6 +36,7 @@ const ProjectsSection = styled.section`
 		p {
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
+			font-weight: 300;
 		}
 
 		h3 {
@@ -44,19 +47,17 @@ const ProjectsSection = styled.section`
 
 		.image-container {
 			padding-top: 5vh;
+			padding-bottom: 8vh;
 			
 			img {
 				border-radius: 8px;
 			}
-			&:hover {
-				background-colour: ${theme.colours.lightBlue};
-			}
 		}
 
-		.x-rect {
-			height: 2px;
-			width: 20vw;
-			background-colour: ${theme.colours.white};
+		.rect {	
+			height: 1px;
+			width: 30vw;
+			background-color: ${theme.colours.grey};
 		}
 	}
 
@@ -65,6 +66,7 @@ const ProjectsSection = styled.section`
 		text-align: left;
 		padding-top: 10vh;
 		margin-right: 20vw;
+		font-weight: 300;
 
 		.project-num {
 			font-size: 26px;
@@ -72,11 +74,24 @@ const ProjectsSection = styled.section`
 			color: ${theme.colours.grey};
 			text-align: right;
 			padding-bottom: 1em;
+
+			span {
+				color: ${theme.colours.lightBlue};
+				font-size: 0.75em;
+			}
 		}
 
 		.link-container {
 			text-align: right;
 			padding-top: 1em;
+		}
+
+		.tech-container {
+			font-family: 'Space Mono', sans-serif;
+			color: ${theme.colours.white};
+			padding-top: 2vh;
+			padding-left: 5vw;
+			font-size: 1.2em;
 		}
 
 		.github {
@@ -138,7 +153,23 @@ const ProjectsSection = styled.section`
 				justify-content: center;
 			}
 		}
+	}
 
+	.view-all-container {
+		margin-left: 10vw;
+		display: inline;
+		padding-bottom: 10vh;
+		p {
+			font-size: 26px;
+			font-family: 'Space Mono', sans-serif;
+			color: ${theme.colours.lightGrey};
+			float: left;
+		}
+
+		.button-container {
+			text-align: right;
+			float: right;
+		}
 	}
 `;
 
@@ -147,8 +178,9 @@ const Projects = () => {
 	return (
 		<>
 		<SectionHeading section_num="02"/>
+		
 		<ProjectsSection>
-			{/* <h1><span>my<br/></span> projects.</h1> */}
+		{/* <h1><span>my<br/></span> projects.</h1> */}
 			{projectsData.map((project, key) => {
 				return (
 					<>
@@ -156,22 +188,25 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
 						<div className="image-container">	
-							<img src={image} alt="" key={key} height="360" width="640" />
+							<figure><img src={image} alt="" key={key} height="360" width="640" /></figure>
 						</div>
-						<div className="x-rect" />
+						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
 					</div>
 
 					<div className="projects-right-container" >
-						<p className="project-num" >// 02.0{key + 1}</p>
+						<p className="project-num" ><span>//</span> 02.0{key + 1}</p>
 						{/* <img src="" alt="ball"  /> */}
 						<div className="description-rectangle">
 							<p key={key}>
 								{project.info}
 							</p>
 						</div>
+						<div className="tech-container">
+							<p>Technologies:</p>
 							{/* <Typer text={project.technologies}/> */}
-							{/* <span>{project.tech}</span>| */}
+							{/* <span key={key}>{project[key].tech}</span>| */}
+						</div>
 						<div className="link-container">
 							<a className="github" src={project.github} alt=""><Github /></a>
 							<a className="link" src={project.link} alt=""><Link /></a>
@@ -180,6 +215,13 @@ const Projects = () => {
 					</>
 				);
 			})}
+			<div className="view-all-container">
+				<p>Checkout everything<br/>
+					else i’ve worked on!</p>
+				<div className="button-container">	
+					<Button text="View All" blueText=">" />
+				</div>
+			</div>
 		</ProjectsSection>
 		</>
 	);

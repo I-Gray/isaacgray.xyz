@@ -6,9 +6,6 @@ const StyledTyper = styled.div`
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
-	background-color: ${theme.colours.darkGrey};
-	color: ${theme.colours.white};
 	font-family: Space Mono;
 
 	margin: 0;
@@ -20,9 +17,10 @@ const StyledTyper = styled.div`
 	align-items: center;
 
 	p {
-	  font-size: 3rem;
+	  font-size: 1rem;
 	  text-align: center;
 	  overflow: hidden;
+	  color: ${theme.colours.white};
 	}
 
 	p span.typed-text {
@@ -33,7 +31,7 @@ const StyledTyper = styled.div`
 	p span.cursor {
 	  display: inline-block;
 	  background-color: ${theme.colours.white};
-	  width: 5px;
+	  width: 2px;
 	  animation: blink 1s infinite;
 	}
 
@@ -54,7 +52,7 @@ const Typer = ({text}) => {
 
 	return (
 		<StyledTyper>
-    			<p>tech<span class="typed-text">{text}</span>
+    			<p>Tech<span class="typed-text"></span>
 					<span class="cursor">&nbsp;</span>
 				</p>
 		</StyledTyper>
