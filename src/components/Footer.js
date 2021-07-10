@@ -39,7 +39,7 @@ const Footer = () => {
 		<>
 			<StyledFooter>
 				<div className="rect" />
-				<a>DESIGNED & DEVELOPED <br/>BY <span>ISAAC GRAY</span></a>
+				<a>DESIGNED & DEVELOPED <br/>BY <span>ISAAC GRAY</span> ©</a>
 				<Logo className="logo" size={80}/>
 				<div className="social" >
 					<Socials size={25} alt={false}/>

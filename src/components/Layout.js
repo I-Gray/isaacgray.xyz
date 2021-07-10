@@ -11,6 +11,8 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 
+import Typer from './Typer';
+
 const Layout = ({ children }) => {
   
 	return(
@@ -20,12 +22,13 @@ const Layout = ({ children }) => {
 					<GlobalStyle />
 						{/* Add Theme prop to ThemeProvider for device handling, using the options.js file */}
 						
-						{/* <Navbar />
+						<Navbar />
 						{children}
 						<Hero />
-						<About /> */}
+						<About />
 						<Projects />
-						{/* <Contact />*/}
+						{/* <Typer /> */}
+						<Contact />
 						<Footer />
 				</ThemeProvider>
 			</div>

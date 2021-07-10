@@ -57,9 +57,9 @@ const Socials = ({size, alt}) => {
 		<>
 			<StyledSocials size={size} alt={alt}>
 					{/* Combine Icons with Social Links array to iterate over this*/}
-					<li><a url=""><Github /></a></li>
-					<li><a url=""><Twitter /></a></li>
-					<li><a url=""><Dribble /></a></li>
+					<li><a href="https://github.com/I-Gray"><Github /></a></li>
+					<li><a href="https://www.twitter.com"><Twitter /></a></li>
+					<li><a href="https://www.dribble.com"><Dribble /></a></li>
 			</StyledSocials>
 		</>
 	);

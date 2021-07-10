@@ -12,7 +12,7 @@ const Projects = [
 		image : ""
 	}, 
 	{
-		title : "Crowd counting using Density Mapping",
+		title : "Crowd Counting Using Density Mapping",
 		info : "Honours thesis research project into current state-of-the-art methods of crowd count estimations through the density mapping method.", 
 		technologies : [
 			"Pytorch (Python)",
