@@ -2,9 +2,9 @@
   grayisaac.com
 </h1>
 
-## 🚀 Personal Website
+## 💻 Personal Portfolio Website
 
-**Under Construction**
+**🚧 ❌ Under Construction ❌ 🚧**
 
 
 **Tech I used**
