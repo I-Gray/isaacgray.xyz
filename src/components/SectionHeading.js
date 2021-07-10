@@ -4,6 +4,8 @@ import theme from '../assets/styles/theme';
 
 const StyledHeading = styled.div`
 	left: 0;
+	padding-left: 0px;
+	margin-left: 0px;
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	ul {	
 		list-style: none;

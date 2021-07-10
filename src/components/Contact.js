@@ -11,41 +11,32 @@ const ContactSection = styled.section`
 	display: grid;
 	grid-template-columns: 60vw 40vw;
 
-	// .section-rectangle {
-	// 	height: 2vh;
-	// 	width: 8vw;
-	// 	background: ${theme.colours.lightBlue};
-	// }
-
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 50vh;
 		
-		ul {
-			list-style: none;
-			text-align: left;
+		text-align: left;
 
-			h1 {
-				font-size: 9em;
-				color: ${theme.colours.white};
+		h1 {
+			font-size: 9em;
+			color: ${theme.colours.white};
+			
+			span {
+				color: ${theme.colours.lightBlue};
+			}
+		}
 
-				span {
-					color: ${theme.colours.lightBlue};
-				}
-			}
-
-			a {
-				font-size: 2em;
-				font-family: 'Space Mono', sans-serif;
-				color: ${theme.colours.lightGrey};	
-				text-decoration: underline;
-				transition: fill 0.4s ease;
-			}
-			a:hover {
-				color: ${theme.colours.white};
-				cursor: pointer;	
-			}
+		a {
+			font-size: 2em;
+			font-family: 'Space Mono', sans-serif;
+			color: ${theme.colours.lightGrey};	
+			text-decoration: underline;
+			transition: fill 0.4s ease;
+		}
+		a:hover {
+			color: ${theme.colours.white};
+			cursor: pointer;	
 		}
 	}
 
@@ -67,23 +58,11 @@ const Contact = () => {
 		<>
 		<SectionHeading section_num="03"/>
 		<ContactSection>
-			
-			{/* <div className="section-rectangle" /> */}
 			<div className="contact-left-container">
-					<ul>
-						<li>
-							<h1>contact</h1>
-						</li>
-						<li>
-							<h1><span>me.</span></h1>
-						</li>
-						<li>
-							<a src="">hello@grayisaac.com</a>	
-						</li>
-						<li>
-							<Socials size="80" alt={true}/>
-						</li>
-					</ul>
+				<h1>contact</h1>
+				<h1><span>me.</span></h1>
+				<a src="">hello@grayisaac.com</a>	
+				<Socials size="80" alt={true}/>
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
