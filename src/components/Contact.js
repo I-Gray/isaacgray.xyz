@@ -14,7 +14,7 @@ const ContactSection = styled.section`
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 50vh;
+		height: 70vh;
 		
 		text-align: left;
 

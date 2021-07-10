@@ -15,7 +15,7 @@ const AboutSection = styled.section`
 	.about-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 70vh;
+		height: 90vh;
 
 		.about-text {
 			font-size: 26px;
