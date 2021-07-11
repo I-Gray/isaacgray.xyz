@@ -81,17 +81,29 @@ const ProjectsSection = styled.section`
 			}
 		}
 
-		.link-container {
-			text-align: right;
-			padding-top: 1em;
-		}
+		.tech-and-link {
+			.tech-container {
+				font-family: 'Space Mono', sans-serif;
+				color: ${theme.colours.white};
+				padding-top: 2vh;
+				padding-left: 5vw;
+				font-size: 1.2em;
+				float: left;
 
-		.tech-container {
-			font-family: 'Space Mono', sans-serif;
-			color: ${theme.colours.white};
-			padding-top: 2vh;
-			padding-left: 5vw;
-			font-size: 1.2em;
+				.tech-title {
+					color: ${theme.colours.lightBlue};
+					font-family: 'Roboto', sans-serif;
+					font-weight: 300;
+					font-style: italic;
+					font-size: 16px;
+				}
+			}
+
+			.link-container {
+				text-align: right;
+				padding-top: 1em;
+				float: right;
+			}
 		}
 
 		.github {
@@ -177,7 +189,7 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
-		<SectionHeading section_num="02"/>
+		<SectionHeading section_num="01"/>
 		
 		<ProjectsSection>
 		{/* <h1><span>my<br/></span> projects.</h1> */}
@@ -195,21 +207,28 @@ const Projects = () => {
 					</div>
 
 					<div className="projects-right-container" >
-						<p className="project-num" ><span>//</span> 02.0{key + 1}</p>
+						<p className="project-num" ><span>//</span> 01.0{key + 1}</p>
 						{/* <img src="" alt="ball"  /> */}
 						<div className="description-rectangle">
 							<p key={key}>
 								{project.info}
 							</p>
 						</div>
-						<div className="tech-container">
-							<p>Technologies:</p>
-							{/* <Typer text={project.technologies}/> */}
-							{/* <span key={key}>{project[key].tech}</span>| */}
-						</div>
-						<div className="link-container">
-							<a className="github" src={project.github} alt=""><Github /></a>
-							<a className="link" src={project.link} alt=""><Link /></a>
+						<div className="tech-and-link">
+							<div className="tech-container">
+								<p className="tech-title">Technologies</p>
+								{/* <Typer text={project.technologies}/> */}
+								{project.tech.map((t, i) => {
+										return(
+											<p key={i}>{t}</p>
+										)
+									})
+								}
+							</div>
+							<div className="link-container">
+								<a className="github" src={project.github} alt=""><Github /></a>
+								<a className="link" src={project.link} alt=""><Link /></a>
+							</div>
 						</div>
 					</div>
 					</>

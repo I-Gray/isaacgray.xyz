@@ -2,10 +2,10 @@ const Projects = [
 	{
 		title : "TRICEP 3D Redi",
 		info : "3D bio-printer software GUI re-design, with a computer vision algorithm to detect material defects.", 
-		technologies : [
-			"Open cv (C++)",
-			"Qt (C++)",
-			"Adobe XD"
+		tech : [
+			"Adobe XD",
+			"OpenCV",
+			"Qt"
 			], 
 		github : "https://github.com",
 		link : "https://google.com", 
@@ -14,8 +14,8 @@ const Projects = [
 	{
 		title : "Crowd Counting Using Density Mapping",
 		info : "Honours thesis research project into current state-of-the-art methods of crowd count estimations through the density mapping method.", 
-		technologies : [
-			"Pytorch (Python)",
+		tech : [
+			"Pytorch",
 			"LaTeX"
 			], 
 		github : "https://github.com",
@@ -26,9 +26,9 @@ const Projects = [
 		title : "Portfolio Website",
 		info : "Personal portfolio website built from the ground up to display my various projects.", 
 		tech : [
-			"React (JS)",
-			"Gatsby", 
+			"React",
 			"Figma", 
+			"Gatsby", 
 			"GraphQL"
 			], 
 		github : "https://github.com",

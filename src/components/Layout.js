@@ -25,8 +25,8 @@ const Layout = ({ children }) => {
 						<Navbar />
 						{children}
 						<Hero />
-						<About />
 						<Projects />
+						<About />
 						{/* <Typer /> */}
 						<Contact />
 						<Footer />
