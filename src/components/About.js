@@ -15,7 +15,7 @@ const AboutSection = styled.section`
 	.about-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 90vh;
+		height: 70vh;
 
 		.about-text {
 			font-size: 26px;
@@ -71,7 +71,7 @@ const About = () => {
 		<AboutSection>
 				<div className="about-left-container">
 					<p className="about-text">
-						Hi, I’m Isaac.
+						Hi, I’m <span>Isaac</span>.
 						<br/>
 						<br/>
 						I am an Australian developer currently living in <span>Wollongong</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as computer vision, web-development, security & hardware projects.

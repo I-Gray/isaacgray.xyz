@@ -32,11 +32,11 @@ const ContactSection = styled.section`
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};	
 			text-decoration: underline;
-			transition: fill 0.4s ease;
+			transition: fill 0.4s ease-in-out;
 		}
 		a:hover {
 			color: ${theme.colours.white};
-			cursor: pointer;	
+			cursor: pointer;
 		}
 	}
 
@@ -61,7 +61,7 @@ const Contact = () => {
 			<div className="contact-left-container">
 				<h1>contact</h1>
 				<h1><span>me.</span></h1>
-				<a src="">hello@grayisaac.com</a>	
+				<a src="">hello<span>@grayisaac</span>.com</a>	
 				<Socials size="80" alt={true}/>
 			</div>
 			<div className="contact-right-container">

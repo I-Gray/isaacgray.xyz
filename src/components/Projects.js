@@ -9,17 +9,17 @@ import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
 import Button from './Button';
 
-const ProjectsSection = styled.section`
+const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	display: grid;
-	grid-template-columns: 50vw 50vw;
-	padding-top: 5vh;
+	height: 20vh;
+	display flex;
 
 	h1 {
 		font-size: 96px;
 		color: ${theme.colours.white};
 		margin-left: 10vw;
 		font-weight: bold;
+		float: left;
 
 		span {
 			color: ${theme.colours.lightBlue};
@@ -28,10 +28,31 @@ const ProjectsSection = styled.section`
 		}
 	}
 
+	p {
+		font-size: 26px;
+		font-family: 'Space Mono', sans-serif;
+		color: ${theme.colours.lightGrey};
+		float: right;
+		padding-left: 5vw;
+		padding-top: 5vh;
+
+		span {
+			color: ${theme.colours.lightBlue};
+		}
+	}
+`;
+
+
+const ProjectsSection = styled.section`
+	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
+	display: grid;
+	grid-template-columns: 50vw 50vw;
+	padding-top: 5vh;
+
 	.projects-left-container {
 		text-align: left;
 		margin-left: 10vw;
-		height: 70vh;
+		height: 50vh;
 
 		p {
 			color: ${theme.colours.lightBlue};
@@ -62,7 +83,7 @@ const ProjectsSection = styled.section`
 	}
 
 	.projects-right-container {
-		height: 70vh;
+		height: 50vh;
 		text-align: left;
 		padding-top: 10vh;
 		margin-right: 20vw;
@@ -176,6 +197,10 @@ const ProjectsSection = styled.section`
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			float: left;
+			
+			span {
+				color: ${theme.colours.lightBlue};
+			}
 		}
 
 		.button-container {
@@ -190,9 +215,13 @@ const Projects = () => {
 	return (
 		<>
 		<SectionHeading section_num="01"/>
-		
+		<StyledTitle>
+				<h1><span>my<br/></span> projects.</h1>
+				<p>Hello this is some test
+				<br /> text, <span>check it out.</span></p>
+		</StyledTitle>
 		<ProjectsSection>
-		{/* <h1><span>my<br/></span> projects.</h1> */}
+			
 			{projectsData.map((project, key) => {
 				return (
 					<>
@@ -235,7 +264,7 @@ const Projects = () => {
 				);
 			})}
 			<div className="view-all-container">
-				<p>Checkout everything<br/>
+				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
 					<Button text="View All" blueText=">" />
