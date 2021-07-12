@@ -56,8 +56,8 @@ const StyledTitle = styled.div`
 		font-family: 'Space Mono', sans-serif;
 		color: ${theme.colours.lightGrey};
 		float: right;
-		padding-left: 5vw;
-		padding-top: 5vh;
+		padding-left: 17vw;
+		padding-top: 2vh;
 
 		span {
 			color: ${theme.colours.lightBlue};

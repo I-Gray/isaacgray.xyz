@@ -72,6 +72,12 @@ const ProjectsSection = styled.section`
 			
 			img {
 				border-radius: 8px;
+				transition: transform 0.2s ease-in-out;
+				z-index: 1;
+			}
+
+			img:hover {
+				transform: scale(1.03);
 			}
 		}
 
@@ -176,7 +182,8 @@ const ProjectsSection = styled.section`
 			background-color: ${theme.colours.lightBlue};
 			padding: 30px;
 			border-radius: 8px;
-			
+			transition: transform 0.2s ease-in-out;
+			z-index: 1500;
 			p {
 				color: ${theme.colours.white};
 				display: inline-block;
@@ -186,12 +193,17 @@ const ProjectsSection = styled.section`
 				justify-content: center;
 			}
 		}
+
+		.description-rectangle:hover {
+			transform: scale(1.05);
+		}
 	}
 
 	.view-all-container {
 		margin-left: 10vw;
 		display: inline;
-		padding-bottom: 10vh;
+		padding-bottom: 4vh;
+
 		p {
 			font-size: 26px;
 			font-family: 'Space Mono', sans-serif;
@@ -206,6 +218,8 @@ const ProjectsSection = styled.section`
 		.button-container {
 			text-align: right;
 			float: right;
+			padding-top: 2vh;
+			padding-right: 2vw;
 		}
 	}
 `;
@@ -217,8 +231,9 @@ const Projects = () => {
 		<SectionHeading section_num="01"/>
 		<StyledTitle>
 				<h1><span>my<br/></span> projects.</h1>
-				<p>Hello this is some test
-				<br /> text, <span>check it out.</span></p>
+				<p>Here is a few projects <br/>
+				I have worked on, <span>check <br/>
+				them out!</span></p>
 		</StyledTitle>
 		<ProjectsSection>
 			

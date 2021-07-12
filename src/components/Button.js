@@ -16,7 +16,7 @@ const StyledButton = styled.button`
 	border-color: ${theme.colours.white};
 	border-radius: 8px;
 	transition: transform .2s ease-in-out;
-	transition: background-color .4s ease-in-out;
+	transition: background-color .2s ease-in-out;
 
 	span {
 		color: ${theme.colours.lightBlue};
