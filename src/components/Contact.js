@@ -56,7 +56,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
-		<SectionHeading section_num="03"/>
+		<SectionHeading section_num="04"/>
 		<ContactSection>
 			<div className="contact-left-container">
 				<h1>contact</h1>
