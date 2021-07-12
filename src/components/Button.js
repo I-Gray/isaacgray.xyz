@@ -15,7 +15,8 @@ const StyledButton = styled.button`
 	color: ${theme.colours.white};
 	border-color: ${theme.colours.white};
 	border-radius: 8px;
-	transition-duration: 0.4s;
+	transition: transform .2s ease-in-out;
+	transition: background-color .4s ease-in-out;
 
 	span {
 		color: ${theme.colours.lightBlue};
@@ -24,6 +25,7 @@ const StyledButton = styled.button`
 	&:hover {
 		background-color: ${theme.colours.white};
 		color: ${theme.colours.darkGrey};
+		transform: scale(1.05);
 	}
 `;
 

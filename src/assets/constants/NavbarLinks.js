@@ -4,12 +4,16 @@ const NavbarLinks = [
 	  url: "/",
 	},
 	{
-	  name: "ABOUT",
-	  url: "/about/",
-	},
-	{
 	  name: "PROJECTS",
 	  url: "/projects/",
+	},
+	{
+		name: "SKILLS",
+		url: "/skills/",
+	},
+	{
+		name: "ABOUT",
+		url: "/about/",
 	},
 	{
 	  name: "CONTACT",
