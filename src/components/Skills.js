@@ -102,9 +102,9 @@ const SkillsSection = styled.section`
 			li {
 				filter: grayscale(1);
 				padding: 10px;
-				transition: filter 0.4s ease-in-out;
+				transition: filter 0.8s ease-in-out;
 				transition: transform .2s ease-in-out;
-				padding-bottom: 5vh;
+				margin-bottom: 3vh;
 			}
 
 			li:hover {
