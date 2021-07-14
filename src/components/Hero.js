@@ -13,21 +13,13 @@ const HeroSection = styled.section`
 	position: relative;
 	padding-top: 5vh;
 
-	.wrapper {
-		z-index; 1000;
-		.icons {
-			position; absolute;
-			top: 0;
-			width: 70vw;
-		}
-	}
-
 	.hero-left-container {
+		z-index: 3;
+
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 100vh;
 		float: left;
-		z-index; 1000;
 		
 		.rectangle {
 			height: 150px;
@@ -61,7 +53,7 @@ const HeroSection = styled.section`
 
 	.circle-orbit {
 		position: absolute;
-		z-index; 0;
+		z-index; 1;
 		left: 47%;
 		top: 20%;
 	}
@@ -99,21 +91,19 @@ const Hero = () => {
 	return (
 		<>
 		<HeroSection>
-			<div className="Wrapper">
 			{/* <FloatingIcons className="icons"/> */}
-				<div className="hero-left-container">
-					{/* <div class="rectangle"></div> */}
-					<h1 className="hero-title">
-						ISAAC <br/>
-						<span>GRAY.</span>
-					</h1>
-					<p className="hero-description">
-						developer, designer & <br />
-						creator.
-					</p>
-					
-					<Button text="Reach Out!" blueText=">" className="reach-out-button"/>	
-				</div>
+			<div className="hero-left-container">
+				{/* <div class="rectangle"></div> */}
+				<h1 className="hero-title">
+					ISAAC <br/>
+					<span>GRAY.</span>
+				</h1>
+				<p className="hero-description">
+					developer, designer & <br />
+					creator.
+				</p>
+				
+				<Button text="Reach Out!" blueText=">" className="reach-out-button"/>	
 			</div>
 			{/* <HeroOrbit /> */}
 			<svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">
