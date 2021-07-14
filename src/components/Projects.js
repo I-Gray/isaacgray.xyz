@@ -184,6 +184,7 @@ const ProjectsSection = styled.section`
 			border-radius: 8px;
 			transition: transform 0.2s ease-in-out;
 			z-index: 1500;
+
 			p {
 				color: ${theme.colours.white};
 				display: inline-block;
@@ -224,7 +225,6 @@ const ProjectsSection = styled.section`
 	}
 `;
 
-
 const Projects = () => {
 	return (
 		<>
@@ -236,7 +236,6 @@ const Projects = () => {
 				them out!</span></p>
 		</StyledTitle>
 		<ProjectsSection>
-			
 			{projectsData.map((project, key) => {
 				return (
 					<>
