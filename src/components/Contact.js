@@ -15,7 +15,7 @@ const ContactSection = styled.section`
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 50vh;
-		
+		margin-top: 5vh;
 		text-align: left;
 
 		h1 {
@@ -52,7 +52,18 @@ const ContactSection = styled.section`
 		}
 
 		Button {
-			font-size: 1.5vw;
+			font-size: 1vw;
+		}
+	}
+
+	@media ${theme.sizes.mobileL} {
+		background:  ${theme.colours.darkGrey};
+
+		.contact-right-container {
+			
+			Button {
+				font-size: 1.5vw;
+			}
 		}
 	}
 `;
@@ -60,7 +71,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
-		<SectionHeading section_num="04"/>
+		<SectionHeading section_num="04" leftDark={true} rightDark={true} />
 		<ContactSection>
 			<div className="contact-left-container">
 				<h1>contact</h1>
@@ -71,7 +82,7 @@ const Contact = () => {
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
 				<Form className="form" />
-				<Button text="Send!" blueText=">" />	
+				<Button text="Send!" blueText=">" light={true} />	
 			</div>
 		</ContactSection>
 		</>

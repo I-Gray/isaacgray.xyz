@@ -59,13 +59,31 @@ const AboutSection = styled.section`
 			padding-top: 25vh;
 		}
 	}
+
+	@media ${theme.sizes.mobileL} {
+		background: ${theme.colours.white};
+		display: flex;
+		justify-content: center;
+		position: relative;
+		padding-top: 0;
+
+		.about-left-container {
+			.about-text {
+				color: ${theme.colours.darkGrey};
+			}
+			
+			.about-learning {
+				color: ${theme.colours.darkGrey};
+			}
+		}
+	}	
 `;
 
 const About = () => {
 
 	return (
 		<>
-		<SectionHeading section_num="03"/>
+		<SectionHeading section_num="03" dark={true} />
 		<AboutSection>
 				<div className="about-left-container">
 					<p className="about-text">

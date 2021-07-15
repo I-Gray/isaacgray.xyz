@@ -167,6 +167,7 @@ const SkillsSection = styled.section`
 		background: ${theme.colours.darkGrey};
 
 		.content {
+
 			p {
 				5vw;
 			}
@@ -177,7 +178,7 @@ const SkillsSection = styled.section`
 const Skills = () => {
 	return (
 		<>
-			<SectionHeading section_num="02" />
+			<SectionHeading section_num="02" leftDark={true} rightDark={true} />
 			<StyledTitle>
 					<h1><span>my<br/></span> skills.</h1>
 					<p>Over the course of my 

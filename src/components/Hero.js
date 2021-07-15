@@ -28,7 +28,7 @@ const HeroSection = styled.section`
 		}
 
 		h1 {
-			margin-top: 25vh;
+			margin-top: 15vh;
 			font-size: 10vw;;
 			color: ${theme.colours.white};
 			text-align: left;
@@ -56,6 +56,8 @@ const HeroSection = styled.section`
 		z-index; 1;
 		left: 47%;
 		top: 20%;
+		display: flex;
+		height
 	}
 
 	.floating-icons {
@@ -71,21 +73,21 @@ const HeroSection = styled.section`
 	@media ${theme.sizes.mobileL} {
 		background: ${theme.colours.darkGrey};
 		display: flex;
-		justify-content: center;
 		position: relative;
 		padding-top: 0;
+		padding-right: 10vw;
 		
 		.hero-left-container {
 			h1 {
-				font-size: 22vw;
+				font-size: 18vw;
 			}
 
 			p {
-				font-size: 5vw;
+				font-size: 3vw;
 			}
 
 			Button {
-				font-size: 3vw;
+				font-size: 2vw;
 			}
 		}
 
@@ -158,7 +160,7 @@ const Hero = () => {
 					creator.
 				</p>
 				
-				<Button text="Reach Out!" blueText=">" className="reach-out-button"/>	
+				<Button text="Reach Out!" blueText=">" light={true} className="reach-out-button"/>	
 			</div>
 			{/* <HeroOrbit /> */}
 			<svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">

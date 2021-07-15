@@ -222,11 +222,12 @@ const ProjectsSection = styled.section`
 
 	.view-all-container {
 		margin-left: 10vw;
-		display: inline;
+		display: flex;
 		padding-bottom: 4vh;
+		padding-top: 2vh;
 
 		p {
-			font-size: 26px;
+			font-size: 2vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			float: left;
@@ -240,7 +241,11 @@ const ProjectsSection = styled.section`
 			text-align: right;
 			float: right;
 			padding-top: 2vh;
-			padding-right: 2vw;
+			padding-left: 2vw;
+			
+			Button {
+				font-size: 1vw;
+			}
 		}
 	}
 
@@ -249,7 +254,6 @@ const ProjectsSection = styled.section`
 		background: ${theme.colours.white};
 		padding-top: 5vh;
 		
-
 		.projects-left-container {
 			height: 0vh;
 			text-align: left;
@@ -289,13 +293,28 @@ const ProjectsSection = styled.section`
 			margin-top: 0vw;
 			z-index: 1499;
 		}
+
+		.view-all-container {
+			p {
+				color: ${theme.colours.darkGrey};
+				font-size: 3vw;
+				padding-right: 2vw;
+				padding-top: 1vh;
+			}
+			
+			.button-container {
+				Button {
+					font-size: 2vw;
+				}
+			}
+		}
 	}
 `;
 
 const Projects = () => {
 	return (
 		<>
-		<SectionHeading section_num="01" dark={true}/>
+		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
 		<StyledTitle>
 				<h1><span>my<br/></span> projects.</h1>
 				<p>Here is a few projects <br/>
@@ -348,7 +367,7 @@ const Projects = () => {
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
-					<Button text="View All" blueText=">" />
+					<Button text="View All" blueText=">" light={true}/>
 				</div>
 			</div>
 		</ProjectsSection>

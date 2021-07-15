@@ -12,8 +12,8 @@ const StyledButton = styled.button`
 	font-size: 1vw;
 	font-weight: bold;
 	cursor: pointer;
-	color: ${theme.colours.white};
-	border-color: ${theme.colours.white};
+	color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
+	border-color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
 	border-radius: 8px;
 	transition: transform .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
@@ -23,17 +23,17 @@ const StyledButton = styled.button`
 	}
 
 	&:hover {
-		background-color: ${theme.colours.white};
-		color: ${theme.colours.darkGrey};
+		background-color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
+		color: ${props => props.light ? theme.colours.darkGrey :  theme.colours.white};
 		transform: scale(1.05);
 	}
 `;
 
-const Button = ({text, blueText}) => {
+const Button = ({text, blueText, light}) => {
 
 	return (
 		<>
-			<StyledButton>
+			<StyledButton light={light} >
 				{text} <span>{blueText}</span>
 			</StyledButton>
 		</>
