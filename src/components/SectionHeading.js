@@ -4,9 +4,11 @@ import theme from '../assets/styles/theme';
 
 const StyledHeading = styled.div`
 	left: 0;
+	margin-left: 0;
 	padding-left: 0px;
 	margin-left: 0px;
-	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
+	background: linear-gradient(90deg, ${props => props.dark ? theme.colours.darkGrey : theme.colours.white} 70%, ${theme.colours.white} 30%);
+	
 	ul {	
 		list-style: none;
 		display: flex;
@@ -25,7 +27,7 @@ const StyledHeading = styled.div`
 	}
 
 	p {
-		font-size: 48px;
+		font-size: 5vw;
 		font-family: 'Space Mono', sans-serif;
 		color: ${theme.colours.grey};
 	}
@@ -36,11 +38,11 @@ const StyledHeading = styled.div`
 	}
 `;
 
-const SectionHeading = ({section_num}) => {
+const SectionHeading = ({section_num, dark}) => {
 	
 	return (
 		<>
-			<StyledHeading>
+			<StyledHeading dark={dark} >
 				<ul>
 					<li><div className="section-rectangle" /></li>
 					<li><div className="thin-rectangle" /></li>

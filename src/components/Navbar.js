@@ -38,6 +38,7 @@ const NavLinks = styled.div`
 	display: flex;
 	width: 100%;
 	margin-right: 10em;
+	
 	@media ${theme.sizes.mobile} {
 		display: none;
 	}
