@@ -14,7 +14,7 @@ const Sidebar = styled.nav`
 	top: 0;
 	background: ${({ theme }) => theme.colours.lightBlue};
 	height: 100vh;
-	padding: 2em;
+	padding: 5vw;
 	transition: transform 0.3s ease-in-out;
 	transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
 
@@ -25,15 +25,16 @@ const Sidebar = styled.nav`
 		margin: 0;
 		margin-right: 0;
 		margin-left: 2em;
-		margin-top: 5em;
-		display: block;
+		margin-top: 8vh;
+		display: flex;
+		padding-left: 5vw;
 
 		.links {
 			color: ${({ theme }) => theme.colours.white};
 			text-decoration: none;
 			display: block;
-			padding: 0.8em;
-			font-size: 4em;
+			padding: 1vh;
+			font-size: 8vw;
 			text-align: right;
 		}
 
