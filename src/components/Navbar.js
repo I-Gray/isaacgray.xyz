@@ -47,6 +47,8 @@ const NavLinks = styled.div`
 		margin-right: 0;
 		margin-left: auto;
 
+		
+
 		ol {
 			padding: 0;
 			margin: 0;
@@ -54,7 +56,33 @@ const NavLinks = styled.div`
 
 			li {
 				float: left;
+
+				.links {
+					color: ${theme.colours.lightBlue};
+					text-decoration: none;
+					
+					display: inline-block;
+					padding: 15px 20px;
+					position: relative;
+				}
+				.links:after {    
+					background: none repeat scroll 0 0 transparent;
+					bottom: 0;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 50%;
+					position: absolute;
+					background: ${theme.colours.lightBlue};
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+				}
 				
+				.links:hover:after { 
+					width: 100%; 
+					left: 0; 
+				}
+
 
 				.links {
 					color: ${theme.colours.grey};

@@ -160,7 +160,6 @@ const ProjectsSection = styled.section`
 				path {
 					transition: fill 0.2s ease-in-out;
 					fill: ${theme.colours.darkGrey};
-					stroke: 0;
 				}
 			}
 		}
