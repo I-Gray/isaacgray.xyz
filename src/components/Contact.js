@@ -8,18 +8,18 @@ import SectionHeading from './SectionHeading';
 
 const ContactSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	display: grid;
+	display: flex;
 	grid-template-columns: 60vw 40vw;
 
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 50vh;
-		
+		margin-top: 5vh;
 		text-align: left;
 
 		h1 {
-			font-size: 9em;
+			font-size: 10vw;
 			color: ${theme.colours.white};
 			
 			span {
@@ -28,7 +28,7 @@ const ContactSection = styled.section`
 		}
 
 		a {
-			font-size: 2em;
+			font-size: 2vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};	
 			text-decoration: underline;
@@ -48,7 +48,22 @@ const ContactSection = styled.section`
 		p {
 			color: ${theme.colours.white};
 			padding-left: 10px;
-			font-size: 1.25em;
+			font-size: 2vw;
+		}
+
+		Button {
+			font-size: 1vw;
+		}
+	}
+
+	@media ${theme.sizes.mobileL} {
+		background:  ${theme.colours.darkGrey};
+
+		.contact-right-container {
+			
+			Button {
+				font-size: 1.5vw;
+			}
 		}
 	}
 `;
@@ -56,7 +71,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
-		<SectionHeading section_num="04"/>
+		<SectionHeading section_num="04" leftDark={true} rightDark={true} />
 		<ContactSection>
 			<div className="contact-left-container">
 				<h1>contact</h1>
@@ -67,7 +82,7 @@ const Contact = () => {
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
 				<Form className="form" />
-				<Button text="Send!" blueText=">" />	
+				<Button text="Send!" blueText=">" light={true} />	
 			</div>
 		</ContactSection>
 		</>

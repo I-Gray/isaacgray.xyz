@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 	/* 'min-height: 100vh' within body is  is the */
 	/* https://www.freecodecamp.org/news/html-page-width-height/ */
+	
 	body {
 		background: var(--white);
 		width: 100%;

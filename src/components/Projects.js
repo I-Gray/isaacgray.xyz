@@ -15,7 +15,7 @@ const StyledTitle = styled.div`
 	display flex;
 
 	h1 {
-		font-size: 96px;
+		font-size: 6vw;
 		color: ${theme.colours.white};
 		margin-left: 10vw;
 		font-weight: bold;
@@ -24,40 +24,62 @@ const StyledTitle = styled.div`
 		span {
 			color: ${theme.colours.lightBlue};
 			font-weight: 400;
-			font-size: 100px;
+			font-size: 5vw;
 		}
 	}
 
 	p {
-		font-size: 26px;
+		font-size: 1.5vw;
 		font-family: 'Space Mono', sans-serif;
 		color: ${theme.colours.lightGrey};
 		float: right;
 		padding-left: 5vw;
-		padding-top: 5vh;
+		padding-top: 4vh;
 
 		span {
 			color: ${theme.colours.lightBlue};
 		}
 	}
-`;
 
+	@media ${theme.sizes.mobileL} {
+		display: flex;
+		flex-wrap: wrap;
+		background:  ${theme.colours.white};
+		height: 16vh;
+
+		h1 {
+			color: ${theme.colours.darkGrey};
+			font-size: 10vw;
+			
+			span {
+				font-size: 8vw;
+			}
+		}
+
+		p {
+			color: ${theme.colours.darkGrey};
+			float: right;
+			font-size: 2vw;
+		}
+	}
+`;
 
 const ProjectsSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: grid;
 	grid-template-columns: 50vw 50vw;
-	padding-top: 5vh;
 
 	.projects-left-container {
 		text-align: left;
 		margin-left: 10vw;
-		height: 50vh;
+		height: 25%;
 
 		p {
+			margin-top: 2vh;
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
 			font-weight: 300;
+			display: block;
 		}
 
 		h3 {
@@ -73,11 +95,8 @@ const ProjectsSection = styled.section`
 			img {
 				border-radius: 8px;
 				transition: transform 0.2s ease-in-out;
-				z-index: 1;
-			}
-
-			img:hover {
-				transform: scale(1.03);
+				height: 360px;
+				width: 640px;
 			}
 		}
 
@@ -141,7 +160,6 @@ const ProjectsSection = styled.section`
 				path {
 					transition: fill 0.2s ease-in-out;
 					fill: ${theme.colours.darkGrey};
-					stroke: 0;
 				}
 			}
 		}
@@ -180,7 +198,7 @@ const ProjectsSection = styled.section`
 
 		.description-rectangle {
 			background-color: ${theme.colours.lightBlue};
-			padding: 30px;
+			padding: 3vw;
 			border-radius: 8px;
 			transition: transform 0.2s ease-in-out;
 			z-index: 1500;
@@ -192,6 +210,7 @@ const ProjectsSection = styled.section`
 				display: flex;
     			align-items: center;
 				justify-content: center;
+				z-index: 1501;
 			}
 		}
 
@@ -202,11 +221,12 @@ const ProjectsSection = styled.section`
 
 	.view-all-container {
 		margin-left: 10vw;
-		display: inline;
+		display: flex;
 		padding-bottom: 4vh;
+		padding-top: 2vh;
 
 		p {
-			font-size: 26px;
+			font-size: 2vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			float: left;
@@ -220,7 +240,78 @@ const ProjectsSection = styled.section`
 			text-align: right;
 			float: right;
 			padding-top: 2vh;
-			padding-right: 2vw;
+			padding-left: 2vw;
+			
+			Button {
+				font-size: 1vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.mobileL} {
+		display: block;
+		background: ${theme.colours.white};
+		padding-top: 5vh;
+		
+		.projects-left-container {
+			height: 0vh;
+			text-align: left;
+			padding-top: 0vh;
+			margin-right: 20vw;
+			font-weight: 300;
+			z-index: 0;
+			
+			p {
+				color: ${theme.colours.lightBlue};
+				font-size: 3vw;
+			}
+
+			h3 {
+				color: ${theme.colours.darkGrey};
+				font-size: 5vw;
+			}
+			
+			.image-container {
+				width: 100%;
+				z-index: 0;
+				margin-top: 5vh;
+				img {
+					display: block;
+					max-width: 512px;
+					max-height: 288px;
+					width: auto;
+					height: auto;
+					z-index: 1;
+				}
+			}
+		}
+
+		.projects-right-container {
+			margin-right: 10vw;
+			margin-left: 15vw;
+			margin-top: 0vw;
+			z-index: 1499;
+		}
+
+		.view-all-container {
+			p {
+				color: ${theme.colours.darkGrey};
+				font-size: 3vw;
+				padding-right: 2vw;
+				padding-top: 1vh;
+			}
+			
+			.button-container {
+				Button {
+					font-size: 2vw;
+					color: ${theme.colours.darkGrey};
+					border-color: ${theme.colours.darkGrey};
+				}
+				Button:hover {
+					color: ${theme.colours.white};
+					background-color: ${theme.colours.darkGrey};
+				}
+			}
 		}
 	}
 `;
@@ -228,7 +319,7 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
-		<SectionHeading section_num="01"/>
+		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
 		<StyledTitle>
 				<h1><span>my<br/></span> projects.</h1>
 				<p>Here is a few projects <br/>
@@ -243,7 +334,7 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
 						<div className="image-container">	
-							<figure><img src={image} alt="" key={key} height="360" width="640" /></figure>
+							<figure><img src={image} alt="" key={key} /></figure>
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
@@ -281,7 +372,7 @@ const Projects = () => {
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
-					<Button text="View All" blueText=">" />
+					<Button text="View All" blueText=">" light={true}/>
 				</div>
 			</div>
 		</ProjectsSection>

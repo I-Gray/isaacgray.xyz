@@ -38,6 +38,7 @@ const NavLinks = styled.div`
 	display: flex;
 	width: 100%;
 	margin-right: 10em;
+	
 	@media ${theme.sizes.mobile} {
 		display: none;
 	}
@@ -46,6 +47,8 @@ const NavLinks = styled.div`
 		margin-right: 0;
 		margin-left: auto;
 
+		
+
 		ol {
 			padding: 0;
 			margin: 0;
@@ -53,7 +56,32 @@ const NavLinks = styled.div`
 
 			li {
 				float: left;
+
+				.links {
+					color: ${theme.colours.lightBlue};
+					text-decoration: none;
+					
+					display: inline-block;
+					padding: 15px 20px;
+					position: relative;
+				}
+				.links:after {    
+					background: none repeat scroll 0 0 transparent;
+					bottom: 0;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 50%;
+					position: absolute;
+					background: ${theme.colours.lightBlue};
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+				}
 				
+				.links:hover:after { 
+					width: 100%; 
+					left: 0; 
+				}
 
 				.links {
 					color: ${theme.colours.grey};
@@ -64,6 +92,7 @@ const NavLinks = styled.div`
 					text-align: right;
 					font-weight: 500;
 					transition: color 0.4 ease-in-out;
+					
 				}
 
 				&:hover {
@@ -73,6 +102,10 @@ const NavLinks = styled.div`
 				.links:hover {
 					color: ${theme.colours.lightBlue};	
 				}
+
+				span {
+					color: ${theme.colours.lightBlue};
+				}	
 			}
 		}
 	}
@@ -91,7 +124,7 @@ const Navbar = () => {
 						{NavbarLinks && 
 						NavbarLinks.map(({name, url}, i) => (
 							<li key={i} className="menu-item">
-								<Link className="links" to={url}>{name}</Link>
+								<Link className="links" to={url}>{name}<span class="divider">.</span></Link>
 							</li>
 						))}
 					</ol>
