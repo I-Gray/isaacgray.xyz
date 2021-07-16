@@ -304,6 +304,12 @@ const ProjectsSection = styled.section`
 			.button-container {
 				Button {
 					font-size: 2vw;
+					color: ${theme.colours.darkGrey};
+					border-color: ${theme.colours.darkGrey};
+				}
+				Button:hover {
+					color: ${theme.colours.white};
+					background-color: ${theme.colours.darkGrey};
 				}
 			}
 		}
