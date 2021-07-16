@@ -28,7 +28,7 @@ import Pytorch from '../assets/icons/skills/Pytorch';
 
 import Arduino from '../assets/icons/skills/Arduino'
 import Qt from '../assets/icons/skills/Qt';
-// import Opencv from '../assets/icons/skills/Opencv';
+import Opencv from '../assets/icons/skills/Opencv';
 // import Ros from '../assets/icons/skills/Ros';
 
 
@@ -230,12 +230,12 @@ const Skills = () => {
 							<li><Python size="55" /></li>
 							<li><Cpp size="55" /></li>
 							<li><Java size="55" /></li>
-							{/* <Pytorch size="55" /> */}
-
-							{/* <Arduino size="55" /> */}
-							{/* <Qt size="55" /> */}
-							{/* <Opencv size="55" /> */}
-							{/* <Ros size="55" /> */}
+							<li><Pytorch size="55" /></li>
+						</ol>
+						<ol>
+							<li><Arduino size="55" /></li>
+							<li><Qt size="55" /></li>
+							<li><Opencv size="55" /></li>
 						</ol>
 					</div>
 				</div>
