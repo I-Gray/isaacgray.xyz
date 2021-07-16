@@ -83,7 +83,6 @@ const NavLinks = styled.div`
 					left: 0; 
 				}
 
-
 				.links {
 					color: ${theme.colours.grey};
 					text-decoration: none;
@@ -93,6 +92,7 @@ const NavLinks = styled.div`
 					text-align: right;
 					font-weight: 500;
 					transition: color 0.4 ease-in-out;
+					
 				}
 
 				&:hover {
@@ -102,6 +102,10 @@ const NavLinks = styled.div`
 				.links:hover {
 					color: ${theme.colours.lightBlue};	
 				}
+
+				span {
+					color: ${theme.colours.lightBlue};
+				}	
 			}
 		}
 	}
@@ -120,7 +124,7 @@ const Navbar = () => {
 						{NavbarLinks && 
 						NavbarLinks.map(({name, url}, i) => (
 							<li key={i} className="menu-item">
-								<Link className="links" to={url}>{name}</Link>
+								<Link className="links" to={url}>{name}<span class="divider">.</span></Link>
 							</li>
 						))}
 					</ol>
