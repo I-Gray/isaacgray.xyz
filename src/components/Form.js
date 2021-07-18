@@ -23,7 +23,7 @@ const StyledForm = styled.div`
 		}
 
 		#message {
-			height: 4.5vh;
+			height: 5.5vh;
 			display: inline-block;
 			width: 60%;
 			border: 2px solid ${theme.colours.darkGrey};
@@ -37,7 +37,6 @@ const StyledForm = styled.div`
 		#message:focus {
 			height: 15vh;
 		}
-
 
 		input[type=text], input[type=email] {
 			transition: width 0.4s ease-in-out;

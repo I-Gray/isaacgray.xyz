@@ -4,14 +4,16 @@ import theme from '../assets/styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import Typer from './Typer';
+
 import image from '../assets/images/projectexample.jpg';
+
 import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
 import Button from './Button';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	height: 20vh;
+	height: 35vh;
 	display flex;
 
 	h1 {
@@ -68,6 +70,7 @@ const ProjectsSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: grid;
 	grid-template-columns: 50vw 50vw;
+	position: relative;
 
 	.projects-left-container {
 		text-align: left;
@@ -142,6 +145,10 @@ const ProjectsSection = styled.section`
 					font-weight: 300;
 					font-style: italic;
 					font-size: 16px;
+				}
+
+				ol {
+					list-style-type: none;
 				}
 			}
 
@@ -287,10 +294,49 @@ const ProjectsSection = styled.section`
 		}
 
 		.projects-right-container {
-			margin-right: 10vw;
-			margin-left: 15vw;
-			margin-top: 0vw;
-			z-index: 1499;
+
+			.description-rectangle {
+				position: absolute;
+				margin-right: 10vw;
+				margin-left: 15vw;
+				margin-top: 0vw;
+				p {
+					z-index: 2001;
+				}
+			}
+
+			.tech-and-link {
+				
+				.tech-container {
+					z-index: 2500;
+					padding-left: 60vw;
+					padding-top: 11vh;
+					display: flex;
+					
+					.tech-title {
+						display: flex;
+					}
+
+					ol {
+						display: flex;
+						flex-direction: column;
+						z-index: 2500;
+						list-style-type: none;
+						
+						li {
+							color: ${theme.colours.darkGrey};
+							flex-wrap: nowrap;
+						}
+					}
+				}
+
+				.link-container {
+					display: flex;
+					z-index: 2500;
+					padding-left: 85vw;
+
+				}
+			}
 		}
 
 		.view-all-container {
@@ -351,13 +397,15 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies</p>
-								{/* <Typer text={project.technologies}/> */}
-								{project.tech.map((t, i) => {
-										return(
-											<p key={i}>{t}</p>
-										)
-									})
-								}
+								<ol>
+									{/* <Typer text={project.technologies}/> */}
+									{project.tech.map((t, i) => {
+											return(
+													<li key={i}>{t}</li>
+											)
+										})
+									}
+								</ol>
 							</div>
 							<div className="link-container">
 								<a className="github" src={project.github} alt=""><Github /></a>

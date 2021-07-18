@@ -1,26 +1,30 @@
+import React from 'react';
+import marketmoo from '../assets/images/TRICEP.png';
+import redi from '../assets/images/MarketMoo.png';
+
 const Projects = [
 	{
 		title : "TRICEP 3D Redi",
 		info : "3D bio-printer software GUI re-design, with a computer vision algorithm to detect material defects.", 
 		tech : [
-			"Adobe XD",
+			"Adobe_XD",
 			"OpenCV",
 			"Qt"
 			], 
 		github : "https://github.com",
 		link : "https://google.com", 
-		image : ""
+		image : "../assets/images/TRICEP.png"
 	}, 
 	{
-		title : "Crowd Counting Using Density Mapping",
-		info : "Honours thesis research project into current state-of-the-art methods of crowd count estimations through the density mapping method.", 
+		title : "Mobile App MVP",
+		info : "Crafted a brand and associated MVP that was pitched to peers at a local startup incubator.", 
 		tech : [
-			"Pytorch",
+			"Adobe_XD",
 			"LaTeX"
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image : ""
+		image : "../assets/images/MarketMoo.png"
 	},
 	{
 		title : "Portfolio Website",

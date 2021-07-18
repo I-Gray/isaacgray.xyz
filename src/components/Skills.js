@@ -129,7 +129,7 @@ const SkillsSection = styled.section`
 			z-index: 0;
 			position: absolute;
 			top: -25%;
-			right: 9%
+			right: 15%
 		}	
 	}
 

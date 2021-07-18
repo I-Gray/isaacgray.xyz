@@ -9,15 +9,15 @@ import SectionHeading from './SectionHeading';
 const ContactSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: flex;
-	grid-template-columns: 60vw 40vw;
-
+	
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 50vh;
-		margin-top: 5vh;
+		height: 70vh;
 		text-align: left;
-
+		display: flex;
+		flex-direction: column;
+		
 		h1 {
 			font-size: 10vw;
 			color: ${theme.colours.white};
@@ -48,7 +48,7 @@ const ContactSection = styled.section`
 		p {
 			color: ${theme.colours.white};
 			padding-left: 10px;
-			font-size: 2vw;
+			font-size: 1vw;
 		}
 
 		Button {
@@ -58,9 +58,24 @@ const ContactSection = styled.section`
 
 	@media ${theme.sizes.mobileL} {
 		background:  ${theme.colours.darkGrey};
+		display: flex;
+		.contact-left-container {
+			display: flex;
+
+		}
+
 
 		.contact-right-container {
+			display: inline-block;
 			
+			Form {
+				
+			}
+
+			p {
+				font-size: 2vw;
+			}
+
 			Button {
 				font-size: 1.5vw;
 			}
