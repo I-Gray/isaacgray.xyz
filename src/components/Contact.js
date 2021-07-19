@@ -86,6 +86,39 @@ const ContactSection = styled.section`
 
 	@media ${theme.sizes.mobileM} {
 	}
+
+	@media ${theme.sizes.mobileXS} {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+		.contact-left-container {
+			padding-bottom: 5vh;
+			h1 {
+				font-size: 20vw;
+				font-weight: normal;
+				span {
+					font-size: 20vw;
+					font-weight: bold;
+				}
+			}
+
+			a {
+				font-size: 5vw;
+			}
+		}
+
+		.contact-right-container {
+			p {
+				font-size: 6vw;
+			}
+
+			Button {
+				font-size: 5vw;
+			}
+		}
+		
+	}
 `;
 
 const Contact = () => {

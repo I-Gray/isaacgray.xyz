@@ -64,6 +64,17 @@ const StyledForm = styled.div`
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
 		}
+
+		@media ${theme.sizes.mobileXS} {
+			input[type=text], input[type=email], select, textarea {
+				width: 75vw;
+			}
+
+			#message {
+				width: 75vw;
+			}
+
+		}
 	}
 `;
 

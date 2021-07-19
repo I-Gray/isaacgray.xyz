@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import theme from '../assets/styles/theme';
 
 const StyledHeading = styled.div`
-	left: 0;
-	margin-left: 0;
-	padding-left: 0px;
-	margin-left: 0px;
+	display: flex;
+	
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	padding-top: 3vh;
 	
@@ -18,11 +16,13 @@ const StyledHeading = styled.div`
 	.section-rectangle {
 		height: 2vh;
 		width: 8vw;
+		padding-right: 2vw;
 		background: ${theme.colours.lightBlue};
 	}
 
 	.thin-rectangle {
 		height: 2px;
+		padding-left: 5vw;
 		width: 70vw;
 		background: ${theme.colours.grey};
 	}
@@ -35,7 +35,7 @@ const StyledHeading = styled.div`
 
 	li {
 		float: left;
-		padding: 1vh;
+		padding-right: 1vh;
 	}
 
 	@media ${theme.sizes.mobileL} {

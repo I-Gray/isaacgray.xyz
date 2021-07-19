@@ -16,13 +16,18 @@ const GlobalStyle = createGlobalStyle`
 	/* 'min-height: 100vh' within body is  is the */
 	/* https://www.freecodecamp.org/news/html-page-width-height/ */
 	
+	html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow-x: hidden; 
+	}
+
 	body {
 		background: var(--white);
 		width: 100%;
 		min-height: 100vh;
-		margin: 0;
-		overflow-x: scroll; 
-		padding: 0;
 		font-family: Roboto, sans-serif;
 	}
 `;
