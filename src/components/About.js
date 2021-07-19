@@ -102,7 +102,11 @@ const AboutSection = styled.section`
 			}
 
 		}
-	}	
+	}
+
+	@media ${theme.sizes.mobileXS} {
+		
+	}
 `;
 
 const About = () => {

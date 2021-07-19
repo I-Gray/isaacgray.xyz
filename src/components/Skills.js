@@ -75,6 +75,25 @@ const StyledTitle = styled.div`
 
 
 	}
+
+	@media ${theme.sizes.mobileXS} {
+		display: flex;
+		flex-wrap: wrap;
+		height: 40vh;
+		h1 {
+			font-size: 20vw;
+			margin-left: 10vw;
+			span {
+				font-size: 18vw;
+			}
+		}
+
+		p {
+			padding-top: 0;
+			margin-left: 5vw;
+			font-size: 5vw;
+		}
+	}
 `;
 
 const SkillsSection = styled.section`
@@ -183,6 +202,15 @@ const SkillsSection = styled.section`
 			p {
 				padding-top: 3vh;
 				font-size: 4vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.mobileXS} {
+		padding-top: 0vh;
+		.left-content, .right-content {
+			p {
+				font-size: 6vw;
 			}
 		}
 	}
