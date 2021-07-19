@@ -64,6 +64,26 @@ const StyledTitle = styled.div`
 			font-size: 2vw;
 		}
 	}
+
+	@media ${theme.sizes.mobileXS} {
+		display: flex;
+		flex-wrap: wrap;
+		height: 30vh;
+		h1 {
+			margin-left: 10vw;
+			font-size: 20vw;
+			span {
+				font-size: 20vw;
+			}
+		}
+
+		p {
+			padding-top: 0;
+			margin-left: 5vw;
+			font-size: 5vw;
+		}
+
+	}
 `;
 
 const ProjectsSection = styled.section`
@@ -360,6 +380,75 @@ const ProjectsSection = styled.section`
 			}
 		}
 	}
+
+
+	@media ${theme.sizes.mobileXS} {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		
+		.projects-left-container {
+		
+			p {
+				font-size: 5vw;
+			}
+
+			h3 {
+				font-size: 8vw;
+			}
+
+			.image-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden
+
+				img {
+					flex-shrink: 0;
+    				min-width: 100%;
+    				min-height: 100%
+				}
+			}
+		}
+
+		.projects-right-container {
+			.project-num {
+				float: left;
+				margin-left: 10vw;
+			}
+
+			.description-rectangle {
+				display: flex;
+				margin-top: 75%;
+				p {
+					
+				}
+			}
+
+			.tech-and-link {
+				display: inline;
+				padding-left: 20vh;
+
+			}
+		}
+
+		.view-all-container {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+
+			p {
+				font-size: 5vw;
+			}
+
+			.button-container {
+				Button {
+					float: left;
+					font-size: 4vw;
+				}
+			}
+		}
+	}
 `;
 
 const Projects = () => {
@@ -380,7 +469,7 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
 						<div className="image-container">	
-							<figure><img src={image} alt="" key={key} /></figure>
+							<img src={image} alt="" key={key} />
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}

@@ -8,14 +8,12 @@ import { gsap } from "gsap";
 
 const HeroSection = styled.section`	
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	display: grid;
-    grid-template-columns: 70vw;
+	display: flex;
 	position: relative;
-	padding-top: 5%;
 
 	.hero-left-container {
 		z-index: 3;
-
+		padding-top: 5%;
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 100vh;
@@ -102,6 +100,43 @@ const HeroSection = styled.section`
 			top: 10%;
 			left: 10%;
 			transform: scale(1.4);
+		}
+	}
+
+
+	@media ${theme.sizes.mobileXS} {
+		display: flex;
+		padding-top: 40%;
+
+		.hero-left-container {
+			display: inline-block;
+			align-items: center;
+
+			h1 {
+				font-size: 25vw;
+			}
+
+			p {
+				font-size: 5vw;
+			}
+
+			Button {
+				font-size: 5vw;
+			}
+		}
+
+		.hero-right-container {
+			
+			
+		}
+
+		.circle-orbit {
+			transform: scale(1.7);
+		}
+
+		.floating-icons {
+			position: absolute;
+			transform: scale(1.8);
 		}
 	}
 `;

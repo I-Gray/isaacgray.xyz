@@ -9,11 +9,12 @@ import SectionHeading from './SectionHeading';
 const ContactSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: flex;
+	height: 70vh;
 	
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 70vh;
+
 		text-align: left;
 		display: flex;
 		flex-direction: column;
@@ -59,15 +60,16 @@ const ContactSection = styled.section`
 	@media ${theme.sizes.mobileL} {
 		background:  ${theme.colours.darkGrey};
 		display: flex;
+		flex-wrap: wrap;
+
 		.contact-left-container {
 			display: flex;
-
+			padding-right: 20vw;
 		}
 
-
 		.contact-right-container {
-			display: inline-block;
-			
+			padding-top: 0vh;
+			padding-left: 8vw;
 			Form {
 				
 			}
@@ -80,6 +82,9 @@ const ContactSection = styled.section`
 				font-size: 1.5vw;
 			}
 		}
+	}
+
+	@media ${theme.sizes.mobileM} {
 	}
 `;
 
