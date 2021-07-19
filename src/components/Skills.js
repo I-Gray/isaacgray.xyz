@@ -146,17 +146,19 @@ const SkillsSection = styled.section`
 			display: none;
 		}
 
-		.content {
-			display: flex;
-			flex-wrap: wrap;
-			margin-right: 10vw;
-
+		.left-content {
+			padding-right: 15vw;
 			p {
-				font-size: 3vw;
+				padding-top: 3vh;
+				font-size: 2vw;
 			}
+		}
 
-			.left-content {
-				margin-left: 0vw;
+		.right-content {
+			padding-left: 0;
+			p {
+				padding-top: 3vh;
+				font-size: 2vw;
 			}
 		}
 	}
@@ -166,10 +168,21 @@ const SkillsSection = styled.section`
 		flex-wrap: wrap;
 		background: ${theme.colours.darkGrey};
 
-		.content {
+		.left-content {
+			padding-right: 5vw;
 
 			p {
-				5vw;
+				padding-top: 3vh;
+				font-size: 4vw;
+			}
+		}
+
+		.right-content {
+			padding-left: 0;
+
+			p {
+				padding-top: 3vh;
+				font-size: 4vw;
 			}
 		}
 	}
@@ -230,7 +243,7 @@ const Skills = () => {
 							<li><Python size="55" /></li>
 							<li><Cpp size="55" /></li>
 							<li><Java size="55" /></li>
-							<li><Pytorch size="55" /></li>
+							{/* <li><Pytorch size="55" /></li> */}
 						</ol>
 						<ol>
 							<li><Arduino size="55" /></li>
