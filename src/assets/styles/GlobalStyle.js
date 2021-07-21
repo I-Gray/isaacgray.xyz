@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
 		height: 100%;
 		margin: 0px;
 		padding: 0px;
+		//overflow-x: scroll; 
+		// change
 		overflow-x: hidden; 
 	}
 

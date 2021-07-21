@@ -20,7 +20,7 @@ const StyledTyper = styled.div`
 	  font-size: 1rem;
 	  text-align: center;
 	  overflow: hidden;
-	  color: ${theme.colours.white};
+	  color: ${theme.colours.darkGrey};
 	}
 
 	p span.typed-text {
@@ -40,11 +40,11 @@ const StyledTyper = styled.div`
 	}
 
 	@keyframes blink {
-	  0%  { background-color: ${theme.colours.white}; }
-	  49% { background-color: ${theme.colours.white}; }
+	  0%  { background-color: ${theme.colours.lightBlue}; }
+	  49% { background-color: ${theme.colours.lightBlue}; }
 	  50% { background-color: transparent; }
 	  99% { background-color: transparent; }
-	  100%  { background-color: ${theme.colours.white}; }
+	  100%  { background-color: ${theme.colours.lightBlue}; }
 	}
 `;
 

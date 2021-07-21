@@ -1,6 +1,5 @@
-import React from 'react';
-import marketmoo from '../assets/images/TRICEP.png';
-import redi from '../assets/images/MarketMoo.png';
+
+import React from 'react'
 
 const Projects = [
 	{
@@ -13,7 +12,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com", 
-		image : "../assets/images/TRICEP.png"
+		image : '../assets/images/MarketMoo.jpg'
 	}, 
 	{
 		title : "Mobile App MVP",
@@ -24,7 +23,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image : "../assets/images/MarketMoo.png"
+		image :  '../assets/images/MarketMoo.jpg'
 	},
 	{
 		title : "Portfolio Website",
@@ -37,7 +36,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image : ""
+		image : '../assets/images/MarketMoo.jpg'
 	}
 ]
 

@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import theme from '../assets/styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
+import { StaticImage } from "gatsby-plugin-image"
 import Typer from './Typer';
 
-import image from '../assets/images/projectexample.jpg';
+import image from '../assets/images/MarketMoo.jpg';
 
 import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
@@ -68,7 +69,8 @@ const StyledTitle = styled.div`
 	@media ${theme.sizes.mobileXS} {
 		display: flex;
 		flex-wrap: wrap;
-		height: 30vh;
+		height: 40vh;
+
 		h1 {
 			margin-left: 10vw;
 			font-size: 20vw;
@@ -82,7 +84,6 @@ const StyledTitle = styled.div`
 			margin-left: 5vw;
 			font-size: 5vw;
 		}
-
 	}
 `;
 
@@ -252,6 +253,13 @@ const ProjectsSection = styled.section`
 		padding-bottom: 4vh;
 		padding-top: 2vh;
 
+		.end-rect {
+			position: absolute;
+			height: 1px;
+			width: 30vw;
+			background-color: ${theme.colours.grey};
+		}
+
 		p {
 			font-size: 2vw;
 			font-family: 'Space Mono', sans-serif;
@@ -354,7 +362,6 @@ const ProjectsSection = styled.section`
 					display: flex;
 					z-index: 2500;
 					padding-left: 85vw;
-
 				}
 			}
 		}
@@ -383,12 +390,10 @@ const ProjectsSection = styled.section`
 
 
 	@media ${theme.sizes.mobileXS} {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
 		
 		.projects-left-container {
-		
+			position: relative;
+
 			p {
 				font-size: 5vw;
 			}
@@ -397,57 +402,69 @@ const ProjectsSection = styled.section`
 				font-size: 8vw;
 			}
 
-			.image-container {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				overflow: hidden
-
-				img {
-					flex-shrink: 0;
-    				min-width: 100%;
-    				min-height: 100%
-				}
+			.rect {
+				position: absolute;
+				bottom: 5vh;
 			}
+
 		}
 
 		.projects-right-container {
-			.project-num {
-				float: left;
-				margin-left: 10vw;
-			}
+			height: 64vh;
 
 			.description-rectangle {
-				display: flex;
-				margin-top: 75%;
-				p {
-					
-				}
+				margin-top: 20vh;
+			}
+
+			.project-num {
+				float: left;
+				padding-left: 10vw;
 			}
 
 			.tech-and-link {
-				display: inline;
-				padding-left: 20vh;
+				display: flex;
+				flex-direction: column;
+				margin-top: 25vh;
 
+				.tech-container {
+					padding-left: 10vw;
+					
+					.tech-title {
+						font-size: 5vw;
+						padding-right: 10vw;
+						padding-top: 1vh;
+					}
+
+					p {
+						font-size: 6vw;
+					}
+				}
+
+				.link-container {
+					display: flex;
+					padding-left: 10vw;
+					float: left;
+				}
 			}
 		}
 
 		.view-all-container {
 			display: flex;
-			flex-direction: column;
 			flex-wrap: wrap;
 
 			p {
+				padding-top: 2vh;
 				font-size: 5vw;
 			}
 
 			.button-container {
+				padding-left: 0;
 				Button {
-					float: left;
 					font-size: 4vw;
 				}
 			}
 		}
+
 	}
 `;
 
@@ -468,8 +485,9 @@ const Projects = () => {
 					<div className="projects-left-container">
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
-						<div className="image-container">	
-							<img src={image} alt="" key={key} />
+						<div className="image-container">
+							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
+							<StaticImage src={'../assets/images/TRICEP.jpg'} className="img" alt="" />
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
@@ -485,16 +503,17 @@ const Projects = () => {
 						</div>
 						<div className="tech-and-link">
 							<div className="tech-container">
-								<p className="tech-title">Technologies</p>
-								<ol>
-									{/* <Typer text={project.technologies}/> */}
+								<p className="tech-title">Technologies </p>
+								<Typer text={project.technologies}/> 
+								{/* <ol>
+									
 									{project.tech.map((t, i) => {
 											return(
 													<li key={i}>{t}</li>
 											)
 										})
-									}
-								</ol>
+									} 
+								</ol>*/}
 							</div>
 							<div className="link-container">
 								<a className="github" src={project.github} alt=""><Github /></a>
@@ -506,6 +525,7 @@ const Projects = () => {
 				);
 			})}
 			<div className="view-all-container">
+				<div className="end-rect" />
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
