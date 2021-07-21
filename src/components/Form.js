@@ -8,7 +8,7 @@ const StyledForm = styled.div`
 	form {
 		input, #message {
 			font-family: 'Roboto', sans-serif;
-			font-size: 24px;
+			font-size: 2vw;
 			padding: 10px 15px;
 			background-color: ${theme.colours.white};
 		}

@@ -88,9 +88,7 @@ const ContactSection = styled.section`
 	}
 
 	@media ${theme.sizes.mobileXS} {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
+		display: block;
 
 		.contact-left-container {
 			padding-bottom: 5vh;
@@ -114,7 +112,7 @@ const ContactSection = styled.section`
 			}
 
 			Button {
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 		}
 		
