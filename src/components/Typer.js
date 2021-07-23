@@ -13,8 +13,6 @@ const StyledTyper = styled.div`
 	box-sizing: border-box;
 
 	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	p {
 	  font-size: 1rem;

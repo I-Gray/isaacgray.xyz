@@ -48,6 +48,8 @@ const StyledForm = styled.div`
 			outline: 2px solid ${theme.colours.lightBlue};
 		}
 
+
+		// Text colours
 		input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
@@ -65,13 +67,24 @@ const StyledForm = styled.div`
 			font-style: italic;
 		}
 
-		@media ${theme.sizes.mobileXS} {
+
+
+
+		@media ${theme.sizes.mobileS} {
 			input[type=text], input[type=email], select, textarea {
-				width: 75vw;
+				width: 70vw;
 			}
 
 			#message {
-				width: 75vw;
+				width: 70vw;
+			}
+
+			input, #message {
+				font-size: 4vw;
+			}
+
+			input[type=text]:focus, input[type=email]:focus  {
+				width: 70vw;
 			}
 
 		}

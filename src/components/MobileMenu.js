@@ -13,7 +13,7 @@ const Sidebar = styled.nav`
 	right: 0;
 	top: 0;
 	background: ${({ theme }) => theme.colours.lightBlue};
-	height: 100vh;
+	height: 100%;
 	padding: 5vw;
 	transition: transform 0.3s ease-in-out;
 	transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -28,6 +28,7 @@ const Sidebar = styled.nav`
 		margin-top: 8vh;
 		display: flex;
 		padding-left: 5vw;
+		padding-top: 5vh;
 
 		.links {
 			color: ${({ theme }) => theme.colours.white};

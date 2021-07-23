@@ -14,7 +14,7 @@ import Button from './Button';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	height: 35vh;
+	height: 100%;
 	display flex;
 
 	h1 {
@@ -70,7 +70,7 @@ const StyledTitle = styled.div`
 	@media ${theme.sizes.mobileS} {
 		display: flex;
 		flex-wrap: wrap;
-		height: 45vh;
+		height: 100%;
 
 		h1 {
 			margin-left: 10vw;
@@ -81,7 +81,7 @@ const StyledTitle = styled.div`
 		}
 
 		p {
-			padding-top: 0;
+			padding-top: 5vh;
 			font-size: 5vw;
 		}
 	}
@@ -287,10 +287,11 @@ const ProjectsSection = styled.section`
 		display: block;
 		background: ${theme.colours.white};
 		padding-top: 0vh;
+		height: 100%;
 
 		.projects-left-container {
 			height: 0vh;
-			padding-top: 0vh;
+			padding-top: 10vh;
 			margin-right: 20vw;
 			font-weight: 300;
 			z-index: 0;
@@ -329,17 +330,18 @@ const ProjectsSection = styled.section`
 		}
 
 		.projects-right-container {
-			height: 70vh;
+			
+			height: 100%;
 
 			.description-rectangle {
 				position: absolute;
 				margin-right: 10vw;
 				margin-left: 15vw;
 				margin-top: 20vh;
-				margin-bottom: 5vh;
-
+				padding: 5vw;
 				p {
 					z-index: 2001;
+					font-size: 5vw;
 				}
 			}
 
@@ -351,7 +353,8 @@ const ProjectsSection = styled.section`
 			.tech-and-link {
 				display: flex;
 				flex-direction: column;
-				margin-top: 35vh;
+				margin-top: 100%;
+				height: 100%;
 
 				.tech-container {
 					padding-left: 10vw;
@@ -359,13 +362,12 @@ const ProjectsSection = styled.section`
 					.tech-title {
 						font-size: 5vw;
 						padding-right: 10vw;
-						padding-top: 1vh;
+						padding-top: 5vh;
 					}
 
 					p {
 						font-size: 6vw;
 					}
-
 				}
 
 				.link-container {
@@ -379,10 +381,11 @@ const ProjectsSection = styled.section`
 		.view-all-container {
 			display: flex;
 			flex-wrap: wrap;
+			height: 100%;
 
 			p {
 				color: ${theme.colours.darkGrey};
-				padding-top: 2vh;
+				padding-top: 4vh;
 				padding-right: 2vw;
 				font-size: 5vw;
 			}
@@ -402,9 +405,6 @@ const ProjectsSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileM} {
-		
-	}
 `;
 
 const Projects = () => {

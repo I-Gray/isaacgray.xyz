@@ -33,6 +33,10 @@ const StyledFooter = styled.footer`
 		padding-left: 1.5vw;
 		padding-bottom: 1.5vh;
 	}
+
+	@media ${theme.sizes.mobileS} {
+		
+	}
 `;
 
 const Footer = () => {
