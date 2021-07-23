@@ -9,7 +9,8 @@ const StyledFooter = styled.footer`
     align-items: center;
 	justify-content: center;
 	background: ${theme.colours.darkGrey};
-	width: 100vw;
+	width: 100%;
+	height: 100%;
 
 	a {
 		color: ${theme.colours.grey};
@@ -35,7 +36,17 @@ const StyledFooter = styled.footer`
 	}
 
 	@media ${theme.sizes.mobileS} {
-		
+		padding-top: 4vh;
+		flex-direction: column;
+
+		a {
+			text-align: center;
+			font-size: 3vw;
+		}
+
+		.social {
+			padding-bottom: 0;
+		}
 	}
 `;
 

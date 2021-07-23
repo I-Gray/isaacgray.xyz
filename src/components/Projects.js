@@ -102,7 +102,7 @@ const ProjectsSection = styled.section`
 			margin-top: 2vh;
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
-			font-weight: 300;
+			font-weight: 400;
 			display: block;
 		}
 
@@ -113,20 +113,27 @@ const ProjectsSection = styled.section`
 		}
 
 		.image-container {
+			display: block;
+			width: 100vw;
+			height: 100%;
+
 			padding-top: 5vh;
 			padding-bottom: 8vh;
+
 			
 			img {
 				border-radius: 8px;
+				
 				transition: transform 0.2s ease-in-out;
-				height: 360px;
-				width: 640px;
+				display: block;
+				width: 100%;
+  				margin: auto;
 			}
 		}
 
 		.rect {	
 			height: 1px;
-			width: 30vw;
+			width: 25vw;
 			background-color: ${theme.colours.grey};
 		}
 	}
@@ -239,6 +246,7 @@ const ProjectsSection = styled.section`
     			align-items: center;
 				justify-content: center;
 				z-index: 1501;
+				font-weight: 400;
 			}
 		}
 
@@ -313,7 +321,7 @@ const ProjectsSection = styled.section`
 				z-index: 0;
 				margin-top: 5vh;
 
-				img {
+				.img {
 					display: block;
 					max-width: 512px;
 					max-height: 288px;
@@ -339,9 +347,11 @@ const ProjectsSection = styled.section`
 				margin-left: 15vw;
 				margin-top: 20vh;
 				padding: 5vw;
+				
 				p {
 					z-index: 2001;
 					font-size: 5vw;
+					font-weight: normal;
 				}
 			}
 
@@ -424,9 +434,10 @@ const Projects = () => {
 					<div className="projects-left-container">
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
-						<div className="image-container">
+						<div key={key} className="image-container">
 							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
-							<StaticImage src={'../assets/images/TRICEP.jpg'} className="img" alt="" />
+							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
+							<StaticImage src={'../assets/images/TRICEP.jpg'} alt="" /> 
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}

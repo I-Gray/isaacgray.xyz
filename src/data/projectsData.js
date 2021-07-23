@@ -1,5 +1,6 @@
 
 import React from 'react'
+import tricep from '../assets/images/TRICEP.jpg'
 
 const Projects = [
 	{
@@ -12,7 +13,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com", 
-		image : '../assets/images/MarketMoo.jpg'
+		image : "TRICEP.jpg"
 	}, 
 	{
 		title : "Mobile App MVP",
@@ -23,7 +24,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image :  '../assets/images/MarketMoo.jpg'
+		image :  "MarketMoo.jpg"
 	},
 	{
 		title : "Portfolio Website",
@@ -36,7 +37,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image : '../assets/images/MarketMoo.jpg'
+		image : "MarketMoo.jpg"
 	}
 ]
 

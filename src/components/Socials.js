@@ -14,7 +14,6 @@ const StyledSocials = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	padding-top: 25px;
 
 	&:after {
 		content: '';
