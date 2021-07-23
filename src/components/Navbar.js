@@ -30,7 +30,7 @@ const NavbarPanel = styled.nav`
 		max-height: 5em;
 		max-width: 10em;
 		cursor: pointer;
-		margin-left: 8em;
+		margin-left: 8vw;
 	}
 `;
 

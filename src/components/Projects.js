@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import theme from '../assets/styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
+import { StaticImage } from "gatsby-plugin-image"
 import Typer from './Typer';
 
-import image from '../assets/images/projectexample.jpg';
+import image from '../assets/images/MarketMoo.jpg';
 
 import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
@@ -13,7 +14,7 @@ import Button from './Button';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	height: 35vh;
+	height: 100%;
 	display flex;
 
 	h1 {
@@ -43,32 +44,34 @@ const StyledTitle = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileM} {
 		display: flex;
 		flex-wrap: wrap;
 		background:  ${theme.colours.white};
-		height: 16vh;
+		height: 45vh;
 
 		h1 {
 			color: ${theme.colours.darkGrey};
-			font-size: 10vw;
+			font-size: 15vw;
 			
 			span {
-				font-size: 8vw;
+				font-size: 12vw;
 			}
 		}
 
 		p {
 			color: ${theme.colours.darkGrey};
 			float: right;
-			font-size: 2vw;
+			font-size: 5vw;
+			padding-left: 10vw;
 		}
 	}
 
-	@media ${theme.sizes.mobileXS} {
+	@media ${theme.sizes.mobileS} {
 		display: flex;
 		flex-wrap: wrap;
-		height: 30vh;
+		height: 100%;
+
 		h1 {
 			margin-left: 10vw;
 			font-size: 20vw;
@@ -78,11 +81,9 @@ const StyledTitle = styled.div`
 		}
 
 		p {
-			padding-top: 0;
-			margin-left: 5vw;
+			padding-top: 5vh;
 			font-size: 5vw;
 		}
-
 	}
 `;
 
@@ -252,6 +253,13 @@ const ProjectsSection = styled.section`
 		padding-bottom: 4vh;
 		padding-top: 2vh;
 
+		.end-rect {
+			position: absolute;
+			height: 1px;
+			width: 30vw;
+			background-color: ${theme.colours.grey};
+		}
+
 		p {
 			font-size: 2vw;
 			font-family: 'Space Mono', sans-serif;
@@ -275,33 +283,36 @@ const ProjectsSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileS} {
 		display: block;
 		background: ${theme.colours.white};
-		padding-top: 5vh;
-		
+		padding-top: 0vh;
+		height: 100%;
+
 		.projects-left-container {
 			height: 0vh;
-			text-align: left;
-			padding-top: 0vh;
+			padding-top: 10vh;
 			margin-right: 20vw;
 			font-weight: 300;
 			z-index: 0;
-			
+
+			position: relative;
+
 			p {
 				color: ${theme.colours.lightBlue};
-				font-size: 3vw;
+				font-size: 5vw;
 			}
 
 			h3 {
 				color: ${theme.colours.darkGrey};
-				font-size: 5vw;
+				font-size: 8vw;
 			}
-			
+
 			.image-container {
 				width: 100%;
 				z-index: 0;
 				margin-top: 5vh;
+
 				img {
 					display: block;
 					max-width: 512px;
@@ -311,65 +322,78 @@ const ProjectsSection = styled.section`
 					z-index: 1;
 				}
 			}
+
+			.rect {
+				position: absolute;
+				bottom: 5vh;
+			}
 		}
 
 		.projects-right-container {
+			
+			height: 100%;
 
 			.description-rectangle {
 				position: absolute;
 				margin-right: 10vw;
 				margin-left: 15vw;
-				margin-top: 0vw;
+				margin-top: 20vh;
+				padding: 5vw;
 				p {
 					z-index: 2001;
+					font-size: 5vw;
 				}
 			}
 
+			.project-num {
+				float: left;
+				padding-left: 10vw;
+			}
+
 			.tech-and-link {
-				
+				display: flex;
+				flex-direction: column;
+				margin-top: 100%;
+				height: 100%;
+
 				.tech-container {
-					z-index: 2500;
-					padding-left: 60vw;
-					padding-top: 11vh;
-					display: flex;
+					padding-left: 10vw;
 					
 					.tech-title {
-						display: flex;
+						font-size: 5vw;
+						padding-right: 10vw;
+						padding-top: 5vh;
 					}
 
-					ol {
-						display: flex;
-						flex-direction: column;
-						z-index: 2500;
-						list-style-type: none;
-						
-						li {
-							color: ${theme.colours.darkGrey};
-							flex-wrap: nowrap;
-						}
+					p {
+						font-size: 6vw;
 					}
 				}
 
 				.link-container {
 					display: flex;
-					z-index: 2500;
-					padding-left: 85vw;
-
+					padding-left: 10vw;
+					float: left;
 				}
 			}
 		}
 
 		.view-all-container {
+			display: flex;
+			flex-wrap: wrap;
+			height: 100%;
+
 			p {
 				color: ${theme.colours.darkGrey};
-				font-size: 3vw;
+				padding-top: 4vh;
 				padding-right: 2vw;
-				padding-top: 1vh;
+				font-size: 5vw;
 			}
-			
+
 			.button-container {
+				padding-left: 0;
 				Button {
-					font-size: 2vw;
+					font-size: 4vw;
 					color: ${theme.colours.darkGrey};
 					border-color: ${theme.colours.darkGrey};
 				}
@@ -381,74 +405,6 @@ const ProjectsSection = styled.section`
 		}
 	}
 
-
-	@media ${theme.sizes.mobileXS} {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		
-		.projects-left-container {
-		
-			p {
-				font-size: 5vw;
-			}
-
-			h3 {
-				font-size: 8vw;
-			}
-
-			.image-container {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				overflow: hidden
-
-				img {
-					flex-shrink: 0;
-    				min-width: 100%;
-    				min-height: 100%
-				}
-			}
-		}
-
-		.projects-right-container {
-			.project-num {
-				float: left;
-				margin-left: 10vw;
-			}
-
-			.description-rectangle {
-				display: flex;
-				margin-top: 75%;
-				p {
-					
-				}
-			}
-
-			.tech-and-link {
-				display: inline;
-				padding-left: 20vh;
-
-			}
-		}
-
-		.view-all-container {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-
-			p {
-				font-size: 5vw;
-			}
-
-			.button-container {
-				Button {
-					float: left;
-					font-size: 4vw;
-				}
-			}
-		}
-	}
 `;
 
 const Projects = () => {
@@ -468,8 +424,9 @@ const Projects = () => {
 					<div className="projects-left-container">
 						<p>Featured Project</p>
 						<h3 key={key}>{project.title}</h3>
-						<div className="image-container">	
-							<img src={image} alt="" key={key} />
+						<div className="image-container">
+							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
+							<StaticImage src={'../assets/images/TRICEP.jpg'} className="img" alt="" />
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
@@ -485,16 +442,17 @@ const Projects = () => {
 						</div>
 						<div className="tech-and-link">
 							<div className="tech-container">
-								<p className="tech-title">Technologies</p>
-								<ol>
-									{/* <Typer text={project.technologies}/> */}
+								<p className="tech-title">Technologies </p>
+								<Typer className="typer" text={project.technologies}/> 
+								{/* <ol>
+									
 									{project.tech.map((t, i) => {
 											return(
 													<li key={i}>{t}</li>
 											)
 										})
-									}
-								</ol>
+									} 
+								</ol>*/}
 							</div>
 							<div className="link-container">
 								<a className="github" src={project.github} alt=""><Github /></a>
@@ -506,6 +464,7 @@ const Projects = () => {
 				);
 			})}
 			<div className="view-all-container">
+				<div className="end-rect" />
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	

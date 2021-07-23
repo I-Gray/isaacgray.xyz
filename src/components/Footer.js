@@ -17,6 +17,7 @@ const StyledFooter = styled.footer`
 		padding-right: 2vw;
 		transition: color 0.8s ease-in-out;
 		font-weight: 500;
+		font-size: 1vw;
 		font-style: italic;
 
 		&:hover {
@@ -31,6 +32,10 @@ const StyledFooter = styled.footer`
 	.social {
 		padding-left: 1.5vw;
 		padding-bottom: 1.5vh;
+	}
+
+	@media ${theme.sizes.mobileS} {
+		
 	}
 `;
 

@@ -62,24 +62,13 @@ const StyledTitle = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileS} {
 		background: ${theme.colours.darkGrey};
-
-		h1 {
-			font-size: 10vw;
-		}
-
-		p {
-			font-size: 2vw;
-		}
-
-
-	}
-
-	@media ${theme.sizes.mobileXS} {
 		display: flex;
 		flex-wrap: wrap;
-		height: 40vh;
+		height: 100%;
+		padding-right: 10vw;
+
 		h1 {
 			font-size: 20vw;
 			margin-left: 10vw;
@@ -89,9 +78,9 @@ const StyledTitle = styled.div`
 		}
 
 		p {
-			padding-top: 0;
+			padding-top: 2vh;
 			margin-left: 5vw;
-			font-size: 5vw;
+			font-size: 4vw;
 		}
 	}
 `;
@@ -102,11 +91,11 @@ const SkillsSection = styled.section`
 	padding-top: 2vh;
 	position: relative;
 	
-	padding-bottom: 10vh;
 	padding-top: 0vh;
 	display: flex;
 	padding-left: 10vw;
-	padding-top: 5vh;
+	
+	padding-top: 2vh;
 
 	.right-content {
 		padding-left: 10vw;
@@ -152,7 +141,7 @@ const SkillsSection = styled.section`
 		}	
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileS} {
 		display: flex;
 		flex-wrap: wrap;
 		background: ${theme.colours.darkGrey};
@@ -169,7 +158,7 @@ const SkillsSection = styled.section`
 			padding-right: 15vw;
 			p {
 				padding-top: 3vh;
-				font-size: 2vw;
+				font-size: 5vw;
 			}
 		}
 
@@ -177,40 +166,7 @@ const SkillsSection = styled.section`
 			padding-left: 0;
 			p {
 				padding-top: 3vh;
-				font-size: 2vw;
-			}
-		}
-	}
-
-	@media ${theme.sizes.mobileM} {
-		display: flex;
-		flex-wrap: wrap;
-		background: ${theme.colours.darkGrey};
-
-		.left-content {
-			padding-right: 5vw;
-
-			p {
-				padding-top: 3vh;
-				font-size: 4vw;
-			}
-		}
-
-		.right-content {
-			padding-left: 0;
-
-			p {
-				padding-top: 3vh;
-				font-size: 4vw;
-			}
-		}
-	}
-
-	@media ${theme.sizes.mobileXS} {
-		padding-top: 0vh;
-		.left-content, .right-content {
-			p {
-				font-size: 6vw;
+				font-size: 5vw;
 			}
 		}
 	}

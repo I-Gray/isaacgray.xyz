@@ -8,7 +8,7 @@ const StyledForm = styled.div`
 	form {
 		input, #message {
 			font-family: 'Roboto', sans-serif;
-			font-size: 24px;
+			font-size: 2vw;
 			padding: 10px 15px;
 			background-color: ${theme.colours.white};
 		}
@@ -48,6 +48,8 @@ const StyledForm = styled.div`
 			outline: 2px solid ${theme.colours.lightBlue};
 		}
 
+
+		// Text colours
 		input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
@@ -63,6 +65,28 @@ const StyledForm = styled.div`
 		input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
 			color: ${theme.colours.lightBlue};
 			font-style: italic;
+		}
+
+
+
+
+		@media ${theme.sizes.mobileS} {
+			input[type=text], input[type=email], select, textarea {
+				width: 70vw;
+			}
+
+			#message {
+				width: 70vw;
+			}
+
+			input, #message {
+				font-size: 4vw;
+			}
+
+			input[type=text]:focus, input[type=email]:focus  {
+				width: 70vw;
+			}
+
 		}
 	}
 `;

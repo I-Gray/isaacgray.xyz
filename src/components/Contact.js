@@ -9,7 +9,7 @@ import SectionHeading from './SectionHeading';
 const ContactSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: flex;
-	height: 70vh;
+	height: 100%;
 	
 	.contact-left-container {
 		margin-left: 10vw;
@@ -42,14 +42,15 @@ const ContactSection = styled.section`
 	}
 
 	.contact-right-container {
-		padding-top: 10vh;
-		margin-left: 2vw;
+		padding-top: 5vh;
+		margin-left: 10vw;
 		margin-right: 10vw;
 
 		p {
-			color: ${theme.colours.white};
+			color: ${theme.colours.lightGrey};
 			padding-left: 10px;
 			font-size: 1vw;
+			font-style: italic;
 		}
 
 		Button {
@@ -57,34 +58,39 @@ const ContactSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
-		background:  ${theme.colours.darkGrey};
-		display: flex;
-		flex-wrap: wrap;
+	@media ${theme.sizes.mobileS} {
+		display: block;
+		background: ${theme.colours.darkGrey};
+		height: 100%;
 
 		.contact-left-container {
-			display: flex;
-			padding-right: 20vw;
+			h1 {
+				font-size: 20vw;
+				font-weight: normal;
+
+				span {
+					font-size: 20vw;
+					font-weight: bold;
+				}
+			}
+
+			a {
+				font-size: 5vw;
+			}
 		}
 
 		.contact-right-container {
-			padding-top: 0vh;
-			padding-left: 8vw;
-			Form {
-				
-			}
-
+			height: 100%
+			display: block;
 			p {
-				font-size: 2vw;
+				font-size: 6vw;
 			}
 
 			Button {
-				font-size: 1.5vw;
+				font-size: 4vw;
 			}
 		}
-	}
-
-	@media ${theme.sizes.mobileM} {
+		
 	}
 `;
 

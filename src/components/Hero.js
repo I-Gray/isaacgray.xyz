@@ -10,6 +10,7 @@ const HeroSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: flex;
 	position: relative;
+	width: 100vw;
 
 	.hero-left-container {
 		z-index: 3;
@@ -104,7 +105,7 @@ const HeroSection = styled.section`
 	}
 
 
-	@media ${theme.sizes.mobileXS} {
+	@media ${theme.sizes.mobileS} {
 		display: flex;
 		padding-top: 40%;
 
