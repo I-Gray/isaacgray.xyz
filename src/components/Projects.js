@@ -44,32 +44,33 @@ const StyledTitle = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileM} {
 		display: flex;
 		flex-wrap: wrap;
 		background:  ${theme.colours.white};
-		height: 16vh;
+		height: 45vh;
 
 		h1 {
 			color: ${theme.colours.darkGrey};
-			font-size: 10vw;
+			font-size: 15vw;
 			
 			span {
-				font-size: 8vw;
+				font-size: 12vw;
 			}
 		}
 
 		p {
 			color: ${theme.colours.darkGrey};
 			float: right;
-			font-size: 2vw;
+			font-size: 5vw;
+			padding-left: 10vw;
 		}
 	}
 
-	@media ${theme.sizes.mobileXS} {
+	@media ${theme.sizes.mobileS} {
 		display: flex;
 		flex-wrap: wrap;
-		height: 40vh;
+		height: 45vh;
 
 		h1 {
 			margin-left: 10vw;
@@ -81,7 +82,6 @@ const StyledTitle = styled.div`
 
 		p {
 			padding-top: 0;
-			margin-left: 5vw;
 			font-size: 5vw;
 		}
 	}
@@ -283,33 +283,35 @@ const ProjectsSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.mobileS} {
 		display: block;
 		background: ${theme.colours.white};
-		padding-top: 5vh;
-		
+		padding-top: 0vh;
+
 		.projects-left-container {
 			height: 0vh;
-			text-align: left;
 			padding-top: 0vh;
 			margin-right: 20vw;
 			font-weight: 300;
 			z-index: 0;
-			
+
+			position: relative;
+
 			p {
 				color: ${theme.colours.lightBlue};
-				font-size: 3vw;
+				font-size: 5vw;
 			}
 
 			h3 {
 				color: ${theme.colours.darkGrey};
-				font-size: 5vw;
+				font-size: 8vw;
 			}
-			
+
 			.image-container {
 				width: 100%;
 				z-index: 0;
 				margin-top: 5vh;
+
 				img {
 					display: block;
 					max-width: 512px;
@@ -319,101 +321,26 @@ const ProjectsSection = styled.section`
 					z-index: 1;
 				}
 			}
-		}
-
-		.projects-right-container {
-
-			.description-rectangle {
-				position: absolute;
-				margin-right: 10vw;
-				margin-left: 15vw;
-				margin-top: 0vw;
-				p {
-					z-index: 2001;
-				}
-			}
-
-			.tech-and-link {
-				
-				.tech-container {
-					z-index: 2500;
-					padding-left: 60vw;
-					padding-top: 11vh;
-					display: flex;
-					
-					.tech-title {
-						display: flex;
-					}
-
-					ol {
-						display: flex;
-						flex-direction: column;
-						z-index: 2500;
-						list-style-type: none;
-						
-						li {
-							color: ${theme.colours.darkGrey};
-							flex-wrap: nowrap;
-						}
-					}
-				}
-
-				.link-container {
-					display: flex;
-					z-index: 2500;
-					padding-left: 85vw;
-				}
-			}
-		}
-
-		.view-all-container {
-			p {
-				color: ${theme.colours.darkGrey};
-				font-size: 3vw;
-				padding-right: 2vw;
-				padding-top: 1vh;
-			}
-			
-			.button-container {
-				Button {
-					font-size: 2vw;
-					color: ${theme.colours.darkGrey};
-					border-color: ${theme.colours.darkGrey};
-				}
-				Button:hover {
-					color: ${theme.colours.white};
-					background-color: ${theme.colours.darkGrey};
-				}
-			}
-		}
-	}
-
-
-	@media ${theme.sizes.mobileXS} {
-		
-		.projects-left-container {
-			position: relative;
-
-			p {
-				font-size: 5vw;
-			}
-
-			h3 {
-				font-size: 8vw;
-			}
 
 			.rect {
 				position: absolute;
 				bottom: 5vh;
 			}
-
 		}
 
 		.projects-right-container {
-			height: 64vh;
+			height: 70vh;
 
 			.description-rectangle {
+				position: absolute;
+				margin-right: 10vw;
+				margin-left: 15vw;
 				margin-top: 20vh;
+				margin-bottom: 5vh;
+
+				p {
+					z-index: 2001;
+				}
 			}
 
 			.project-num {
@@ -424,7 +351,7 @@ const ProjectsSection = styled.section`
 			.tech-and-link {
 				display: flex;
 				flex-direction: column;
-				margin-top: 25vh;
+				margin-top: 35vh;
 
 				.tech-container {
 					padding-left: 10vw;
@@ -438,6 +365,7 @@ const ProjectsSection = styled.section`
 					p {
 						font-size: 6vw;
 					}
+
 				}
 
 				.link-container {
@@ -453,7 +381,9 @@ const ProjectsSection = styled.section`
 			flex-wrap: wrap;
 
 			p {
+				color: ${theme.colours.darkGrey};
 				padding-top: 2vh;
+				padding-right: 2vw;
 				font-size: 5vw;
 			}
 
@@ -461,10 +391,19 @@ const ProjectsSection = styled.section`
 				padding-left: 0;
 				Button {
 					font-size: 4vw;
+					color: ${theme.colours.darkGrey};
+					border-color: ${theme.colours.darkGrey};
+				}
+				Button:hover {
+					color: ${theme.colours.white};
+					background-color: ${theme.colours.darkGrey};
 				}
 			}
 		}
+	}
 
+	@media ${theme.sizes.mobileM} {
+		
 	}
 `;
 
@@ -504,7 +443,7 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies </p>
-								<Typer text={project.technologies}/> 
+								<Typer className="typer" text={project.technologies}/> 
 								{/* <ol>
 									
 									{project.tech.map((t, i) => {

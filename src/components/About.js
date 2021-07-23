@@ -71,52 +71,56 @@ const AboutSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileL} {
+	// @media ${theme.sizes.mobileL} {
+	// 	background: ${theme.colours.white};
+	// 	display: flex;
+	// 	position: relative;
+	// 	padding-top: 0;
+
+	// 	.about-left-container {
+	// 		.about-text {
+	// 			color: ${theme.colours.darkGrey};
+	// 		}
+			
+	// 		.about-learning {
+	// 			color: ${theme.colours.darkGrey};
+	// 		}
+	// 	}
+
+	// 	.about-right-container {
+	// 		display: flex;
+	// 		position: absolute;
+	// 		padding-left: 10vw;
+			
+	// 		.about-image-desktop {
+	// 			display: none;
+	// 		}
+
+	// 		.about-image-mobile {
+	// 			display: flex;
+	// 			position: absolute;
+	// 			padding-left: 10vw;
+	// 		}
+
+	// 		svg {
+	// 			.about-vector {
+	// 				fill: ${theme.colours.lightBlue};
+	// 			}
+	// 		}
+
+	// 	}
+	// }
+
+	@media ${theme.sizes.mobileS} {
 		background: ${theme.colours.white};
-		display: flex;
-		position: relative;
-		padding-top: 0;
-
-		.about-left-container {
-			.about-text {
-				color: ${theme.colours.darkGrey};
-			}
-			
-			.about-learning {
-				color: ${theme.colours.darkGrey};
-			}
-		}
-
-		.about-right-container {
-			display: flex;
-			position: absolute;
-			padding-left: 10vw;
-			
-			.about-image-desktop {
-				display: none;
-			}
-
-			.about-image-mobile {
-				display: flex;
-				position: absolute;
-				padding-left: 10vw;
-			}
-
-			svg {
-				.about-vector {
-					fill: ${theme.colours.lightBlue};
-				}
-			}
-
-		}
-	}
-
-	@media ${theme.sizes.mobileXS} {
-		display: flex;
-		flex-wrap: wrap;
-		//height: 100vh;
+		display: block;
+		overflow: hidden;
+		height: 100%;
 
 		.about-text-container {
+			.about-mobile {
+				padding-right: 50vw;
+			}
 
 			h1 {
 				font-size: 20vw;
@@ -139,27 +143,37 @@ const AboutSection = styled.section`
 
 		.about-left-container {
 			display: block;
+			height: 100%;
 
 			.about-text {
 				display: block;
-				font-size: 4.5vw;
+				font-size: 4vw;
 				padding-top: 2vh;
-				padding-bottom: 2vh;
+				color: ${theme.colours.grey};
 			}
 		}
 
-		.about-right-container {
+		.about-image-mobile {
 			display: block;
-			margin: auto;
-			width: anything under 100% 
+			width: 100vw;
+			height: 100%;
 
 			img {
 				display: block;
-				width: 100%;
-				height: auto;
-				margin: 0 auto; 
-				
+				width: 50%;
+  				margin: auto;
+  				display: block;
+				padding-bottom: 5vh;
+				padding-top: 5vh;
 			}
+		}
+		
+		.about-right-container {
+			display: none;
+		}
+
+		.about-image-desktop {
+			display: none;
 		}
 	}
 `;
@@ -170,9 +184,9 @@ const About = () => {
 		<>
 		<SectionHeading section_num="03" dark={true} />
 		<AboutSection>
-				{/* <div className="about-text-container">	 */}
-						{/* <h1 className="about-mobile">about<span><br/>me.</span></h1> */}
-				{/* </div> */}
+				<div className="about-text-container">	
+						<h1 className="about-mobile">about<span><br/>me.</span></h1>
+				</div>
 				
 				<div className="about-left-container">
 					<p>//</p>
@@ -209,9 +223,15 @@ const About = () => {
 						</g>
 						<path d="M142.072 175.88H158.488V186.68H158.776C160.312 183.416 162.76 180.536 166.12 178.04C169.576 175.448 174.184 174.152 179.944 174.152C190.792 174.152 197.992 178.424 201.544 186.968C204.04 182.552 207.16 179.336 210.904 177.32C214.648 175.208 219.112 174.152 224.296 174.152C228.904 174.152 232.792 174.92 235.96 176.456C239.128 177.992 241.672 180.104 243.592 182.792C245.608 185.48 247.048 188.648 247.912 192.296C248.776 195.848 249.208 199.688 249.208 203.816V245H231.928V205.832C231.928 203.72 231.736 201.704 231.352 199.784C230.968 197.768 230.296 196.04 229.336 194.6C228.376 193.064 227.08 191.864 225.448 191C223.816 190.136 221.704 189.704 219.112 189.704C216.424 189.704 214.12 190.232 212.2 191.288C210.376 192.248 208.84 193.592 207.592 195.32C206.44 196.952 205.576 198.872 205 201.08C204.52 203.192 204.28 205.352 204.28 207.56V245H187V203.816C187 199.496 186.088 196.088 184.264 193.592C182.44 191 179.416 189.704 175.192 189.704C172.312 189.704 169.864 190.184 167.848 191.144C165.928 192.104 164.296 193.4 162.952 195.032C161.704 196.664 160.792 198.536 160.216 200.648C159.64 202.76 159.352 204.968 159.352 207.272V245H142.072V175.88ZM281.913 216.488C282.489 221.672 284.505 225.704 287.961 228.584C291.417 231.464 295.593 232.904 300.489 232.904C304.809 232.904 308.409 232.04 311.289 230.312C314.265 228.488 316.857 226.232 319.065 223.544L331.449 232.904C327.417 237.896 322.905 241.448 317.913 243.56C312.921 245.672 307.689 246.728 302.217 246.728C297.033 246.728 292.137 245.864 287.529 244.136C282.921 242.408 278.937 239.96 275.577 236.792C272.217 233.624 269.529 229.832 267.513 225.416C265.593 220.904 264.633 215.912 264.633 210.44C264.633 204.968 265.593 200.024 267.513 195.608C269.529 191.096 272.217 187.256 275.577 184.088C278.937 180.92 282.921 178.472 287.529 176.744C292.137 175.016 297.033 174.152 302.217 174.152C307.017 174.152 311.385 175.016 315.321 176.744C319.353 178.376 322.761 180.776 325.545 183.944C328.425 187.112 330.633 191.048 332.169 195.752C333.801 200.36 334.617 205.688 334.617 211.736V216.488H281.913ZM317.337 203.528C317.241 198.44 315.657 194.456 312.585 191.576C309.513 188.6 305.241 187.112 299.769 187.112C294.585 187.112 290.457 188.6 287.385 191.576C284.409 194.552 282.585 198.536 281.913 203.528H317.337ZM350.776 234.92C350.776 231.848 351.88 229.208 354.088 227C356.392 224.792 359.128 223.688 362.296 223.688C365.368 223.688 368.056 224.744 370.36 226.856C372.664 228.968 373.816 231.56 373.816 234.632C373.816 237.704 372.664 240.344 370.36 242.552C368.152 244.76 365.464 245.864 362.296 245.864C360.76 245.864 359.272 245.576 357.832 245C356.488 244.424 355.288 243.656 354.232 242.696C353.176 241.736 352.312 240.584 351.64 239.24C351.064 237.896 350.776 236.456 350.776 234.92Z" fill="#27C1E7"/>
 					</svg>
-					<img className="about-image-desktop" src={AboutImageDesktop} alt="Picture of Isaac G."></img>
-					{/* <img className="about-image-mobile" src={AboutImageMobile} alt="Picture of Isaac G."></img> */}
 				</div>
+				<div className="about-image-desktop" >
+					<img src={AboutImageDesktop} alt="Picture of Isaac G."></img>
+				</div>
+				<div className="about-image-mobile">
+					<img  src={AboutImageMobile} alt="Picture of Isaac G."></img>
+				</div>
+				
+					
 		</AboutSection>
 		</>
 	);

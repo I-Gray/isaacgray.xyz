@@ -87,7 +87,7 @@ const ContactSection = styled.section`
 	@media ${theme.sizes.mobileM} {
 	}
 
-	@media ${theme.sizes.mobileXS} {
+	@media ${theme.sizes.mobileS} {
 		display: block;
 
 		.contact-left-container {

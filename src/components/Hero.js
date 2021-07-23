@@ -105,7 +105,7 @@ const HeroSection = styled.section`
 	}
 
 
-	@media ${theme.sizes.mobileXS} {
+	@media ${theme.sizes.mobileS} {
 		display: flex;
 		padding-top: 40%;
 

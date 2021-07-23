@@ -7,9 +7,9 @@ const theme = {
 	sizes : {	
 		mobile: '(max-width: 1200px)', 
 		desktop: '(max-width: 1200px)',
-		mobileL: '(max-width: 1180px)',
-		mobileM: '(max-width: 715px)',
-		mobileXS: '(max-width: 480px)',
+		mobileL: '(max-width: 992px)',
+		mobileM: '(max-width: 768px)',
+		mobileS: '(max-width: 480px)',
 	}, 
 	colours : {
 		white: '#ffffff',
