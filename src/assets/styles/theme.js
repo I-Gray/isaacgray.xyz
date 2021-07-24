@@ -9,7 +9,7 @@ const theme = {
 		desktop: '(max-width: 1200px)',
 		mobileL: '(max-width: 992px)',
 		mobileM: '(max-width: 768px)',
-		mobileS: '(max-width: 480px)',
+		mobileS: '(max-width: 768px)',
 	}, 
 	colours : {
 		white: '#ffffff',

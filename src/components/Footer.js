@@ -29,7 +29,7 @@ const StyledFooter = styled.footer`
 			}
 		}
 	}
-
+	
 	.social {
 		padding-left: 1.5vw;
 		padding-bottom: 1.5vh;
@@ -45,7 +45,9 @@ const StyledFooter = styled.footer`
 		}
 
 		.social {
-			padding-bottom: 0;
+			ul {
+				padding-top: 0vh;
+			}
 		}
 	}
 `;

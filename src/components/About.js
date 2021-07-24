@@ -162,7 +162,7 @@ const AboutSection = styled.section`
 				display: block;
 				width: 50%;
   				margin: auto;
-  				display: block;
+
 				padding-bottom: 5vh;
 				padding-top: 5vh;
 			}

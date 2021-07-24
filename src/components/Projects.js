@@ -299,7 +299,7 @@ const ProjectsSection = styled.section`
 
 		.projects-left-container {
 			height: 0vh;
-			padding-top: 10vh;
+			padding-top: 8vh;
 			margin-right: 20vw;
 			font-weight: 300;
 			z-index: 0;
@@ -333,7 +333,7 @@ const ProjectsSection = styled.section`
 
 			.rect {
 				position: absolute;
-				bottom: 5vh;
+				bottom: 2vh;
 			}
 		}
 
@@ -345,7 +345,7 @@ const ProjectsSection = styled.section`
 				position: absolute;
 				margin-right: 10vw;
 				margin-left: 15vw;
-				margin-top: 20vh;
+				margin-top: 55%;
 				padding: 5vw;
 				
 				p {
@@ -356,14 +356,17 @@ const ProjectsSection = styled.section`
 			}
 
 			.project-num {
+				display: block;
 				float: left;
 				padding-left: 10vw;
+				padding-top: 2vw;
+				height: 100%;
 			}
 
 			.tech-and-link {
 				display: flex;
 				flex-direction: column;
-				margin-top: 100%;
+				margin-top: 120%;
 				height: 100%;
 
 				.tech-container {
@@ -372,7 +375,7 @@ const ProjectsSection = styled.section`
 					.tech-title {
 						font-size: 5vw;
 						padding-right: 10vw;
-						padding-top: 5vh;
+						padding-top: 0;
 					}
 
 					p {
@@ -454,9 +457,8 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies </p>
-								<Typer className="typer" text={project.technologies}/> 
+								<Typer className="typer" text={project.tech} /> 
 								{/* <ol>
-									
 									{project.tech.map((t, i) => {
 											return(
 													<li key={i}>{t}</li>
