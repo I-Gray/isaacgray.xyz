@@ -114,18 +114,17 @@ const SkillsSection = styled.section`
 	ol {
 		display: flex;
 		list-style: none;
-		align-items; center;
+		align-items: center;
 
 		li {
 			filter: grayscale(1);
 			padding: 1vw;
-			transition: filter 0.8s ease-in-out;
 			transition: transform .2s ease-in-out;
 			margin-bottom: 3vh;
 		}
 
 		li:hover {
-			filter: grayscale(0);
+			filter: grayscale(0.2);
 			transform: scale(1.1);
 			cursor: pointer;
 		}
@@ -145,16 +144,27 @@ const SkillsSection = styled.section`
 		display: flex;
 		flex-wrap: wrap;
 		background: ${theme.colours.darkGrey};
+		position: relative;
 		
 		h1 {
 			font-size: 3vw;
 		}
 
 		.skills-orbit {
-			display: none;
+			z-index: 1;
+			display: flex;
+			transform: scale(0.5);
+			
+			svg {
+				position: absolute;
+				display: flex;
+				top: -20%;
+				left: 10%;
+			}
 		}
 
 		.left-content {
+			z-index: 2;
 			padding-right: 15vw;
 			p {
 				padding-top: 3vh;
@@ -163,6 +173,7 @@ const SkillsSection = styled.section`
 		}
 
 		.right-content {
+			z-index: 2;
 			padding-left: 0;
 			p {
 				padding-top: 3vh;
@@ -237,12 +248,12 @@ const Skills = () => {
 					</div>
 				</div>
 				<div className="skills-orbit">
-					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1.35899e-05 614C167.342 614 303 478.342 303 311C303 143.658 167.342 8 1.35899e-05 8" stroke="#292626" stroke-width="4"/>
-						<path d="M2.38419e-07 558C135.31 558 245 448.31 245 313C245 177.69 135.31 68 2.38419e-07 68" stroke="#292626" stroke-width="4"/>
-						<circle r="20.5" transform="matrix(-1 0 0 1 244.5 318.5)" fill="#26C1E7"/>
-						<path d="M71 21C71 31.5391 79.3279 40 89.5 40C99.6721 40 108 31.5391 108 21C108 10.4609 99.6721 2 89.5 2C79.3279 2 71 10.4609 71 21Z" fill="white" stroke="#292626" stroke-width="4"/>
-					</svg>
+				<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#ffffff" stroke-width="4"/>
+					<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#ffffff" stroke-width="4"/>
+					<circle cx="60.5" cy="318.5" r="20.5" fill="#26C1E7"/>
+					<path d="M234 21C234 31.5391 225.672 40 215.5 40C205.328 40 197 31.5391 197 21C197 10.4609 205.328 2 215.5 2C225.672 2 234 10.4609 234 21Z" fill="white" stroke="#292626" stroke-width="4"/>
+				</svg>
 				</div>
 			</SkillsSection>
 		</>

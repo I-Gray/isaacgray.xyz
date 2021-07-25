@@ -7,8 +7,12 @@ import NavbarLinks from '../assets/constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
 
 const Header = styled.header`
-	background: var(--white);
-	padding: 2em;
+	background: ${theme.colours.white};
+
+	padding-left: 1.5vw;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+
 	width: 100%;
 	position: fixed;
 	z-index: 3000;
@@ -17,6 +21,10 @@ const Header = styled.header`
 	justify-content: space-between;
 
 	border-bottom: 2px solid ${theme.colours.darkGrey};
+
+	@media ${theme.sizes.mobileS} {
+		padding-right: 2vw;
+	}
 `;
 
 const NavbarPanel = styled.nav`
@@ -46,8 +54,6 @@ const NavLinks = styled.div`
 	.link-container {
 		margin-right: 0;
 		margin-left: auto;
-
-		
 
 		ol {
 			padding: 0;
@@ -100,7 +106,7 @@ const NavLinks = styled.div`
 				}
 
 				.links:hover {
-					color: ${theme.colours.lightBlue};	
+					color: ${theme.colours.lightBlue};
 				}
 
 				span {
@@ -108,6 +114,10 @@ const NavLinks = styled.div`
 				}	
 			}
 		}
+	}
+
+	@media ${theme.sizes.mobileS} {
+
 	}
 `;
 

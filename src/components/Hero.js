@@ -11,6 +11,7 @@ const HeroSection = styled.section`
 	display: flex;
 	position: relative;
 	width: 100vw;
+	height: 100%;
 
 	.hero-left-container {
 		z-index: 3;
@@ -107,7 +108,8 @@ const HeroSection = styled.section`
 
 	@media ${theme.sizes.mobileS} {
 		display: flex;
-		padding-top: 40%;
+		padding-top: 25%;
+		height: 100%;
 
 		.hero-left-container {
 			display: inline-block;
@@ -126,13 +128,9 @@ const HeroSection = styled.section`
 			}
 		}
 
-		.hero-right-container {
-			
-			
-		}
-
 		.circle-orbit {
 			transform: scale(1.7);
+			opacity: 0.3;
 		}
 
 		.floating-icons {

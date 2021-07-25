@@ -22,6 +22,8 @@ export const StyledBurger = styled.button`
 	z-index: 1000;
 	font-size: inherit;
 
+	
+
 	// Deal with really small mobile sizes (text doesnt scale down on sidebar)
 	@media ${theme.sizes.mobile} {
 		&:focus {
@@ -31,7 +33,7 @@ export const StyledBurger = styled.button`
 		div {
 			width: 2rem;
 			height: 0.25rem;
-			background: ${({ theme, open }) => open ? theme.colours.white : theme.colours.darkGrey};
+			background: ${({ theme, open }) => open ? theme.colours.white : theme.colours.lightBlue};
 			border-radius: 10px;
 			transition: all 0.3s linear;
 			position: relative;

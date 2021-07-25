@@ -77,6 +77,10 @@ const ContactSection = styled.section`
 			a {
 				font-size: 5vw;
 			}
+
+			ul {
+				padding-top: 2vh;	
+			}
 		}
 
 		.contact-right-container {
@@ -103,7 +107,7 @@ const Contact = () => {
 				<h1>contact</h1>
 				<h1><span>me.</span></h1>
 				<a src="">hello<span>@grayisaac</span>.com</a>	
-				<Socials size="80" alt={true}/>
+				<Socials className="socials" size="80" alt={true}/>
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>

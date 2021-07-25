@@ -22,11 +22,11 @@ const StyledSocials = styled.ul`
 		height: 90px;
 		margin: 0 auto;
 	}
-	
+
 	li {
 		
 		a {
-			padding: 10px;
+			padding-right: 5vw;
 			svg {
 				width: ${props => props.size}px;
 				height: ${props => props.size}px;
@@ -48,6 +48,15 @@ const StyledSocials = styled.ul`
 			}	
 				
 		}
+	}
+
+	@media ${theme.sizes.mobileS} {
+		li {
+			a {
+
+			}
+		}
+	
 	}
 `;
 
