@@ -57,38 +57,38 @@ const StyledTyper = styled.div`
 `;
 
 const Typer = ({text}) => {
-	const wordToChange = document.querySelector('.change-word')
+	// const wordToChange = document.querySelector('.change-word')
 
-	let interval = 0
-	initInterval()
+	// let interval = 0
+	// initInterval()
 
-	function initInterval () {
-		interval = setInterval(changeSentence, 3500)
-	}
+	// function initInterval () {
+	// 	interval = setInterval(changeSentence, 3500)
+	// }
 
-	function changeSentence () {
-		const randomWord = text[Math.floor(Math.random() * words.length)]
-		clearInterval(interval)
-		eraseAndSet(wordToChange, randomWord)
-	}
+	// function changeSentence () {
+	// 	const randomWord = text[Math.floor(Math.random() * words.length)]
+	// 	clearInterval(interval)
+	// 	eraseAndSet(wordToChange, randomWord)
+	// }
 
-	function eraseAndSet (element, newValue) {
-		erase()
+	// function eraseAndSet (element, newValue) {
+	// 	erase()
 
-		function erase () {
-			const stringLength = element.innerHTML.length
-			element.innerHTML = element.innerHTML.substr(0, stringLength - 1)
+	// 	function erase () {
+	// 		const stringLength = element.innerHTML.length
+	// 		element.innerHTML = element.innerHTML.substr(0, stringLength - 1)
 
-			stringLength > 0 ? setTimeout(erase, 50) : set()
-		}
+	// 		stringLength > 0 ? setTimeout(erase, 50) : set()
+	// 	}
 
-		function set () {
-			const stringLength = element.innerHTML.length;
-			element.innerHTML = newValue.substr(0, stringLength + 1)
+	// 	function set () {
+	// 		const stringLength = element.innerHTML.length;
+	// 		element.innerHTML = newValue.substr(0, stringLength + 1)
 
-			stringLength < newValue.length ? setTimeout(set, 50) : initInterval()
-		}
-	}
+	// 		stringLength < newValue.length ? setTimeout(set, 50) : initInterval()
+	// 	}
+	// }
 
 	return (
 		<StyledTyper>
