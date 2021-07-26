@@ -97,6 +97,8 @@ const ProjectsSection = styled.section`
 		text-align: left;
 		margin-left: 10vw;
 		height: 25%;
+		margin-top: 5vh;
+		z-index: 50 ;
 
 		p {
 			margin-top: 2vh;
@@ -113,25 +115,25 @@ const ProjectsSection = styled.section`
 		}
 
 		.image-container {
-			display: block;
-			width: 100vw;
-			height: 100%;
+			width: 100%;
+			z-index: 0;
+			margin-top: 5vh;
+			margin-bottom: 10vh;
+			margin-left: 2vw;
 
-			padding-top: 5vh;
-			padding-bottom: 8vh;
-
-			
-			img {
-				border-radius: 8px;
-				
-				transition: transform 0.2s ease-in-out;
+			.img {
 				display: block;
-				width: 100%;
-  				margin: auto;
+				max-width: 512px;
+				max-height: 288px;
+				width: auto;
+				height: auto;
+				z-index: 1;
 			}
 		}
 
-		.rect {	
+		.rect {
+			display: flex;
+			position: absolute;
 			height: 1px;
 			width: 25vw;
 			background-color: ${theme.colours.grey};
@@ -139,6 +141,7 @@ const ProjectsSection = styled.section`
 	}
 
 	.projects-right-container {
+		z-index: 50;
 		height: 50vh;
 		text-align: left;
 		padding-top: 10vh;
@@ -262,6 +265,7 @@ const ProjectsSection = styled.section`
 		padding-top: 2vh;
 
 		.end-rect {
+			display: none;
 			position: absolute;
 			height: 1px;
 			width: 30vw;
@@ -320,6 +324,7 @@ const ProjectsSection = styled.section`
 				width: 100%;
 				z-index: 0;
 				margin-top: 5vh;
+				z-index: 1;
 
 				.img {
 					display: block;
@@ -328,6 +333,7 @@ const ProjectsSection = styled.section`
 					width: auto;
 					height: auto;
 					z-index: 1;
+					
 				}
 			}
 
@@ -338,7 +344,7 @@ const ProjectsSection = styled.section`
 		}
 
 		.projects-right-container {
-			
+			z-index: 2;
 			height: 100%;
 
 			.description-rectangle {
@@ -381,6 +387,10 @@ const ProjectsSection = styled.section`
 					p {
 						font-size: 6vw;
 					}
+
+					li {
+						color: ${theme.colours.grey};
+					}
 				}
 
 				.link-container {
@@ -395,6 +405,10 @@ const ProjectsSection = styled.section`
 			display: flex;
 			flex-wrap: wrap;
 			height: 100%;
+
+			.end-rect {
+				display: flex;
+			}
 
 			p {
 				color: ${theme.colours.darkGrey};
@@ -440,7 +454,7 @@ const Projects = () => {
 						<div key={key} className="image-container">
 							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
 							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
-							<StaticImage src={'../assets/images/TRICEP.jpg'} alt="" /> 
+							<StaticImage src={'../assets/images/TRICEP.jpg'} alt="" />
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
@@ -457,15 +471,15 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies </p>
-								<Typer className="typer" text={project.tech} /> 
-								{/* <ol>
+								{/* <Typer className="typer" text={project.tech} />  */}
+								<ol>
 									{project.tech.map((t, i) => {
 											return(
 													<li key={i}>{t}</li>
 											)
 										})
 									} 
-								</ol>*/}
+								</ol>
 							</div>
 							<div className="link-container">
 								<a className="github" src={project.github} alt=""><Github /></a>
