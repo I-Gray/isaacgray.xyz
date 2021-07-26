@@ -16,6 +16,7 @@ const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	height: 100%;
 	display flex;
+	padding-bottom: 5vh;
 
 	h1 {
 		font-size: 6vw;
@@ -71,6 +72,7 @@ const StyledTitle = styled.div`
 		display: flex;
 		flex-wrap: wrap;
 		height: 100%;
+		padding-bottom: 0vh;
 
 		h1 {
 			margin-left: 10vw;
@@ -147,6 +149,7 @@ const ProjectsSection = styled.section`
 		padding-top: 10vh;
 		margin-right: 20vw;
 		font-weight: 300;
+		position: relative;
 
 		.project-num {
 			font-size: 26px;
@@ -256,6 +259,13 @@ const ProjectsSection = styled.section`
 		.description-rectangle:hover {
 			transform: scale(1.05);
 		}
+
+		.circle-accent {
+			display: flex;
+			position: absolute;
+			transform: scale(0.5);
+			right: 20%;
+		}
 	}
 
 	.view-all-container {
@@ -298,7 +308,6 @@ const ProjectsSection = styled.section`
 	@media ${theme.sizes.mobileS} {
 		display: block;
 		background: ${theme.colours.white};
-		padding-top: 0vh;
 		height: 100%;
 
 		.projects-left-container {
@@ -307,6 +316,7 @@ const ProjectsSection = styled.section`
 			margin-right: 20vw;
 			font-weight: 300;
 			z-index: 0;
+			margin-top: 0vh;
 
 			position: relative;
 
@@ -344,7 +354,6 @@ const ProjectsSection = styled.section`
 		}
 
 		.projects-right-container {
-			z-index: 2;
 			height: 100%;
 
 			.description-rectangle {
@@ -398,6 +407,10 @@ const ProjectsSection = styled.section`
 					padding-left: 10vw;
 					float: left;
 				}
+			}
+
+			.circle-accent {
+				display: none;
 			}
 		}
 
@@ -462,7 +475,6 @@ const Projects = () => {
 
 					<div className="projects-right-container" >
 						<p className="project-num" ><span>//</span> 01.0{key + 1}</p>
-						{/* <img src="" alt="ball"  /> */}
 						<div className="description-rectangle">
 							<p key={key}>
 								{project.info}
@@ -485,6 +497,12 @@ const Projects = () => {
 								<a className="github" src={project.github} alt=""><Github /></a>
 								<a className="link" src={project.link} alt=""><Link /></a>
 							</div>
+						</div>
+						<div className="circle-accent" >
+							<svg width="193" height="385" viewBox="0 0 193 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M193 383C87.5136 383 2 297.71 2 192.5C2 87.2898 87.5136 2 193 2" stroke="white" stroke-width="4"/>
+								<circle cx="47.5" cy="319.5" r="16.5" fill="white"/>
+							</svg>
 						</div>
 					</div>
 					</>

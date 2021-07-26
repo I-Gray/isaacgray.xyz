@@ -14,10 +14,12 @@ const ContactSection = styled.section`
 	.contact-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
+		margin-bottom: 10vh;
 
 		text-align: left;
 		display: flex;
 		flex-direction: column;
+
 		
 		h1 {
 			font-size: 10vw;
@@ -34,6 +36,7 @@ const ContactSection = styled.section`
 			color: ${theme.colours.lightGrey};	
 			text-decoration: underline;
 			transition: fill 0.4s ease-in-out;
+			margin-bottom: 5vh;
 		}
 		a:hover {
 			color: ${theme.colours.white};
@@ -43,18 +46,18 @@ const ContactSection = styled.section`
 
 	.contact-right-container {
 		padding-top: 5vh;
-		margin-left: 10vw;
+		margin-left: 6vw;
 		margin-right: 10vw;
 
 		p {
 			color: ${theme.colours.lightGrey};
 			padding-left: 10px;
-			font-size: 1vw;
+			font-size: 1.5vw;
 			font-style: italic;
 		}
 
 		Button {
-			font-size: 1vw;
+			font-size: 1.5vw;
 		}
 	}
 
@@ -64,6 +67,8 @@ const ContactSection = styled.section`
 		height: 100%;
 
 		.contact-left-container {
+			margin-bottom: 2vh;
+
 			h1 {
 				font-size: 20vw;
 				font-weight: normal;
@@ -75,10 +80,13 @@ const ContactSection = styled.section`
 			}
 
 			a {
+				margin-bottom: 2vh;
+				margin-top: 2vh;
 				font-size: 5vw;
 			}
 
 			ul {
+
 				padding-top: 2vh;	
 			}
 		}
@@ -86,6 +94,8 @@ const ContactSection = styled.section`
 		.contact-right-container {
 			height: 100%
 			display: block;
+			margin-left: 10vw;
+
 			p {
 				font-size: 6vw;
 			}

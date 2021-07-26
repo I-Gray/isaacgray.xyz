@@ -48,6 +48,7 @@ const HeroSection = styled.section`
 
 		Button {
 			text-align: left;
+			font-size: 1.5vw;
 		}
 	}
 

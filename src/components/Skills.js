@@ -35,6 +35,8 @@ import Opencv from '../assets/icons/skills/Opencv';
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display flex;
+	height: 100%;
+	padding-bottom: 10vh;
 
 	h1 {
 		font-size: 6vw;
@@ -68,6 +70,7 @@ const StyledTitle = styled.div`
 		flex-wrap: wrap;
 		height: 100%;
 		padding-right: 10vw;
+		padding-bottom: 2vh;
 
 		h1 {
 			font-size: 20vw;
@@ -132,12 +135,9 @@ const SkillsSection = styled.section`
 	}
 
 	.skills-orbit {
-		svg {
-			z-index: 0;
-			position: absolute;
-			top: -25%;
-			right: 15%
-		}	
+		display: none;
+		transform: scale(-0.7, 0.7);
+		margin-left: 5%;
 	}
 
 	@media ${theme.sizes.mobileS} {
@@ -248,12 +248,12 @@ const Skills = () => {
 					</div>
 				</div>
 				<div className="skills-orbit">
-				<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#ffffff" stroke-width="4"/>
-					<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#ffffff" stroke-width="4"/>
-					<circle cx="60.5" cy="318.5" r="20.5" fill="#26C1E7"/>
-					<path d="M234 21C234 31.5391 225.672 40 215.5 40C205.328 40 197 31.5391 197 21C197 10.4609 205.328 2 215.5 2C225.672 2 234 10.4609 234 21Z" fill="white" stroke="#292626" stroke-width="4"/>
-				</svg>
+					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#ffffff" stroke-width="4"/>
+						<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#ffffff" stroke-width="4"/>
+						<circle cx="60.5" cy="318.5" r="20.5" fill="#26C1E7"/>
+						<path d="M234 21C234 31.5391 225.672 40 215.5 40C205.328 40 197 31.5391 197 21C197 10.4609 205.328 2 215.5 2C225.672 2 234 10.4609 234 21Z" fill="white" stroke="#292626" stroke-width="4"/>
+					</svg>
 				</div>
 			</SkillsSection>
 		</>

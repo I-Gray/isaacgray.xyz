@@ -26,7 +26,7 @@ const StyledSocials = styled.ul`
 	li {
 		
 		a {
-			padding-right: 5vw;
+			padding-right: 2vw;
 			svg {
 				width: ${props => props.size}px;
 				height: ${props => props.size}px;
@@ -53,7 +53,7 @@ const StyledSocials = styled.ul`
 	@media ${theme.sizes.mobileS} {
 		li {
 			a {
-
+				padding-right: 5vw;
 			}
 		}
 	

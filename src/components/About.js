@@ -67,12 +67,13 @@ const AboutSection = styled.section`
 		}
 
 		.about-image-desktop {
-			padding-top: 20vh;
+			padding-top: 50%;
 		}
 
 		.about-image-mobile {
 			display: none;
 		}
+
 	}
 
 	.about-image-mobile {
