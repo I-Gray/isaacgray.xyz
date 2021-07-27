@@ -100,7 +100,7 @@ const ProjectsSection = styled.section`
 		margin-left: 10vw;
 		height: 25%;
 		margin-top: 5vh;
-		z-index: 50 ;
+		z-index: 50;
 
 		p {
 			margin-top: 2vh;
@@ -296,11 +296,11 @@ const ProjectsSection = styled.section`
 		.button-container {
 			text-align: right;
 			float: right;
-			padding-top: 2vh;
+			padding-top: 1vh;
 			padding-left: 2vw;
 			
 			Button {
-				font-size: 1vw;
+				font-size: 1.5vw;
 			}
 		}
 	}
@@ -333,7 +333,7 @@ const ProjectsSection = styled.section`
 			.image-container {
 				width: 100%;
 				z-index: 0;
-				margin-top: 5vh;
+				margin-top: 10vh;
 				z-index: 1;
 
 				.img {
@@ -358,9 +358,9 @@ const ProjectsSection = styled.section`
 
 			.description-rectangle {
 				position: absolute;
-				margin-right: 10vw;
+				margin-right: 2vw;
 				margin-left: 15vw;
-				margin-top: 55%;
+				margin-top: 62%;
 				padding: 5vw;
 				
 				p {

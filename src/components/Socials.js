@@ -14,6 +14,7 @@ const StyledSocials = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	transition: transform .8s ease-in-out;
 
 	&:after {
 		content: '';
@@ -27,6 +28,7 @@ const StyledSocials = styled.ul`
 		
 		a {
 			padding-right: 2vw;
+			
 			svg {
 				width: ${props => props.size}px;
 				height: ${props => props.size}px;
@@ -39,6 +41,7 @@ const StyledSocials = styled.ul`
 		}
 		&:hover {
 			cursor: pointer;
+			transform: scale(1.1);
 			svg {
 				stroke: ${theme.colours.white};
 				path {

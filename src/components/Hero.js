@@ -10,7 +10,6 @@ const HeroSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: flex;
 	position: relative;
-	width: 100vw;
 	height: 100%;
 
 	.hero-left-container {
