@@ -4,10 +4,11 @@ import rootVars from './rootVars';
 const GlobalStyle = createGlobalStyle`
 	${rootVars};
 
-
 	/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	
-	*, *:before, *:after {
+	*, 
+	*:before, 
+	*:after {
 		margin: 0;
     	padding: 0;
     	box-sizing: border-box;
