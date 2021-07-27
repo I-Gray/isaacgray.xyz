@@ -22,10 +22,7 @@ export const StyledBurger = styled.button`
 	z-index: 1000;
 	font-size: inherit;
 
-	
-
-	// Deal with really small mobile sizes (text doesnt scale down on sidebar)
-	@media ${theme.sizes.mobile} {
+	@media ${theme.sizes.burger} {
 		&:focus {
 			outline: none;
 		}

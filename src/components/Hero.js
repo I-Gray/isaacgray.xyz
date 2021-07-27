@@ -14,7 +14,7 @@ const HeroSection = styled.section`
 
 	.hero-left-container {
 		z-index: 3;
-		padding-top: 5%;
+		padding-top: 15%;
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 100vh;
@@ -71,44 +71,59 @@ const HeroSection = styled.section`
 		width: 70vw;
 	}
 
-	// @media ${theme.sizes.mobileL} {
-	// 	background: ${theme.colours.darkGrey};
-	// 	display: flex;
-	// 	position: relative;
-	// 	padding-top: 0;
-	// 	padding-right: 10vw;
-		
-	// 	.hero-left-container {
-	// 		h1 {
-	// 			font-size: 18vw;
-	// 		}
-
-	// 		p {
-	// 			font-size: 3vw;
-	// 		}
-
-	// 		Button {
-	// 			font-size: 2vw;
-	// 		}
-	// 	}
-
-	// 	.circle-orbit {
-	// 		position: absolute;
-	// 		transform: scale(-1,1);
-	// 		top: 60%;
-	// 	}
-
-	// 	.floating-icons {
-	// 		position: absolute;
-	// 		top: 10%;
-	// 		left: 10%;
-	// 		transform: scale(1.4);
-	// 	}
-	// }
-
-
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.tabletL} {
 		background: ${theme.colours.darkGrey};
+		padding-top: 5%;
+
+		.hero-left-container {
+			display: inline-block;
+			align-items: center;
+
+			h1 {
+				font-size: 15vw;
+			}
+
+			p {
+				font-size: 3vw;
+			}
+
+			Button {
+				font-size: 2vw;
+			}
+		}
+
+		.circle-orbit {
+			transform: scale(1.7);
+			opacity: 0.3;
+		}
+
+		.floating-icons {
+			position: absolute;
+			transform: scale(1.8);
+		}
+	}
+
+	@media ${theme.sizes.tabletS} {
+		padding-top: 0%;
+		.hero-left-container {
+			display: inline-block;
+			align-items: center;
+
+			h1 {
+				font-size: 20vw;
+			}
+
+			p {
+				font-size: 4vw;
+			}
+
+			Button {
+				font-size: 3vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.mobile} {
 		display: flex;
 		padding-top: 25%;
 		height: 100%;
@@ -126,7 +141,7 @@ const HeroSection = styled.section`
 			}
 
 			Button {
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 		}
 

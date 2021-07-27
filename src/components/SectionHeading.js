@@ -38,7 +38,7 @@ const StyledHeading = styled.div`
 		padding-right: 1vh;
 	}
 
-	@media ${theme.sizes.mobileL} {
+	@media ${theme.sizes.tabletL} {
 		background: linear-gradient(90deg, ${props => props.leftDark ? theme.colours.darkGrey : theme.colours.white} 70%, ${props => props.rightDark ? theme.colours.darkGrey : theme.colours.white} 30%);
 	}
 `;

@@ -5,11 +5,12 @@ const theme = {
 	// Add dark theme ??
 	// Change to em values ?
 	sizes : {	
-		mobile: '(max-width: 1200px)', 
-		desktop: '(max-width: 1200px)',
-		mobileL: '(max-width: 1160px)',
-		mobileM: '(max-width: 768px)',
-		mobileS: '(max-width: 768px)',
+		burger: '(max-width: 1200px)',
+		widescreen: '(max-width: 2560px)',
+		desktop: '(max-width: 1920px)',
+		tabletL: '(max-width: 1120px)',
+		tabletS: '(max-width: 920px)',
+		mobile: '(max-width: 680px)',
 	}, 
 	colours : {
 		white: '#ffffff',

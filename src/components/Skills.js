@@ -64,8 +64,28 @@ const StyledTitle = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.tabletL} {
 		background: ${theme.colours.darkGrey};
+		padding-bottom: 2vh;
+		h1 {
+			font-size: 12vw;
+
+			span {
+				font-size: 10vw;
+			}
+		}
+
+		p {
+			padding-top: 4vh;
+			font-size: 2vw;
+		}
+	}
+	
+	@media ${theme.sizes.tabletS} {
+		
+	}
+
+	@media ${theme.sizes.mobile} {
 		display: flex;
 		flex-wrap: wrap;
 		height: 100%;
@@ -133,7 +153,6 @@ const SkillsSection = styled.section`
 		}
 	}
 
-
 	.skills-orbit {
 		display: flex;
 		position: absolute;
@@ -142,12 +161,50 @@ const SkillsSection = styled.section`
 		z-index; 0;
 		top: 5%;
 	}
-	
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.tabletL} {
+		background: ${theme.colours.darkGrey};
+
+		.skills-orbit {
+			display: none;
+		}
+
+		.left-content {
+			padding-right: 5vw;
+			p {
+				padding-top: 2vh;
+				font-size: 3vw;
+			}
+		}
+
+		.right-content {
+			p {
+				padding-top: 2vh;
+				font-size: 3vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.tabletS} {
+		.left-content {
+			padding-right: 0vw;
+			p {
+				padding-top: 0vh;
+				font-size: 2.5vw;
+			}
+		}
+
+		.right-content {
+			p {
+				padding-top: 0vh;
+				font-size: 2.5vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.mobile} {
 		display: flex;
 		flex-wrap: wrap;
-		background: ${theme.colours.darkGrey};
 		position: relative;
 		
 		h1 {

@@ -36,7 +36,7 @@ const StyledFooter = styled.footer`
 		padding-bottom: 1.5vh;
 	}
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.mobile} {
 		padding-top: 4vh;
 		flex-direction: column;
 

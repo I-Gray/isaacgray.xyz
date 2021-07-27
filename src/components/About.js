@@ -81,47 +81,7 @@ const AboutSection = styled.section`
 		display: none;
 	}
 
-	// @media ${theme.sizes.mobileL} {
-	// 	background: ${theme.colours.white};
-	// 	display: flex;
-	// 	position: relative;
-	// 	padding-top: 0;
-
-	// 	.about-left-container {
-	// 		.about-text {
-	// 			color: ${theme.colours.darkGrey};
-	// 		}
-			
-	// 		.about-learning {
-	// 			color: ${theme.colours.darkGrey};
-	// 		}
-	// 	}
-
-	// 	.about-right-container {
-	// 		display: flex;
-	// 		position: absolute;
-	// 		padding-left: 10vw;
-			
-	// 		.about-image-desktop {
-	// 			display: none;
-	// 		}
-
-	// 		.about-image-mobile {
-	// 			display: flex;
-	// 			position: absolute;
-	// 			padding-left: 10vw;
-	// 		}
-
-	// 		svg {
-	// 			.about-vector {
-	// 				fill: ${theme.colours.lightBlue};
-	// 			}
-	// 		}
-
-	// 	}
-	// }
-
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.mobile} {
 		background: ${theme.colours.white};
 		display: block;
 		overflow: hidden;

@@ -47,7 +47,7 @@ const NavLinks = styled.div`
 	width: 100%;
 	margin-right: 10em;
 	
-	@media ${theme.sizes.mobile} {
+	@media ${theme.sizes.burger} {
 		display: none;
 	}
 
@@ -115,7 +115,7 @@ const NavLinks = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.mobile} {
 
 	}
 `;

@@ -67,7 +67,7 @@ const StyledForm = styled.div`
 			font-style: italic;
 		}
 
-		@media ${theme.sizes.mobileS} {
+		@media ${theme.sizes.mobile} {
 			input[type=text], input[type=email], select, textarea {
 				width: 70vw;
 			}

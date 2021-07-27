@@ -53,7 +53,7 @@ const StyledSocials = styled.ul`
 		}
 	}
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.mobile} {
 		li {
 			a {
 				padding-right: 5vw;

@@ -61,7 +61,7 @@ const ContactSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.mobileS} {
+	@media ${theme.sizes.mobile} {
 		display: block;
 		background: ${theme.colours.darkGrey};
 		height: 100%;
