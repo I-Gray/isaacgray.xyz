@@ -83,6 +83,7 @@ const AboutSection = styled.section`
 
 	@media ${theme.sizes.tabletL} {
 		background: ${theme.colours.white};
+		margin-right: 5vw;
 		position: relative;
 
 		.about-text-container {
@@ -90,7 +91,7 @@ const AboutSection = styled.section`
 			position: absolute;
 			left: 50%;
 			top: 5%;
-
+			
 			.about-mobile {
 				padding-right: 5vw;
 			}
@@ -152,10 +153,6 @@ const AboutSection = styled.section`
 		}
 	}
 
-	@media ${theme.sizes.tabletS} {
-
-	}
-
 	@media ${theme.sizes.mobile} {
 		display: block;
 		overflow: hidden;
@@ -163,6 +160,7 @@ const AboutSection = styled.section`
 
 		.about-text-container {
 			display: block;
+			position: static;
 
 			.about-mobile {
 				padding-right: 50vw;
@@ -223,9 +221,8 @@ const About = () => {
 		<SectionHeading section_num="03" dark={true} />
 		<AboutSection>
 				<div className="about-text-container">	
-						<h1 className="about-mobile">about<span><br/>me.</span></h1>
+					<h1 className="about-mobile">about<span><br/>me.</span></h1>
 				</div>
-				
 				<div className="about-left-container">
 					<p>//</p>
 					<br />
@@ -244,11 +241,6 @@ const About = () => {
 						<br/>
 						Currently I am learning: <span>Vue</span>|
 					</p>
-					{/* <p className="about-learning">
-						<br/>
-						<br/>
-						Currently I am learning: <span>Vue</span>|
-					</p> */}
 				</div>
 				<div className="about-right-container">
 					<svg className="about-svg" width="562" height="280" viewBox="0 0 562 280" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,12 +257,9 @@ const About = () => {
 					<img src={AboutImageDesktop} alt="Picture of Isaac G."></img>
 				</div>
 				</div>
-				
 				<div className="about-image-mobile">
 					<img  src={AboutImageMobile} alt="Picture of Isaac G."></img>
-				</div>
-				
-					
+				</div>		
 		</AboutSection>
 		</>
 	);

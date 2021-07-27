@@ -452,7 +452,7 @@ const ProjectsSection = styled.section`
 			.tech-and-link {
 				display: flex;
 				flex-direction: column;
-				margin-top: 120%;
+				margin-top: 110%;
 				height: 100%;
 
 				.tech-container {

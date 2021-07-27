@@ -63,10 +63,20 @@ const ContactSection = styled.section`
 
 	@media ${theme.sizes.tabletL} {
 		background: ${theme.colours.darkGrey};
-	}
 
-	@media ${theme.sizes.tabletS} {
-		
+		.contact-right-container {
+			height: 100%
+			display: block;
+			margin-left: 2vw;
+
+			p {
+				font-size: 3vw;
+			}
+
+			Button {
+				font-size: 2vw;
+			}
+		}
 	}
 
 	@media ${theme.sizes.mobile} {
@@ -93,7 +103,6 @@ const ContactSection = styled.section`
 			}
 
 			ul {
-
 				padding-top: 2vh;	
 			}
 		}
