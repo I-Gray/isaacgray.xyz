@@ -326,6 +326,7 @@ const ProjectsSection = styled.section`
 		}
 
 		.projects-right-container {
+			padding-top: 12vh;
 			.tech-and-link {
 				.tech-container {
 					padding-top: 1vh;
@@ -424,6 +425,7 @@ const ProjectsSection = styled.section`
 
 		.projects-right-container {
 			height: 100%;
+			padding-top: 12vh;
 
 			.description-rectangle {
 				position: absolute;
@@ -434,7 +436,7 @@ const ProjectsSection = styled.section`
 				
 				p {
 					z-index: 2001;
-					font-size: 5vw;
+					font-size: 4vw;
 					font-weight: normal;
 				}
 			}

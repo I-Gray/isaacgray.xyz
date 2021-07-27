@@ -61,9 +61,16 @@ const ContactSection = styled.section`
 		}
 	}
 
+	@media ${theme.sizes.tabletL} {
+		background: ${theme.colours.darkGrey};
+	}
+
+	@media ${theme.sizes.tabletS} {
+		
+	}
+
 	@media ${theme.sizes.mobile} {
 		display: block;
-		background: ${theme.colours.darkGrey};
 		height: 100%;
 
 		.contact-left-container {
