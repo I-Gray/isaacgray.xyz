@@ -19,6 +19,8 @@ const HeroSection = styled.section`
 		margin-right: 10vw;
 		height: 100vh;
 		float: left;
+		height: 100%;
+		margin-bottom: 30vh;
 		
 		.rectangle {
 			height: 150px;
@@ -57,7 +59,6 @@ const HeroSection = styled.section`
 		left: 47%;
 		top: 20%;
 		display: flex;
-		height
 	}
 
 	.floating-icons {
@@ -70,43 +71,44 @@ const HeroSection = styled.section`
 		width: 70vw;
 	}
 
-	@media ${theme.sizes.mobileL} {
-		background: ${theme.colours.darkGrey};
-		display: flex;
-		position: relative;
-		padding-top: 0;
-		padding-right: 10vw;
+	// @media ${theme.sizes.mobileL} {
+	// 	background: ${theme.colours.darkGrey};
+	// 	display: flex;
+	// 	position: relative;
+	// 	padding-top: 0;
+	// 	padding-right: 10vw;
 		
-		.hero-left-container {
-			h1 {
-				font-size: 18vw;
-			}
+	// 	.hero-left-container {
+	// 		h1 {
+	// 			font-size: 18vw;
+	// 		}
 
-			p {
-				font-size: 3vw;
-			}
+	// 		p {
+	// 			font-size: 3vw;
+	// 		}
 
-			Button {
-				font-size: 2vw;
-			}
-		}
+	// 		Button {
+	// 			font-size: 2vw;
+	// 		}
+	// 	}
 
-		.circle-orbit {
-			position: absolute;
-			transform: scale(-1,1);
-			top: 60%;
-		}
+	// 	.circle-orbit {
+	// 		position: absolute;
+	// 		transform: scale(-1,1);
+	// 		top: 60%;
+	// 	}
 
-		.floating-icons {
-			position: absolute;
-			top: 10%;
-			left: 10%;
-			transform: scale(1.4);
-		}
-	}
+	// 	.floating-icons {
+	// 		position: absolute;
+	// 		top: 10%;
+	// 		left: 10%;
+	// 		transform: scale(1.4);
+	// 	}
+	// }
 
 
 	@media ${theme.sizes.mobileS} {
+		background: ${theme.colours.darkGrey};
 		display: flex;
 		padding-top: 25%;
 		height: 100%;

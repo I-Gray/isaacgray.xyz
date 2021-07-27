@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Github from '../assets/icons/Github';
 import Twitter from '../assets/icons/Twitter';
 import Dribble from '../assets/icons/Dribble';
-import SocialLinks from '../assets/constants/SocialLinks'
+import SocialLinks from '../assets/constants/SocialLinks';
 
 const StyledSocials = styled.ul`
 	display: flex;

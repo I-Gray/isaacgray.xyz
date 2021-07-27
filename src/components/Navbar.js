@@ -98,7 +98,6 @@ const NavLinks = styled.div`
 					text-align: right;
 					font-weight: 500;
 					transition: color 0.4 ease-in-out;
-					
 				}
 
 				&:hover {

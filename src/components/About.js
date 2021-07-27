@@ -11,6 +11,7 @@ const AboutSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display: grid;
 	grid-template-columns: 60vw 40vw;
+	padding-bottom: 5vh;
 
 	.about-text-container {
 		display: none;
@@ -19,7 +20,7 @@ const AboutSection = styled.section`
 	.about-left-container {
 		margin-left: 10vw;
 		margin-right: 10vw;
-		height: 70vh;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 

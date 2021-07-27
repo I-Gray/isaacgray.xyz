@@ -7,7 +7,7 @@ const theme = {
 	sizes : {	
 		mobile: '(max-width: 1200px)', 
 		desktop: '(max-width: 1200px)',
-		mobileL: '(max-width: 992px)',
+		mobileL: '(max-width: 1160px)',
 		mobileM: '(max-width: 768px)',
 		mobileS: '(max-width: 768px)',
 	}, 

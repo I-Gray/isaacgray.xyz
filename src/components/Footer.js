@@ -31,6 +31,7 @@ const StyledFooter = styled.footer`
 	}
 	
 	.social {
+		padding-top: 1vh;
 		padding-left: 1.5vw;
 		padding-bottom: 1.5vh;
 	}
