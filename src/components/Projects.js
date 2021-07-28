@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import theme from '../assets/styles/theme';
 import SectionHeading from './SectionHeading';
@@ -11,6 +11,8 @@ import image from '../assets/images/MarketMoo.jpg';
 import Github from '../assets/icons/Github';
 import Link from '../assets/icons/Link';
 import Button from './Button';
+
+import lax from 'lax.js';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -513,11 +515,35 @@ const ProjectsSection = styled.section`
 `;
 
 const Projects = () => {
+	
+	useEffect(() => {
+		// Setup lax
+		lax.init();
+	
+		lax.addDriver("scrollY", function () {
+		  return window.scrollY;
+		});
+	
+		// Add your elements
+		lax.addElements(
+		  ".spin",
+		  {
+			scrollY: {
+			  rotate: [
+				[0, 1e9],
+				[0, 1e9]
+			  ]
+			}
+		  },
+		  []
+		);
+	  }, []);
+
 	return (
 		<>
 		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
 		<StyledTitle>
-				<h1><span>my<br/></span> projects.</h1>
+				<h1 className=".spin"><span>my<br/></span> projects.</h1>
 				<p>Here is a few projects <br/>
 				I have worked on, <span>check <br/>
 				them out!</span></p>
