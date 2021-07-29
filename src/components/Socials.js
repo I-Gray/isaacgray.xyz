@@ -1,11 +1,11 @@
 import React from "react";
-import theme from '../assets/styles/theme'
+import theme from '../styles/theme'
 import styled from 'styled-components';
 
-import Github from '../assets/icons/Github';
-import Twitter from '../assets/icons/Twitter';
-import Dribble from '../assets/icons/Dribble';
-import SocialLinks from '../assets/constants/SocialLinks';
+import Github from '../icons/Github';
+import Twitter from '../icons/Twitter';
+import Dribble from '../icons/Dribble';
+import SocialLinks from '../constants/SocialLinks';
 
 const StyledSocials = styled.ul`
 	display: flex;

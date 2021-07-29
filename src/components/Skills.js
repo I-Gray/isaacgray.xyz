@@ -1,35 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionHeading from './SectionHeading';
-import theme from '../assets/styles/theme';
+import theme from '../styles/theme';
 
-import SkillsOrbit from '../assets/icons/SkillsOrbit'
+import SkillsOrbit from '../icons/SkillsOrbit'
 
 // Turn skills logos into a component and iterate through
 // them to save code and improve reusability. 
-import Javascript from '../assets/icons/skills/Javascript';
-import Reactlogo from '../assets/icons/skills/Reactlogo';
-import Gatsby from '../assets/icons/skills/Gatsby';  
-import Sass from '../assets/icons/skills/Sass';  
+import Javascript from '../icons/skills/Javascript';
+import Reactlogo from '../icons/skills/Reactlogo';
+import Gatsby from '../icons/skills/Gatsby';  
+import Sass from '../icons/skills/Sass';  
 
-import Mongo from '../assets/icons/skills/Mongo';
-import Graphql from '../assets/icons/skills/Graphql';
-import Firebase from '../assets/icons/skills/Firebase';
+import Mongo from '../icons/skills/Mongo';
+import Graphql from '../icons/skills/Graphql';
+import Firebase from '../icons/skills/Firebase';
 
-import Figma from '../assets/icons/skills/Figma';
-// import Xd from '../assets/icons/skills/Xd';
-import Ai from '../assets/icons/skills/Ai';
-import Ps from '../assets/icons/skills/Ps';
+import Figma from '../icons/skills/Figma';
+// import Xd from '../icons/skills/Xd';
+import Ai from '../icons/skills/Ai';
+import Ps from '../icons/skills/Ps';
 
-import Python from '../assets/icons/skills/Python'
-import Cpp from '../assets/icons/skills/Cpp';
-import Java from '../assets/icons/skills/Java';
-import Pytorch from '../assets/icons/skills/Pytorch';
+import Python from '../icons/skills/Python'
+import Cpp from '../icons/skills/Cpp';
+import Java from '../icons/skills/Java';
+import Pytorch from '../icons/skills/Pytorch';
 
-import Arduino from '../assets/icons/skills/Arduino'
-import Qt from '../assets/icons/skills/Qt';
-import Opencv from '../assets/icons/skills/Opencv';
-// import Ros from '../assets/icons/skills/Ros';
+import Arduino from '../icons/skills/Arduino'
+import Qt from '../icons/skills/Qt';
+import Opencv from '../icons/skills/Opencv';
+// import Ros from '../icons/skills/Ros';
 
 
 const StyledTitle = styled.div`

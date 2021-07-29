@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 import Socials from './Socials';
-import theme from '../assets/styles/theme';
-import Logo from '../assets/icons/Logo';
+import theme from '../styles/theme';
+import Logo from '../icons/Logo';
 
 const StyledFooter = styled.footer`
 	display: flex;

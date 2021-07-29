@@ -1,9 +1,9 @@
 import React from "react"
-import theme from '../assets/styles/theme';
+import theme from '../styles/theme';
 import { Link } from "gatsby"
-import logo from "../assets/images/logo.svg"
+import logo from "../images/logo.svg"
 import styled from 'styled-components';
-import NavbarLinks from '../assets/constants/NavbarLinks'
+import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
 
 const Header = styled.header`

@@ -1,10 +1,10 @@
 import React from 'react'
 
 import styled from 'styled-components';
-import CircleAccent from '../assets/icons/CircleAccent';
-import theme from '../assets/styles/theme';
-import AboutImageMobile from '../assets/images/AboutPictureMobile.png';
-import AboutImageDesktop from '../assets/images/AboutPictureDesktop.png';
+import CircleAccent from '../icons/CircleAccent';
+import theme from '../styles/theme';
+import AboutImageMobile from '../images/AboutPictureMobile.png';
+import AboutImageDesktop from '../images/AboutPictureDesktop.png';
 import SectionHeading from './SectionHeading';
 
 const AboutSection = styled.section`

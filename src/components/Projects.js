@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import theme from '../assets/styles/theme';
+import theme from '../styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import { StaticImage } from "gatsby-plugin-image"
 import Typer from './Typer';
 
-import image from '../assets/images/MarketMoo.jpg';
+import image from '../images/MarketMoo.jpg';
 
-import Github from '../assets/icons/Github';
-import Link from '../assets/icons/Link';
+import Github from '../icons/Github';
+import Link from '../icons/Link';
 import Button from './Button';
-
-import lax from 'lax.js';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -515,30 +513,6 @@ const ProjectsSection = styled.section`
 `;
 
 const Projects = () => {
-	
-	useEffect(() => {
-		// Setup lax
-		lax.init();
-	
-		lax.addDriver("scrollY", function () {
-		  return window.scrollY;
-		});
-	
-		// Add your elements
-		lax.addElements(
-		  ".spin",
-		  {
-			scrollY: {
-			  rotate: [
-				[0, 1e9],
-				[0, 1e9]
-			  ]
-			}
-		  },
-		  []
-		);
-	  }, []);
-
 	return (
 		<>
 		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
@@ -554,7 +528,7 @@ const Projects = () => {
 					<>
 					<div className="projects-left-container">
 						<p>Featured Project</p>
-						<h3 key={key}>{project.title}</h3>
+						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
 							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
 							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}

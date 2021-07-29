@@ -1,5 +1,5 @@
 import React from "react";
-import theme from '../assets/styles/theme'
+import theme from '../styles/theme'
 import styled from 'styled-components';
 
 const StyledButton = styled.button`

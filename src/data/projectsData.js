@@ -1,6 +1,5 @@
 
 import React from 'react'
-import tricep from '../assets/images/TRICEP.jpg'
 
 const Projects = [
 	{

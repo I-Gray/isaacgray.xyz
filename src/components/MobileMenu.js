@@ -1,7 +1,7 @@
 import React, { useState, useRef }from 'react';
-import Burger from '../assets/icons/Burger'
+import Burger from '../icons/Burger'
 import styled from 'styled-components';
-import NavbarLinks from '../assets/constants/NavbarLinks'
+import NavbarLinks from '../constants/NavbarLinks'
 import { Link } from "gatsby"
 import { bool } from 'prop-types';
 import { useOnClickOutside } from './hooks/useOnClickOutside';

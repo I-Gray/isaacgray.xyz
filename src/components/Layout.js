@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { ThemeProvider }  from 'styled-components';
-import GlobalStyle from '../assets/styles/GlobalStyle';
-import theme from '../assets/styles/theme';
+import GlobalStyle from '../styles/GlobalStyle';
+import theme from '../styles/theme';
 
 import Navbar from './Navbar';
 import Hero from './Hero';
@@ -12,7 +12,14 @@ import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
 
-import Typer from './Typer';
+
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+  } from "react-router-dom";
+
 
 const Layout = ({ children }) => {
   

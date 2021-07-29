@@ -1,8 +1,8 @@
 import React from "react"
-import HeroOrbit from '../assets/icons/HeroOrbit'
-import FloatingIcons from '../assets/icons/FloatingIcons'
+import HeroOrbit from '../icons/HeroOrbit'
+import FloatingIcons from '../icons/FloatingIcons'
 import styled from 'styled-components';
-import theme from '../assets/styles/theme';
+import theme from '../styles/theme';
 import Button from './Button';
 
 import { gsap } from "gsap";
@@ -160,17 +160,17 @@ const HeroSection = styled.section`
 `;
 
 const Hero = () => {
-	document.addEventListener('mousemove', parallax);
-	function parallax(e) {
-		this.querySelectorAll('.layer').forEach(layer => {
-			const velocity = layer.getAttribute('icon-speed');
+	// document.addEventListener('mousemove', parallax);
+	// function parallax(e) {
+	// 	this.querySelectorAll('.layer').forEach(layer => {
+	// 		const velocity = layer.getAttribute('icon-speed');
 
-			const x = (window.innerWidth - e.pageX * velocity)/100;
-			const y = (window.innerHeight - e.pageY * velocity)/100;
+	// 		const x = (window.innerWidth - e.pageX * velocity)/100;
+	// 		const y = (window.innerHeight - e.pageY * velocity)/100;
 			
-			layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-		})
-	}
+	// 		layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+	// 	})
+	// }
 
 	// var path = anime.path('.inner-follow');
 		
