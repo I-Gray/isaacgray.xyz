@@ -127,7 +127,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
-		<SectionHeading section_num="04" leftDark={true} rightDark={true} />
+		<SectionHeading section_num="04" leftDark={true} rightDark={true} id="CONTACT" />
 		<ContactSection>
 			<div className="contact-left-container">
 				<h1>contact</h1>

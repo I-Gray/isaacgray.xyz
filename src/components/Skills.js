@@ -251,7 +251,7 @@ const SkillsSection = styled.section`
 const Skills = () => {
 	return (
 		<>
-			<SectionHeading section_num="02" leftDark={true} rightDark={true} />
+			<SectionHeading section_num="02" leftDark={true} rightDark={true} id="SKILLS" />
 			<StyledTitle>
 					<h1><span>my<br/></span> skills.</h1>
 					<p>Over the course of my 

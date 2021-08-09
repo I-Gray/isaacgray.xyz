@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 	/* https://www.freecodecamp.org/news/html-page-width-height/ */
 	
 	html, body {
+		scroll-behavior: smooth;
 		width: 100%;
 		height: 100%;
 		margin: 0px;
