@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import theme from '../styles/theme';
 import { Link } from "gatsby"
 import logo from "../images/logo.svg"
 import styled from 'styled-components';
 import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
+import { useScrollDirection } from './hooks/useScrollDirection';
+import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
+import PropTypes from 'prop-types';
 
 const Header = styled.header`
 	background: ${theme.colours.white};
@@ -120,9 +123,41 @@ const NavLinks = styled.div`
 	}
 `;
 
-const Navbar = () => {
+const Navbar = ({ isHome }) => {
+
+	const [isMounted, setIsMounted] = useState(!isHome);
+	const scrollDirection = useScrollDirection('down');
+	const [scrolledToTop, setScrolledToTop] = useState(true);
+	const prefersReducedMotion = usePrefersReducedMotion();
+
+	const handleScroll = () => {
+		setScrolledToTop(window.pageYOffset < 50);
+	};
+
+	useEffect(() => {
+		if (prefersReducedMotion) {
+		  return;
+		}
+	
+		const timeout = setTimeout(() => {
+		  setIsMounted(true);
+		}, 100);
+	
+		window.addEventListener('scroll', handleScroll);
+	
+		return () => {
+		  clearTimeout(timeout);
+		  window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	// CSS transitions settings
+	const timeout = isHome ? loaderDelay : 0;
+	const fadeClass = isHome ? 'fade' : '';
+	const fadeDownClass = isHome ? 'fadedown' : '';
+
 	return (
-		<Header>
+		<Header scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
 			{/* ISSUE: change to raw svg import from icons folder */}
 			<NavbarPanel>
 			{/* link to home menu using Link component */}
@@ -145,4 +180,8 @@ const Navbar = () => {
 	)
 }
 
+Navbar.propTypes = {
+	isHome: PropTypes.bool,
+};
+  
 export default Navbar;

@@ -516,7 +516,7 @@ const Projects = () => {
 	return (
 		<>
 		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
-		<StyledTitle>
+		<StyledTitle id="PROJECTS">
 				<h1 className=".spin"><span>my<br/></span> projects.</h1>
 				<p>Here is a few projects <br/>
 				I have worked on, <span>check <br/>

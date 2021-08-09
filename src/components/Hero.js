@@ -186,7 +186,7 @@ const Hero = () => {
 
 	return (
 		<>
-		<HeroSection>
+		<HeroSection id="HOME">
 			{/* <FloatingIcons className="icons"/> */}
 			<div className="hero-left-container">
 				{/* <div class="rectangle"></div> */}

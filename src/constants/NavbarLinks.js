@@ -5,19 +5,19 @@ const NavbarLinks = [
 	},
 	{
 	  name: "PROJECTS",
-	  url: "/projects/",
+	  url: "/#projects",
 	},
 	{
 		name: "SKILLS",
-		url: "/skills/",
+		url: "/#skills",
 	},
 	{
 		name: "ABOUT",
-		url: "/about/",
+		url: "/#about",
 	},
 	{
 	  name: "CONTACT",
-	  url: "/contact/",
+	  url: "/#contact",
 	},
 ]
 
