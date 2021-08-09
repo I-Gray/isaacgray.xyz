@@ -11,7 +11,7 @@ const Main = styled.main`
   	counter-reset: section;
 `;
 
-const IndexPage = ({ location }) => (
+const Index = ({ location }) => (
 	<Layout location={location}>
 		<Main>
 			<Hero />
@@ -23,8 +23,8 @@ const IndexPage = ({ location }) => (
 );
 
 
-IndexPage.propTypes = {
+Index.propTypes = {
 	location: PropTypes.object.isRequired,
 };
 
-export default IndexPage;
+export default Index;

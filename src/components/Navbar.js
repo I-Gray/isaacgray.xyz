@@ -8,6 +8,7 @@ import MobileMenu from './MobileMenu';
 import { useScrollDirection } from './hooks/useScrollDirection';
 import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
 import PropTypes from 'prop-types';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Header = styled.header`
 	background: ${theme.colours.white};
@@ -165,12 +166,19 @@ const Navbar = ({ isHome }) => {
 			<NavLinks>
 				<div className="link-container">
 					<ol>
-						{NavbarLinks && 
-						NavbarLinks.map(({name, url}, i) => (
-							<li key={i} className="menu-item">
-								<Link className="links" to={url}>{name}<span class="divider">.</span></Link>
-							</li>
-						))}
+						<TransitionGroup component={null}>
+							{	
+								isMounted &&
+								NavbarLinks && 
+								NavbarLinks.map(({name, url}, i) => (
+									<CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
+										<li key={i} className="menu-item" style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+											<Link className="links" to={url} onClick={() => setInProp(true)}>{name}<span class="divider">.</span></Link>
+										</li>
+									</CSSTransition>
+								))
+							}
+						</TransitionGroup>
 					</ol>
 				</div>
 			</NavLinks>
