@@ -75,13 +75,13 @@ const Layout = ({ children, location}) => {
 							<StyledContent>
 								<Navbar isHome={isHome}/>
 								{children}
-								<Hero />
+								{/* <Hero />
 								<Projects />
 								<Skills />
-								<About />
+								<About /> */}
 								{/* <Typer /> */}
-								<Contact />
-								<Footer />
+								{/* <Contact /> */}
+								<Footer /> 
 							</StyledContent>
 						)}
 				</ThemeProvider>

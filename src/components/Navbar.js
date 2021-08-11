@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import theme from '../styles/theme';
 import { Link } from "gatsby"
 import logo from "../images/logo.svg"
 import styled from 'styled-components';
 import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
-import { useScrollDirection } from './hooks/useScrollDirection';
-import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
-import PropTypes from 'prop-types';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Header = styled.header`
 	background: ${theme.colours.white};
@@ -124,41 +120,9 @@ const NavLinks = styled.div`
 	}
 `;
 
-const Navbar = ({ isHome }) => {
-
-	const [isMounted, setIsMounted] = useState(!isHome);
-	const scrollDirection = useScrollDirection('down');
-	const [scrolledToTop, setScrolledToTop] = useState(true);
-	const prefersReducedMotion = usePrefersReducedMotion();
-
-	const handleScroll = () => {
-		setScrolledToTop(window.pageYOffset < 50);
-	};
-
-	useEffect(() => {
-		if (prefersReducedMotion) {
-		  return;
-		}
-	
-		const timeout = setTimeout(() => {
-		  setIsMounted(true);
-		}, 100);
-	
-		window.addEventListener('scroll', handleScroll);
-	
-		return () => {
-		  clearTimeout(timeout);
-		  window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
-	// CSS transitions settings
-	const timeout = isHome ? loaderDelay : 0;
-	const fadeClass = isHome ? 'fade' : '';
-	const fadeDownClass = isHome ? 'fadedown' : '';
-
+const Navbar = () => {
 	return (
-		<Header scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
+		<Header>
 			{/* ISSUE: change to raw svg import from icons folder */}
 			<NavbarPanel>
 			{/* link to home menu using Link component */}
@@ -166,19 +130,12 @@ const Navbar = ({ isHome }) => {
 			<NavLinks>
 				<div className="link-container">
 					<ol>
-						<TransitionGroup component={null}>
-							{	
-								isMounted &&
-								NavbarLinks && 
-								NavbarLinks.map(({name, url}, i) => (
-									<CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-										<li key={i} className="menu-item" style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-											<Link className="links" to={url} onClick={() => setInProp(true)}>{name}<span class="divider">.</span></Link>
-										</li>
-									</CSSTransition>
-								))
-							}
-						</TransitionGroup>
+						{NavbarLinks && 
+						NavbarLinks.map(({name, url}, i) => (
+							<li key={i} className="menu-item">
+								<Link className="links" to={url}>{name}<span class="divider">.</span></Link>
+							</li>
+						))}
 					</ol>
 				</div>
 			</NavLinks>
@@ -188,8 +145,4 @@ const Navbar = ({ isHome }) => {
 	)
 }
 
-Navbar.propTypes = {
-	isHome: PropTypes.bool,
-};
-  
 export default Navbar;
