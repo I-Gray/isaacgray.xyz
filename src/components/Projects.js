@@ -532,7 +532,7 @@ const Projects = () => {
 						<div key={key} className="image-container">
 							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
 							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
-							<StaticImage src={'../assets/images/TRICEP.jpg'} alt="" />
+							<StaticImage src={'../images/TRICEP.jpg'} alt="" />
 						</div>
 						<div className="rect" />
 						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
