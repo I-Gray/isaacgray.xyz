@@ -5,6 +5,7 @@ import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import { StaticImage } from "gatsby-plugin-image"
 import Typer from './Typer';
+import { tricep } from '../images/projectexample.jpg'
 
 import image from '../images/MarketMoo.jpg';
 
@@ -515,6 +516,7 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
+		<div id="projects">
 		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
 		<StyledTitle id="PROJECTS">
 				<h1 className=".spin"><span>my<br/></span> projects.</h1>
@@ -522,7 +524,7 @@ const Projects = () => {
 				I have worked on, <span>check <br/>
 				them out!</span></p>
 		</StyledTitle>
-		<ProjectsSection>
+		<ProjectsSection >
 			{projectsData.map((project, key) => {
 				return (
 					<>
@@ -530,12 +532,13 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
-							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
+							{/* <img key={key} src={'../../images/' + project.image} className="img" alt="" /> */}
 							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
-							<StaticImage src={'../images/TRICEP.jpg'} alt="" />
+							{/* <StaticImage src={'project.image'} alt="" /> */}
+							{/* <StaticImage src={'../images/TRICEP.jpg'} alt="" /> */}
 						</div>
 						<div className="rect" />
-						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
+						<img src={project.image} alt="" key={key} />
 					</div>
 
 					<div className="projects-right-container" >
@@ -582,6 +585,7 @@ const Projects = () => {
 				</div>
 			</div>
 		</ProjectsSection>
+		</div>
 		</>
 	);
 };

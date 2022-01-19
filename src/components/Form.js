@@ -23,7 +23,7 @@ const StyledForm = styled.div`
 		}
 
 		#message {
-			height: 5.5vh;
+			height: 8vh;
 			display: inline-block;
 			width: 60%;
 			border: 2px solid ${theme.colours.darkGrey};

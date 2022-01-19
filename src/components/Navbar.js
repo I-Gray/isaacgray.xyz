@@ -1,10 +1,10 @@
 import React from "react"
 import theme from '../styles/theme';
-import { Link } from "gatsby"
-import logo from "../images/logo.svg"
+import logo from "../images/Logo.png"
 import styled from 'styled-components';
 import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
+import { HashLink } from 'react-router-hash-link';
 
 const Header = styled.header`
 	background: ${theme.colours.white};
@@ -123,17 +123,16 @@ const NavLinks = styled.div`
 const Navbar = () => {
 	return (
 		<Header>
-			{/* ISSUE: change to raw svg import from icons folder */}
 			<NavbarPanel>
 			{/* link to home menu using Link component */}
-			<img src={logo} alt="Logo" />
+			<HashLink smooth to={"/#home"}><img src={logo} alt="Logo" /></HashLink>
 			<NavLinks>
 				<div className="link-container">
 					<ol>
 						{NavbarLinks && 
 						NavbarLinks.map(({name, url}, i) => (
 							<li key={i} className="menu-item">
-								<Link className="links" to={url}>{name}<span class="divider">.</span></Link>
+								<HashLink className="links" smooth to={url}>{name}<span class="divider">.</span></HashLink>
 							</li>
 						))}
 					</ol>

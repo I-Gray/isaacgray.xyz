@@ -127,6 +127,7 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
+		<div id="contact">
 		<SectionHeading section_num="04" leftDark={true} rightDark={true} id="CONTACT" />
 		<ContactSection>
 			<div className="contact-left-container">
@@ -141,6 +142,7 @@ const Contact = () => {
 				<Button text="Send!" blueText=">" light={true} />	
 			</div>
 		</ContactSection>
+		</div>
 		</>
 	);
 };

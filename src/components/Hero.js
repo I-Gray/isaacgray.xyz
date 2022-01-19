@@ -16,7 +16,7 @@ const HeroSection = styled.section`
 
 	.hero-left-container {
 		z-index: 3;
-		padding-top: 15%;
+		padding-top: 5%;
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 100vh;
@@ -186,7 +186,7 @@ const Hero = () => {
 
 	return (
 		<>
-		<HeroSection id="HOME">
+		<HeroSection id="home">
 			{/* <FloatingIcons className="icons"/> */}
 			<div className="hero-left-container">
 				{/* <div class="rectangle"></div> */}
@@ -199,7 +199,7 @@ const Hero = () => {
 					creator.
 				</p>
 				
-				<Button text="Reach Out!" blueText=">" light={true} className="reach-out-button"/>	
+				<Button text="Reach Out!" blueText=">" light={true} className="reach-out-button" />	
 			</div>
 			{/* <HeroOrbit /> */}
 			<svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -218,7 +218,8 @@ const About = () => {
 
 	return (
 		<>
-		<SectionHeading section_num="03" dark={true} />
+		<div id="about">
+		<SectionHeading section_num="02" dark={true} />
 		<AboutSection>
 				<div className="about-text-container">	
 					<h1 className="about-mobile">about<span><br/>me.</span></h1>
@@ -261,6 +262,7 @@ const About = () => {
 					<img  src={AboutImageMobile} alt="Picture of Isaac G."></img>
 				</div>		
 		</AboutSection>
+		</div>
 		</>
 	);
 };

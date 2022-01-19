@@ -250,8 +250,9 @@ const SkillsSection = styled.section`
 
 const Skills = () => {
 	return (
-		<>
-			<SectionHeading section_num="02" leftDark={true} rightDark={true} id="SKILLS" />
+		<>	
+			<div id="skills">
+			<SectionHeading section_num="03" leftDark={true} rightDark={true} />
 			<StyledTitle>
 					<h1><span>my<br/></span> skills.</h1>
 					<p>Over the course of my 
@@ -321,6 +322,7 @@ const Skills = () => {
 					</svg>
 				</div>
 			</SkillsSection>
+			</div>
 		</>
 	);
 };
