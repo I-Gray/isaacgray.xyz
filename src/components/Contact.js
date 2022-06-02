@@ -110,14 +110,14 @@ const ContactSection = styled.section`
 		.contact-right-container {
 			height: 100%
 			display: block;
-			margin-left: 10vw;
+			margin-left: 9vw;
 
 			p {
 				font-size: 6vw;
 			}
 
 			Button {
-				font-size: 4vw;
+				font-size: 3vw;
 			}
 		}
 		
@@ -139,7 +139,7 @@ const Contact = () => {
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
 				<Form className="form" />
-				<Button text="Send!" blueText=">" light={true} />	
+				{/* <Button text="Send!" blueText=">" light={true} />	 */}
 			</div>
 		</ContactSection>
 		</div>

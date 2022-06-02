@@ -4,6 +4,7 @@ import FloatingIcons from '../icons/FloatingIcons'
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import Button from './Button';
+import { Link } from 'gatsby';
 
 import { gsap } from "gsap";
 import anime from 'animejs/lib/anime.es';
@@ -199,7 +200,7 @@ const Hero = () => {
 					creator.
 				</p>
 				
-				<Button text="Reach Out!" blueText=">" light={true} className="reach-out-button" />	
+				<Link smooth to={"/#contact"}><Button text="Reach Out!" blueText=">" light={true} className="reach-out-button" /></Link>
 			</div>
 			{/* <HeroOrbit /> */}
 			<svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">

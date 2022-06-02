@@ -4,7 +4,7 @@ import theme from '../styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import { StaticImage } from "gatsby-plugin-image"
-import Typer from './Typer';
+
 import { tricep } from '../images/projectexample.jpg'
 
 import image from '../images/MarketMoo.jpg';
@@ -532,13 +532,9 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
-							{/* <img key={key} src={'../../images/' + project.image} className="img" alt="" /> */}
-							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
-							{/* <StaticImage src={'project.image'} alt="" /> */}
-							{/* <StaticImage src={'../images/TRICEP.jpg'} alt="" /> */}
+							<StaticImage src={'../images/TRICEP.jpg'} alt="" key={key}/>
 						</div>
 						<div className="rect" />
-						<img src={project.image} alt="" key={key} />
 					</div>
 
 					<div className="projects-right-container" >
@@ -551,7 +547,6 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies </p>
-								{/* <Typer className="typer" text={project.tech} />  */}
 								<ol>
 									{project.tech.map((t, i) => {
 											return(

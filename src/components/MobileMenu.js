@@ -21,32 +21,59 @@ const Sidebar = styled.nav`
 	li {
 		float: right;
 		list-style: none;
-		padding: 0;
 		margin: 0;
 		margin-right: 0;
 		margin-left: 2em;
 		margin-top: 8vh;
-		display: flex;
-		padding-left: 5vw;
+		display:block;
+		padding-left: 10vw;
 		padding-top: 5vh;
+		font-weight: 600;
 
 		.links {
 			color: ${({ theme }) => theme.colours.white};
 			text-decoration: none;
-			display: block;
+			display: inline-block;
 			padding: 1vh;
 			font-size: 8vw;
 			text-align: right;
-		}
+			position: relative;
 
-		&:hover {
-			background-color: ${({ theme }) => theme.colours.lightBlue};
-			cursor: pointer;
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;
+			
 		}
-
 		.links:hover {
-			background-color: ${({ theme }) => theme.colours.white};
 			color: ${({ theme }) => theme.colours.darkGrey};
+			-webkit-transform: skewX(-4deg);
+			-moz-transform: skewX(-4deg);
+			-o-transform: skewX(-4deg);
+			transform: skewX(-4deg);
+		}
+		.links:after {    
+			background: none repeat scroll 0 0 transparent;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: 4px;
+			left: 50%;
+
+			position: absolute;
+			color: ${({ theme }) => theme.colours.darkGrey};
+			background-color: ${({ theme }) => theme.colours.white};
+			cursor: pointer;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+			width: 0;
+		}
+		
+		.links:hover:after { 
+			color: ${({ theme }) => theme.colours.darkGrey};
+			background-color: ${({ theme }) => theme.colours.white};
+			width: 100%; 
+			left: 0; 
 		}
 	}
 `;

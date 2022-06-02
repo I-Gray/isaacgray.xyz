@@ -1,4 +1,4 @@
-// // https://www.joshwcomeau.com/snippets/react-hooks/use-prefers-reduced-motion/
+// https://www.joshwcomeau.com/snippets/react-hooks/use-prefers-reduced-motion/
 
 // import { useState, useEffect } from 'react';
 // const QUERY = '(prefers-reduced-motion: no-preference)';
@@ -26,4 +26,3 @@
 // 	return prefersReducedMotion;
 // };
 
- 

@@ -1,5 +1,4 @@
 
-import React from 'react'
 
 const Projects = [
 	{
@@ -12,7 +11,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com", 
-		image : "TRICEP.jpg"
+		image : "Tricep"
 	}, 
 	{
 		title : "Mobile App MVP",
@@ -23,7 +22,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image :  "MarketMoo.jpg"
+		image :  "../images/TRICEP.jpg"
 	},
 	{
 		title : "Portfolio Website",
@@ -36,7 +35,7 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image : "MarketMoo.jpg"
+		image : "../images/TRICEP.jpg"
 	}
 ]
 

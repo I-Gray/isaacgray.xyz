@@ -4,7 +4,8 @@ import logo from "../images/Logo.png"
 import styled from 'styled-components';
 import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'gatsby';
+
 
 const Header = styled.header`
 	background: ${theme.colours.white};
@@ -94,14 +95,24 @@ const NavLinks = styled.div`
 					text-decoration: none;
 					display: block;
 					padding: 1em;
-					font-size: 1.5em;
+					font-size: 1.6em;
 					text-align: right;
 					font-weight: 500;
 					transition: color 0.4 ease-in-out;
+
+					-webkit-transition: all 0.25s;
+					-moz-transition:    all 0.25s;
+					-ms-transition:     all 0.25s;
+					-o-transition:      all 0.25s;
+					transition:         all 0.25s;
 				}
 
 				&:hover {
 					cursor: pointer;
+					-webkit-transform: skewX(-4deg);
+					-moz-transform: skewX(-4deg);
+					-o-transform: skewX(-4deg);
+					transform: skewX(-4deg);
 				}
 
 				.links:hover {
@@ -124,15 +135,14 @@ const Navbar = () => {
 	return (
 		<Header>
 			<NavbarPanel>
-			{/* link to home menu using Link component */}
-			<HashLink smooth to={"/#home"}><img src={logo} alt="Logo" /></HashLink>
+			<Link smooth to={"/#home"}><img src={logo} alt="Logo" /></Link>
 			<NavLinks>
 				<div className="link-container">
 					<ol>
 						{NavbarLinks && 
 						NavbarLinks.map(({name, url}, i) => (
 							<li key={i} className="menu-item">
-								<HashLink className="links" smooth to={url}>{name}<span class="divider">.</span></HashLink>
+								<Link  className="links" smooth to={url}>{name}<span class="divider">.</span></Link>
 							</li>
 						))}
 					</ol>
