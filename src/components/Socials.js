@@ -6,6 +6,7 @@ import Github from '../icons/Github';
 import Twitter from '../icons/Twitter';
 import Dribble from '../icons/Dribble';
 import SocialLinks from '../constants/SocialLinks';
+import LinkedIn from "../icons/LinkedIn";
 
 const StyledSocials = styled.ul`
 	display: flex;
@@ -33,7 +34,7 @@ const StyledSocials = styled.ul`
 				width: ${props => props.size}px;
 				height: ${props => props.size}px;
 				path {
-					transition: fill 0.4s ease;
+					transition: fill 0.6s ease;
 					fill: ${props => props.alt ? theme.colours.lightGrey : theme.colours.grey};
 					stroke: 0;
 				}
@@ -41,9 +42,9 @@ const StyledSocials = styled.ul`
 		}
 		&:hover {
 			cursor: pointer;
-			transform: scale(1.1);
+			transform: scale(1.05);
 			svg {
-				stroke: ${theme.colours.white};
+
 				path {
 					fill: ${theme.colours.white};
 					
@@ -69,7 +70,8 @@ const Socials = ({size, alt}) => {
 			<StyledSocials size={size} alt={alt}>
 					{/* Combine Icons with Social Links array to iterate over this*/}
 					<li><a href="https://github.com/I-Gray"><Github /></a></li>
-					<li><a href="https://www.twitter.com"><Twitter /></a></li>
+					{/* <li><a href="https://www.twitter.com"><Twitter /></a></li> */}
+					<li><a href="https://www.linkedin.com/in/isaacgray1/"><LinkedIn /></a></li>
 					<li><a href="https://www.dribble.com"><Dribble /></a></li>
 			</StyledSocials>
 		</>

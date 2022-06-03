@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 	cursor: pointer;
 	color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
 	border-color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
-	border-radius: 8px;
+	border-radius: 10px;
 	transition: transform .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
 

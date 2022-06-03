@@ -254,19 +254,14 @@ const SkillsSection = styled.section`
 	}
 `;
 
-const Skills = () => {
+const Experience = () => {
 	return (
 		<>	
-			<div id="skills">
-			<SectionHeading section_num="03" leftDark={true} rightDark={true} />
+			<div id="experience">
+			<SectionHeading section_num="04" leftDark={true} rightDark={true} />
 			<StyledTitle>
-					<h1><span>my<br/></span> skills.</h1>
-					<p>Over the course of my 
-						<br/>degrees, I have built up a <br />
-						wide range of both <span>software <br/>
-						& hardware</span> experience, both <br />
-						through my work experience, studies  <br />
-						and personal projects.</p>
+					<h1><span>my<br/></span> experience.</h1>
+
 				</StyledTitle>
 			<SkillsSection>
 				<div className="left-content">
@@ -280,52 +275,13 @@ const Skills = () => {
 						</ol>
 					</div>
 
-					<div className="back-end">
-						<p>Infrastructure <span>//</span></p>
-						<br />
-						<ol>
-							<li><AWS size="55"/></li>
-							<li><Terraform size="55"/></li>
-							{/* <li><Graphql size="55"/></li>*/}
-							<li><Linux size="55" /></li>
-							{/* <li><Firebase size="55"/></li>  */}
-						</ol>
-					</div>
-					<div className="back-end">
-						<p>Backend <span>//</span></p>
-						<br />
-						<ol>
-							<li><Kubernetes size="55"/></li>
-							<li><PostgreSQL size="55"/></li>
-							<li><Docker size="60" /></li>
-							{/* <li><Graphql size="55"/></li>
-							<li><Firebase size="55"/></li> */}
-						</ol>
-					</div>
-				</div>
-				<div className="right-content">	
-					<div className="design">
-						<p>UI/UX Design <span>//</span></p>
-						<br/>
-						<ol>
-							<li><Figma size="55" /></li>
-							{/* <Xd size="55" /> */}
-							<li><Ps size="55" /></li>
-							<li><Ai size="55" /></li>
-						</ol>
-					</div>
-
-					<div className="technical" >
-						<p>Languages <span>//</span></p>
-						<br />
-						<ol>
-							<li><Python size="55" /></li>
-							<li><Cpp size="55" /></li>
-							<li><Arduino size="55" /></li>
-							{/* <li><Java size="55" /></li> */}
-							{/* <li><Pytorch size="55" /></li> */}
-						</ol>
-					</div>
+					
+					<p>Over the course of my 
+						<br/>degrees, I have built up a <br />
+						wide range of both <span>software <br/>
+						& hardware</span> experience, both <br />
+						through my work experience, studies  <br />
+						and personal projects.</p>
 					
 				</div>
 				<div className="skills-orbit">
@@ -343,4 +299,4 @@ const Skills = () => {
 };
 
 
-export default Skills;
+export default Experience;

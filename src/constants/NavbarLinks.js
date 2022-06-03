@@ -15,6 +15,10 @@ const NavbarLinks = [
 	  name: "SKILLS",
 	  url: "/#skills",
 	},
+	// {
+	// 	name: "EXPERIENCE",
+	// 	url: "/#experience",
+	// },
 	{
 	  name: "CONTACT",
 	  url: "/#contact",

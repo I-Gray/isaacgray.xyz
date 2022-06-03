@@ -30,17 +30,16 @@ const ContactSection = styled.section`
 			}
 		}
 
-		a {
-			font-size: 2vw;
+		p {
+			font-size: 1.2vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};	
-			text-decoration: underline;
+			text-decoration: italic;
 			transition: fill 0.4s ease-in-out;
 			margin-bottom: 5vh;
 		}
-		a:hover {
+		p:hover {
 			color: ${theme.colours.white};
-			cursor: pointer;
 		}
 	}
 
@@ -133,13 +132,13 @@ const Contact = () => {
 			<div className="contact-left-container">
 				<h1>contact</h1>
 				<h1><span>me.</span></h1>
-				<a src="">hello<span>@grayisaac</span>.com</a>	
-				<Socials className="socials" size="80" alt={true}/>
+				{/* <a src="">hello<span>@grayisaac</span>.com</a>	 */}
+				<p>Thanks for stopping by.</p>
+				<Socials className="socials" size="45" alt={true}/>
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
 				<Form className="form" />
-				{/* <Button text="Send!" blueText=">" light={true} />	 */}
 			</div>
 		</ContactSection>
 		</div>

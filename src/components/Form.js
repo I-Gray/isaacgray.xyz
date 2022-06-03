@@ -9,7 +9,8 @@ const StyledForm = styled.div`
 	form {
 
 		Button {
-			font-size: 1.5vw;
+			display: block;
+			font-size: 1vw;
 		}
 
 		input, #message {
@@ -92,7 +93,6 @@ const StyledForm = styled.div`
 			Button {
 				height: 100%
 				display: block;
-				margin-left: 2vw;
 				font-size: 2vw;
 			}
 
@@ -118,7 +118,6 @@ const StyledForm = styled.div`
 			Button {
 				height: 100%
 				display: block;
-				margin-left: 9vw;
 				font-size: 3vw;
 			}
 
