@@ -7,3 +7,4 @@ const TypeScript = ({size}) => (
 );
 
 export default TypeScript;
+
