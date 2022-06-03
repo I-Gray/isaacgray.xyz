@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import SectionHeading from './SectionHeading';
 import theme from '../styles/theme';
@@ -35,6 +35,8 @@ import Pytorch from '../icons/skills/Pytorch';
 import Arduino from '../icons/skills/Arduino'
 import Qt from '../icons/skills/Qt';
 import Opencv from '../icons/skills/Opencv';
+import HelloFresh from './HelloFresh';
+import Button from './Button';
 // import Ros from '../icons/skills/Ros';
 
 
@@ -42,7 +44,7 @@ const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	display flex;
 	height: 100%;
-	padding-bottom: 10vh;
+	padding-bottom: 2vh;
 
 	h1 {
 		font-size: 6vw;
@@ -114,7 +116,7 @@ const StyledTitle = styled.div`
 	}
 `;
 
-const SkillsSection = styled.section`
+const ExperienceSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	grid-template-columns: 70vw;
 	padding-top: 2vh;
@@ -157,6 +159,12 @@ const SkillsSection = styled.section`
 			transform: scale(1.1);
 			cursor: pointer;
 		}
+	}
+
+	.description {
+		font-size: 1.1vw;
+		color: ${theme.colours.lightGrey};
+
 	}
 
 	.skills-orbit {
@@ -260,28 +268,33 @@ const Experience = () => {
 			<div id="experience">
 			<SectionHeading section_num="04" leftDark={true} rightDark={true} />
 			<StyledTitle>
-					<h1><span>my<br/></span> experience.</h1>
-
-				</StyledTitle>
-			<SkillsSection>
+				<h1><span>my<br/></span> experience.</h1>
+			</StyledTitle>
+			<ExperienceSection>
 				<div className="left-content">
 					<div className="front-end">
-						<p>Front-end Web <span>//</span></p>
-						<br />
 						<ol>
-							<li><TypeScript size="55"/></li>
-							<li><Reactlogo size="55"/></li>
-							<li><Gatsby size="55"/></li>
+							<li><HelloFresh size="70"/></li>
 						</ol>
+						<p>Graduate Software Engineer <span>//</span></p>
+						<br />
+						<p>Nov. 2021 <span>// </span> Present</p>
+						<br />
 					</div>
+					<Button text="Show More" blueText=">" light={true} />	
+						<p id='description'>
+						Designed and implemented the <br />
+						cartonization service - a global <br />
+						initiative created to optimise box <br />
+						packaging configuration. The role  <br />
+						included working directly with <br />
+						stakeholders in an operating  <br />
+						warehouse to provide a scalable <br />
+						software solution to find the most <br />
+						appropriate materials to pack <br />
+						a customers order. 
+						</p> 
 
-					
-					<p>Over the course of my 
-						<br/>degrees, I have built up a <br />
-						wide range of both <span>software <br/>
-						& hardware</span> experience, both <br />
-						through my work experience, studies  <br />
-						and personal projects.</p>
 					
 				</div>
 				<div className="skills-orbit">
@@ -292,7 +305,7 @@ const Experience = () => {
 						<path d="M234 21C234 31.5391 225.672 40 215.5 40C205.328 40 197 31.5391 197 21C197 10.4609 205.328 2 215.5 2C225.672 2 234 10.4609 234 21Z" fill="white" stroke="#292626" stroke-width="4"/>
 					</svg>
 				</div>
-			</SkillsSection>
+			</ExperienceSection>
 			</div>
 		</>
 	);

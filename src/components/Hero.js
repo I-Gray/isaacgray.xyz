@@ -40,6 +40,19 @@ const HeroSection = styled.section`
 			span {
 				color: ${theme.colours.lightBlue};
 			}
+
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;
+
+			&:hover {
+				-webkit-transform: skewX(-4deg);
+				-moz-transform: skewX(-4deg);
+				-o-transform: skewX(-4deg);
+				transform: skewX(-4deg);
+			}
 		}
 	
 		p {

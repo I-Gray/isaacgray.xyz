@@ -76,6 +76,19 @@ const AboutSection = styled.section`
 
 		.about-image-desktop {
 			padding-top: 50%;
+			transition: transform .2s ease-in-out;
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;				
+		}
+
+		&:hover {
+			-webkit-transform: skewX(-1deg);
+			-moz-transform: skewX(-1deg);
+			-o-transform: skewX(-1deg);
+			transform: skewX(-1deg);
 		}
 
 		.about-image-mobile {

@@ -28,6 +28,19 @@ const ContactSection = styled.section`
 			span {
 				color: ${theme.colours.lightBlue};
 			}
+
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;
+
+			&:hover {
+				-webkit-transform: scale(1.02);
+				-moz-transform: scale(1.02);
+				-o-transform: scale(1.02));
+				transform: scale(1.02);
+			}
 		}
 
 		p {

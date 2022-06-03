@@ -9,7 +9,7 @@ const StyledButton = styled.button`
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 0.8vw;
 	font-weight: bold;
 	cursor: pointer;
 	color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
