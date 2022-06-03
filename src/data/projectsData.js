@@ -22,21 +22,21 @@ const Projects = [
 			], 
 		github : "https://github.com",
 		link : "https://google.com",
-		image :  "../images/TRICEP.jpg"
+		image :  "../images/TRICEP.png"
 	},
-	{
-		title : "Portfolio Website",
-		info : "Personal portfolio website built from the ground up to display my various projects.", 
-		tech : [
-			"React",
-			"Figma", 
-			"Gatsby", 
-			"GraphQL"
-			], 
-		github : "https://github.com",
-		link : "https://google.com",
-		image : "../images/TRICEP.jpg"
-	}
+	// {
+	// 	title : "Portfolio Website",
+	// 	info : "Personal portfolio website built from the ground up to display my various projects.", 
+	// 	tech : [
+	// 		"React",
+	// 		"Figma", 
+	// 		"Gatsby", 
+	// 		"GraphQL"
+	// 		], 
+	// 	github : "https://github.com",
+	// 	link : "https://google.com",
+	// 	image : "../images/TRICEP.png"
+	// }
 ]
 
 export default Projects;

@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import { StaticImage } from "gatsby-plugin-image"
-
-import { tricep } from '../images/projectexample.jpg'
-
-import image from '../images/MarketMoo.jpg';
 
 import Github from '../icons/Github';
 import Link from '../icons/Link';
@@ -539,13 +535,15 @@ const Projects = () => {
 		</StyledTitle>
 		<ProjectsSection >
 			{projectsData.map((project, key) => {
+
+
 				return (
 					<>
 					<div className="projects-left-container">
 						<p>Featured Project</p>
 						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
-							<StaticImage src={'../images/TRICEP.jpg'} alt="" key={key}/>
+							<StaticImage src={'../images/TRICEP.png'} alt="" key={key}/>
 						</div>
 						<div className="rect" />
 					</div>

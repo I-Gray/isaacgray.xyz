@@ -5,7 +5,6 @@ import CircleAccent from '../icons/CircleAccent';
 import theme from '../styles/theme'
 import AboutImageMobile from '../images/AboutPictureMobile.png';
 import AboutImageDesktop from '../images/AboutPictureDesktop.png';
-import Tricep from '../images/TRICEP.jpg';
 
 import SectionHeading from './SectionHeading';
 import { ScrollRevealConfig } from '../config';
