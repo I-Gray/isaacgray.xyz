@@ -1,16 +1,16 @@
 import React from "react"
 import theme from '../styles/theme';
-import logo from "../images/Logo.png"
 import styled from 'styled-components';
 import NavbarLinks from '../constants/NavbarLinks'
 import MobileMenu from './MobileMenu';
 import { Link } from 'gatsby';
+import Logo from '../icons/Logo';
 
 
 const Header = styled.header`
 	background: ${theme.colours.white};
 
-	padding-left: 1.5vw;
+	padding-left: 10vw;
 	padding-top: 2vh;
 	padding-bottom: 2vh;
 
@@ -35,11 +35,22 @@ const NavbarPanel = styled.nav`
 
 	display: flex;
 
-	img {
-		max-height: 5em;
-		max-width: 10em;
+	.logo {
 		cursor: pointer;
-		margin-left: 8vw;
+		transform-origin: 50% 50%;
+		-webkit-transition: transform 0.25s;
+		-moz-transition:    transform 0.25s;
+		-ms-transition:     transform 0.25s;
+		-o-transition:      transform 0.25s;
+		transition:         transform 0.25s;
+	}
+
+	.logo:hover {
+		cursor: pointer;
+		-webkit-transform: scale(1.02);
+		-moz-transform: scale(1.02);
+		-o-transform: scale(1.02);
+		transform: scale(1.02);
 	}
 `;
 
@@ -95,7 +106,7 @@ const NavLinks = styled.div`
 					text-decoration: none;
 					display: block;
 					padding: 1em;
-					font-size: 1.6em;
+					font-size: 1.4em;
 					text-align: right;
 					font-weight: 500;
 					transition: color 0.4 ease-in-out;
@@ -135,7 +146,7 @@ const Navbar = () => {
 	return (
 		<Header>
 			<NavbarPanel>
-			<Link smooth to={"/#home"}><img src={logo} alt="Logo" /></Link>
+			<Link smooth to={"/#home"}><Logo class="logo" size={80}/></Link>
 			<NavLinks>
 				<div className="link-container">
 					<ol>

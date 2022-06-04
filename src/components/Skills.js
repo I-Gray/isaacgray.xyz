@@ -23,7 +23,7 @@ import Docker from '../icons/skills/Docker';
 import Linux from '../icons/skills/Linux';
 
 import Figma from '../icons/skills/Figma';
-// import Xd from '../icons/skills/Xd';
+import Xd from '../icons/skills/Xd';
 import Ai from '../icons/skills/Ai';
 import Ps from '../icons/skills/Ps';
 
@@ -323,8 +323,8 @@ const Skills = () => {
 						<br/>
 						<ol>
 							<li><Figma size="55" /></li>
-							{/* <Xd size="55" /> */}
-							<li><Ps size="55" /></li>
+							<li><Xd size="55" /></li>
+							{/* <li><Ps size="55" /></li> */}
 							<li><Ai size="55" /></li>
 						</ol>
 					</div>

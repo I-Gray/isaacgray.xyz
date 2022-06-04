@@ -6,12 +6,9 @@ import theme from "../styles/theme";
 import styled from "styled-components";
 
 import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import About from "./About";
-import Contact from "./Contact";
 import Footer from "./Footer";
+
+import Loader from './Loader';
 
 import PropTypes from "prop-types";
 
@@ -24,40 +21,39 @@ const StyledContent = styled.div`
 `;
 
 const Layout = ({ children, location }) => {
-  	// const isHome = location.pathname === "/";
-  	// const [isLoading, setIsLoading] = useState(isHome);
+  	const isHome = location.pathname === "/";
+  	const [isLoading, setIsLoading] = useState(isHome);
 
-  //   // Sets target="_blank" rel="noopener noreferrer" on external links
-  //   const handleExternalLinks = () => {
-  //     const allLinks = Array.from(document.querySelectorAll("a"));
-  //     if (allLinks.length > 0) {
-  //       allLinks.forEach((link) => {
-  //         if (link.host !== window.location.host) {
-  //           link.setAttribute("rel", "noopener noreferrer");
-  //           link.setAttribute("target", "_blank");
-  //         }
-  //       });
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     if (isLoading) {
-  //       return;
-  //     }
-
-  //     if (location.hash) {
-  //       const id = location.hash.substring(1); // location.hash without the '#'
-  //       setTimeout(() => {
-  //         const el = document.getElementById(id);
-  //         if (el) {
-  //           el.scrollIntoView();
-  //           el.focus();
-  //         }
-  //       }, 0);
-  //     }
-
-  //     handleExternalLinks();
-  //   }, [isLoading]);
+	  const handleExternalLinks = () => {
+		const allLinks = Array.from(document.querySelectorAll('a'));
+		if (allLinks.length > 0) {
+		  allLinks.forEach(link => {
+			if (link.host !== window.location.host) {
+			  link.setAttribute('rel', 'noopener noreferrer');
+			  link.setAttribute('target', '_blank');
+			}
+		  });
+		}
+	  };
+	
+	  useEffect(() => {
+		if (isLoading) {
+		  return;
+		}
+	
+		if (location.hash) {
+		  const id = location.hash.substring(1); // location.hash without the '#'
+		  setTimeout(() => {
+			const el = document.getElementById(id);
+			if (el) {
+			  el.scrollIntoView();
+			  el.focus();
+			}
+		  }, 0);
+		}
+	
+		handleExternalLinks();
+	  }, [isLoading]);
 
   return (
     <>
@@ -66,16 +62,17 @@ const Layout = ({ children, location }) => {
           <GlobalStyle />
           {/* Add Theme prop to ThemeProvider for device handling, using the options.js file */}
 
-          {/* {isLoading && isHome ? (
-            <h1> Loading...</h1>
-          ) : ( */}
+          {isLoading && isHome ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
+          ) : 
+		  (
             <StyledContent>
               {/* <Navbar isHome={isHome} /> */}
-			  <Navbar />
+			  <Navbar isHome={isHome} />
               {children}
               <Footer />
             </StyledContent>
-          {/* )} */}
+        )} 
         </ThemeProvider>
       </div>
     </>

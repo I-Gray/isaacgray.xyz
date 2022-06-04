@@ -147,7 +147,7 @@ const Contact = () => {
 				<h1><span>me.</span></h1>
 				{/* <a src="">hello<span>@grayisaac</span>.com</a>	 */}
 				<p>Thanks for stopping by.</p>
-				<Socials className="socials" size="45" alt={true}/>
+				<Socials className="socials" size={55} alt={true}/>
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>

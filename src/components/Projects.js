@@ -533,17 +533,15 @@ const Projects = () => {
 				I have worked on, <span>check <br/>
 				them out!</span></p>
 		</StyledTitle>
-		<ProjectsSection >
+		<ProjectsSection>
 			{projectsData.map((project, key) => {
-
-
 				return (
 					<>
 					<div className="projects-left-container">
 						<p>Featured Project</p>
 						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
-							<StaticImage src={'../images/TRICEP.png'} alt="" key={key}/>
+							<StaticImage src='../images/TRICEP.png' alt={project.title} className="img" />
 						</div>
 						<div className="rect" />
 					</div>
@@ -568,8 +566,8 @@ const Projects = () => {
 								</ol>
 							</div>
 							<div className="link-container">
-								<a className="github" src={project.github} alt=""><Github /></a>
-								<a className="link" src={project.link} alt=""><Link /></a>
+								<a className="github" href={project.github} target="_blank" rel="noopener noreferrer" alt=""><Github /></a>
+								<a className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt=""><Link /></a>
 							</div>
 						</div>
 						<div className="circle-accent" >
@@ -582,14 +580,14 @@ const Projects = () => {
 					</>
 				);
 			})}
-			<div className="view-all-container">
+			{/* <div className="view-all-container">
 				<div className="end-rect" />
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
 					<Button text="View All" blueText=">" light={true}/>
 				</div>
-			</div>
+			</div> */}
 		</ProjectsSection>
 		</div>
 		</>

@@ -1,3 +1,5 @@
+import Tricep from '../images/TRICEP.png';
+import MarketMoo from '../images/MarketMoo.png';
 
 
 const Projects = [
@@ -7,23 +9,24 @@ const Projects = [
 		tech : [
 			"Adobe_XD",
 			"OpenCV",
-			"Qt"
+			"C++",
+			"Qt",
 			], 
-		github : "https://github.com",
-		link : "https://google.com", 
-		image : "Tricep"
+		github : "https://github.com/I-Gray/TRICEP-ComputerVisionAlgo",
+		link : "https://www.tricep.com.au/post/meet-3d-redi", 
+		image : '../images/TRICEP.png'
 	}, 
-	{
-		title : "Mobile App MVP",
-		info : "Crafted a brand and associated MVP that was pitched to peers at a local startup incubator.", 
-		tech : [
-			"Adobe_XD",
-			"LaTeX"
-			], 
-		github : "https://github.com",
-		link : "https://google.com",
-		image :  "../images/TRICEP.png"
-	},
+	// {
+	// 	title : "Mobile App MVP",
+	// 	info : "Crafted a brand and associated MVP that was pitched to peers at a local startup incubator.", 
+	// 	tech : [
+	// 		"Adobe_XD",
+	// 		"LaTeX"
+	// 		], 
+	// 	github : "https://github.com",
+	// 	link : "https://google.com",
+	// 	image :  '../images/MarketMoo.png'
+	// },
 	// {
 	// 	title : "Portfolio Website",
 	// 	info : "Personal portfolio website built from the ground up to display my various projects.", 
