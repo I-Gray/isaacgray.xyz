@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import styled from 'styled-components';
 import CircleAccent from '../icons/CircleAccent';
-import theme from '../styles/theme';
+import theme from '../styles/theme'
 import AboutImageMobile from '../images/AboutPictureMobile.png';
 import AboutImageDesktop from '../images/AboutPictureDesktop.png';
+
 import SectionHeading from './SectionHeading';
+import { ScrollRevealConfig } from '../config';
+import scrollReveal from '../util/scrollreveal';
+import Typer from './Typer';
+
+
 
 const AboutSection = styled.section`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -48,7 +54,7 @@ const AboutSection = styled.section`
 
 			span {
 				color: ${theme.colours.lightBlue};
-			}
+			}			
 		}
 	}
 
@@ -69,6 +75,19 @@ const AboutSection = styled.section`
 
 		.about-image-desktop {
 			padding-top: 50%;
+			transition: transform .2s ease-in-out;
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;				
+		}
+
+		&:hover {
+			-webkit-transform: skewX(-1deg);
+			-moz-transform: skewX(-1deg);
+			-o-transform: skewX(-1deg);
+			transform: skewX(-1deg);
 		}
 
 		.about-image-mobile {
@@ -215,11 +234,20 @@ const AboutSection = styled.section`
 `;
 
 const About = () => {
+	// const revealContainer = useRef(null);
+	// useEffect(() => {
+	// 	// if (prefersReducedMotion) {
+	// 	// 	return;
+	// 	// }
+	// 	scrollReveal.reveal(revealContainer.current, ScrollRevealConfig());
+	// }, []);
+	// ref={revealContainer}
 
 	return (
 		<>
-		<SectionHeading section_num="03" dark={true} />
-		<AboutSection>
+		<div id="about">
+		<SectionHeading section_num="02" dark={true} />
+		<AboutSection class="about" >
 				<div className="about-text-container">	
 					<h1 className="about-mobile">about<span><br/>me.</span></h1>
 				</div>
@@ -230,17 +258,18 @@ const About = () => {
 						Hi, I’m <span>Isaac</span>.
 						<br/>
 						<br/>
-						I am an Australian developer currently living in <span>Wollongong</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as computer vision, web-development, security & hardware projects.
+						I am an Australian developer currently living in <span>Sydney</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as back-end web development, computer vision & hardware projects.
 						<br/>
 						<br/>
 						I have experience creating things in teams as well as many solo-projects, all of which you can read about on this site!
 						<br/>
 						<br/>
-						<span>Other than tech</span>, I enjoy reading, rock-climbing & making music. 
+						<span>Other than tech</span>, I enjoy reading, traveling, running & making music. 
 						<br/>
 						<br/>
-						Currently I am learning: <span>Vue</span>|
+						Currently I am learning: 
 					</p>
+					<Typer className="typer" text="software design patterns" /> 
 				</div>
 				<div className="about-right-container">
 					<svg className="about-svg" width="562" height="280" viewBox="0 0 562 280" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -261,6 +290,7 @@ const About = () => {
 					<img  src={AboutImageMobile} alt="Picture of Isaac G."></img>
 				</div>		
 		</AboutSection>
+		</div>
 		</>
 	);
 };

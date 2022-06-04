@@ -6,7 +6,7 @@ const StyledHeading = styled.div`
 	display: flex;
 	
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	padding-top: 3vh;
+	padding-top: 12vh;
 	
 	ul {	
 		list-style: none;

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-// https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/ 
+// // https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/ 
 
 export const useOnClickOutside = (ref, handler) => {
 	useEffect(() => {
@@ -10,9 +10,13 @@ export const useOnClickOutside = (ref, handler) => {
 			}
 			handler(event);
 		};
-		document.addEventListener('mousedown', listener);
+		if (typeof document !== 'undefined'){
+			document.addEventListener('mousedown', listener);
+		}
 		return () => {
-			document.removeEventListener('mousedown', listener);
+			if (typeof document !== 'undefined'){
+				document.removeEventListener('mousedown', listener);
+			}
 		};
 	}, 
 	[ref, handler],

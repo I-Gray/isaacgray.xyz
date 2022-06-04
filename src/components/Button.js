@@ -9,12 +9,12 @@ const StyledButton = styled.button`
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 0.8vw;
 	font-weight: bold;
 	cursor: pointer;
 	color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
 	border-color: ${props => props.light ? theme.colours.white : theme.colours.darkGrey};
-	border-radius: 8px;
+	border-radius: 10px;
 	transition: transform .2s ease-in-out;
 	transition: background-color .2s ease-in-out;
 

@@ -4,6 +4,7 @@ import FloatingIcons from '../icons/FloatingIcons'
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import Button from './Button';
+import { Link } from 'gatsby';
 
 import { gsap } from "gsap";
 import anime from 'animejs/lib/anime.es';
@@ -16,7 +17,7 @@ const HeroSection = styled.section`
 
 	.hero-left-container {
 		z-index: 3;
-		padding-top: 15%;
+		padding-top: 2%;
 		margin-left: 10vw;
 		margin-right: 10vw;
 		height: 100vh;
@@ -39,6 +40,19 @@ const HeroSection = styled.section`
 			span {
 				color: ${theme.colours.lightBlue};
 			}
+
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;
+
+			&:hover {
+				-webkit-transform: skewX(-4deg);
+				-moz-transform: skewX(-4deg);
+				-o-transform: skewX(-4deg);
+				transform: skewX(-4deg);
+			}
 		}
 	
 		p {
@@ -59,7 +73,7 @@ const HeroSection = styled.section`
 		position: absolute;
 		z-index; 1;
 		left: 47%;
-		top: 20%;
+		top: 10%;
 		display: flex;
 	}
 
@@ -160,17 +174,21 @@ const HeroSection = styled.section`
 `;
 
 const Hero = () => {
-	// document.addEventListener('mousemove', parallax);
-	// function parallax(e) {
-	// 	this.querySelectorAll('.layer').forEach(layer => {
-	// 		const velocity = layer.getAttribute('icon-speed');
+	if (typeof document !== 'undefined') {
+		document.addEventListener('mousemove', parallax);
+	}
+	function parallax(e) {
+		if (window !== 'undefined') {
+			this.querySelectorAll('.layer').forEach(layer => {
+				const velocity = layer.getAttribute('icon-speed');
 
-	// 		const x = (window.innerWidth - e.pageX * velocity)/100;
-	// 		const y = (window.innerHeight - e.pageY * velocity)/100;
-			
-	// 		layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-	// 	})
-	// }
+				const x = (window.innerWidth - e.pageX * velocity)/100;
+				const y = (window.innerHeight - e.pageY * velocity)/100;
+				
+				layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+			})
+		}
+	}
 
 	// var path = anime.path('.inner-follow');
 		
@@ -186,7 +204,7 @@ const Hero = () => {
 
 	return (
 		<>
-		<HeroSection id="HOME">
+		<HeroSection id="home">
 			{/* <FloatingIcons className="icons"/> */}
 			<div className="hero-left-container">
 				{/* <div class="rectangle"></div> */}
@@ -199,10 +217,10 @@ const Hero = () => {
 					creator.
 				</p>
 				
-				<Button text="Reach Out!" blueText=">" light={true} className="reach-out-button"/>	
+				<Link smooth to={"/#contact"}><Button text="Reach Out!" blueText=">" light={true} className="reach-out-button" /></Link>
 			</div>
 			{/* <HeroOrbit /> */}
-			<svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">
+			 <svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.4" className="icon1">
 				<path class="layer" icon-speed="-4" d="M665.799 111.545C665.665 111.12 665.62 110.671 665.667 110.228C665.714 109.784 665.852 109.354 666.072 108.965C666.293 108.576 666.591 108.237 666.948 107.967C667.305 107.697 667.714 107.503 668.149 107.396C668.948 107.196 669.792 107.296 670.52 107.677C671.248 108.058 671.809 108.694 672.095 109.462C672.381 110.231 672.372 111.078 672.07 111.841C671.767 112.605 671.193 113.231 670.458 113.6L670.092 113.842C670.116 113.93 670.257 114.059 670.52 114.23C670.701 114.364 670.911 114.455 671.133 114.496C671.451 114.643 671.808 114.686 672.153 114.62C672.497 114.553 672.813 114.38 673.053 114.125C673.71 113.476 674.095 112.603 674.13 111.683C674.099 106.78 673.564 101.894 672.531 97.102C671.511 90.9619 670.706 85.265 670.116 80.0114C669.253 72.4866 668.725 66.4762 668.53 61.9802C668.195 55.7045 669.575 51.7917 672.672 50.2419C672.969 50.1083 673.278 50.0016 673.594 49.9232C674.561 49.6638 675.583 49.6972 676.53 50.019C677.477 50.3409 678.306 50.9366 678.91 51.7302C679.803 52.797 680.457 54.042 680.827 55.3819C680.961 55.8073 681.006 56.2559 680.959 56.6998C680.912 57.1436 680.774 57.5734 680.554 57.9623C680.333 58.3513 680.035 58.6912 679.678 58.961C679.32 59.2307 678.911 59.4246 678.476 59.5306C677.677 59.7312 676.833 59.6313 676.105 59.2502C675.377 58.869 674.816 58.2333 674.53 57.4649C674.245 56.6965 674.253 55.8493 674.556 55.0858C674.858 54.3222 675.432 53.6959 676.168 53.3269L676.535 53.0847C676.512 52.9962 676.368 52.8682 676.106 52.6972C675.925 52.5607 675.715 52.4693 675.492 52.4308C675.159 52.2874 674.788 52.2542 674.434 52.3362C674.08 52.4181 673.761 52.6108 673.525 52.886C672.825 53.5044 672.486 54.84 672.507 56.893C672.829 61.201 673.376 65.4889 674.146 69.7393C676.077 81.1549 677.403 92.665 678.12 104.222C678.53 107.462 678.123 110.755 676.937 113.803C676.128 115.265 674.812 116.384 673.236 116.949C672.446 117.194 671.607 117.24 670.796 117.081C669.985 116.922 669.226 116.564 668.59 116.04C667.193 114.885 666.213 113.307 665.799 111.545Z" fill="white" fill-opacity="0.25"/>
 				
@@ -242,7 +260,7 @@ const Hero = () => {
 					<path d="M763.801 464.2L765.721 469.591" stroke="white" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</g>
 				
-				<circle class="layer" icon-speed="-1" cx="301" cy="653" r="53.5" stroke="white" stroke-opacity="0.25" stroke-width="3"/>
+				<circle class="layer" icon-speed="-1" cx="301" cy="600" r="53.5" stroke="white" stroke-opacity="0.25" stroke-width="3"/>
 				
 				<path class="layer" icon-speed="3" d="M38.1695 146.53L54.0873 55.2422L125.186 114.671L38.1695 146.53Z" stroke="white" stroke-opacity="0.25" stroke-width="3"/>
 				
@@ -261,6 +279,7 @@ const Hero = () => {
 				</clipPath>
 				</defs>
 			</svg>
+
 			<svg className="circle-orbit" viewBox="0 0 634 728" fill="none" xmlns="http://www.w3.org/2000/svg" >
 				<path d="M377.485 227C432.914 242.814 418.307 532.071 418.307 532.071C387.491 611.942 312.171 706.826 257.422 447.396C188.986 123.108 444.12 634.762 596 447.396" stroke="#2661BF" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 				<path class="blue-squiggle" d="M273.646 285.873C308.699 308.708 386.234 327.99 415.959 222.438C445.684 116.886 533.867 181.672 584.377 211.305C604.042 219.229 611.808 248.229 485.56 300.833" stroke="#3C6AB3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>

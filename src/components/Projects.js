@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../styles/theme';
 import SectionHeading from './SectionHeading';
 import projectsData from '../data/projectsData'
 import { StaticImage } from "gatsby-plugin-image"
-import Typer from './Typer';
-
-import image from '../images/MarketMoo.jpg';
 
 import Github from '../icons/Github';
 import Link from '../icons/Link';
@@ -29,6 +26,19 @@ const StyledTitle = styled.div`
 			color: ${theme.colours.lightBlue};
 			font-weight: 400;
 			font-size: 5vw;
+		}
+
+		-webkit-transition: all 0.25s;
+		-moz-transition:    all 0.25s;
+		-ms-transition:     all 0.25s;
+		-o-transition:      all 0.25s;
+		transition:         all 0.25s;
+
+		&:hover {
+			-webkit-transform: scale(1.02);
+			-moz-transform: scale(1.02);
+			-o-transform: scale(1.02);
+			transform: scale(1.02);
 		}
 	}
 
@@ -515,6 +525,7 @@ const ProjectsSection = styled.section`
 const Projects = () => {
 	return (
 		<>
+		<div id="projects">
 		<SectionHeading section_num="01" leftDark={false} rightDark={false} />
 		<StyledTitle id="PROJECTS">
 				<h1 className=".spin"><span>my<br/></span> projects.</h1>
@@ -530,12 +541,9 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h3 key={key} class="animate" >{project.title}</h3>
 						<div key={key} className="image-container">
-							{/* <StaticImage src={`${project.image}`} className="img" alt="" /> */}
-							{/* <StaticImage key={key} src={require('../assets/images/' + project.image)} className="img" alt="" /> */}
-							<StaticImage src={'../images/TRICEP.jpg'} alt="" />
+							<StaticImage src='../images/TRICEP.png' alt={project.title} className="img" />
 						</div>
 						<div className="rect" />
-						{/* <img src={"../assets/images/projectexample.jpg" + project.image} alt="" key={key} /> */}
 					</div>
 
 					<div className="projects-right-container" >
@@ -548,7 +556,6 @@ const Projects = () => {
 						<div className="tech-and-link">
 							<div className="tech-container">
 								<p className="tech-title">Technologies </p>
-								{/* <Typer className="typer" text={project.tech} />  */}
 								<ol>
 									{project.tech.map((t, i) => {
 											return(
@@ -559,8 +566,8 @@ const Projects = () => {
 								</ol>
 							</div>
 							<div className="link-container">
-								<a className="github" src={project.github} alt=""><Github /></a>
-								<a className="link" src={project.link} alt=""><Link /></a>
+								<a className="github" href={project.github} target="_blank" rel="noopener noreferrer" alt=""><Github /></a>
+								<a className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt=""><Link /></a>
 							</div>
 						</div>
 						<div className="circle-accent" >
@@ -573,15 +580,16 @@ const Projects = () => {
 					</>
 				);
 			})}
-			<div className="view-all-container">
+			{/* <div className="view-all-container">
 				<div className="end-rect" />
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
 					<Button text="View All" blueText=">" light={true}/>
 				</div>
-			</div>
+			</div> */}
 		</ProjectsSection>
+		</div>
 		</>
 	);
 };

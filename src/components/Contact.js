@@ -28,19 +28,31 @@ const ContactSection = styled.section`
 			span {
 				color: ${theme.colours.lightBlue};
 			}
+
+			-webkit-transition: all 0.25s;
+			-moz-transition:    all 0.25s;
+			-ms-transition:     all 0.25s;
+			-o-transition:      all 0.25s;
+			transition:         all 0.25s;
+
+			&:hover {
+				-webkit-transform: scale(1.02);
+				-moz-transform: scale(1.02);
+				-o-transform: scale(1.02));
+				transform: scale(1.02);
+			}
 		}
 
-		a {
-			font-size: 2vw;
+		p {
+			font-size: 1.2vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};	
-			text-decoration: underline;
+			text-decoration: italic;
 			transition: fill 0.4s ease-in-out;
 			margin-bottom: 5vh;
 		}
-		a:hover {
+		p:hover {
 			color: ${theme.colours.white};
-			cursor: pointer;
 		}
 	}
 
@@ -110,14 +122,14 @@ const ContactSection = styled.section`
 		.contact-right-container {
 			height: 100%
 			display: block;
-			margin-left: 10vw;
+			margin-left: 9vw;
 
 			p {
 				font-size: 6vw;
 			}
 
 			Button {
-				font-size: 4vw;
+				font-size: 3vw;
 			}
 		}
 		
@@ -127,20 +139,22 @@ const ContactSection = styled.section`
 const Contact = () => {
 	return (
 		<>
+		<div id="contact">
 		<SectionHeading section_num="04" leftDark={true} rightDark={true} id="CONTACT" />
 		<ContactSection>
 			<div className="contact-left-container">
 				<h1>contact</h1>
 				<h1><span>me.</span></h1>
-				<a src="">hello<span>@grayisaac</span>.com</a>	
-				<Socials className="socials" size="80" alt={true}/>
+				{/* <a src="">hello<span>@grayisaac</span>.com</a>	 */}
+				<p>Thanks for stopping by.</p>
+				<Socials className="socials" size={55} alt={true}/>
 			</div>
 			<div className="contact-right-container">
 				<p>Let's chat!</p>
 				<Form className="form" />
-				<Button text="Send!" blueText=">" light={true} />	
 			</div>
 		</ContactSection>
+		</div>
 		</>
 	);
 };

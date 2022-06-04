@@ -7,17 +7,23 @@ import SkillsOrbit from '../icons/SkillsOrbit'
 
 // Turn skills logos into a component and iterate through
 // them to save code and improve reusability. 
-import Javascript from '../icons/skills/Javascript';
+import TypeScript from '../icons/skills/TypeScript';
 import Reactlogo from '../icons/skills/Reactlogo';
 import Gatsby from '../icons/skills/Gatsby';  
 import Sass from '../icons/skills/Sass';  
 
-import Mongo from '../icons/skills/Mongo';
+import AWS from '../icons/skills/AWS';
 import Graphql from '../icons/skills/Graphql';
 import Firebase from '../icons/skills/Firebase';
+import Terraform from '../icons/skills/Terraform';
+
+import PostgreSQL from '../icons/skills/PostgreSQL';
+import Kubernetes from '../icons/skills/Kubernetes';
+import Docker from '../icons/skills/Docker';
+import Linux from '../icons/skills/Linux';
 
 import Figma from '../icons/skills/Figma';
-// import Xd from '../icons/skills/Xd';
+import Xd from '../icons/skills/Xd';
 import Ai from '../icons/skills/Ai';
 import Ps from '../icons/skills/Ps';
 
@@ -50,7 +56,21 @@ const StyledTitle = styled.div`
 			font-weight: 400;
 			font-size: 8vw;
 		}
+
+		-webkit-transition: all 0.25s;
+		-moz-transition:    all 0.25s;
+		-ms-transition:     all 0.25s;
+		-o-transition:      all 0.25s;
+		transition:         all 0.25s;
+
+		&:hover {
+			-webkit-transform: skewX(-4deg);
+			-moz-transform: skewX(-4deg);
+			-o-transform: skewX(-4deg);
+			transform: skewX(-4deg);
+		}
 	}
+
 
 	p {
 		font-size: 1.5vw;
@@ -250,16 +270,17 @@ const SkillsSection = styled.section`
 
 const Skills = () => {
 	return (
-		<>
-			<SectionHeading section_num="02" leftDark={true} rightDark={true} id="SKILLS" />
+		<>	
+			<div id="skills">
+			<SectionHeading section_num="03" leftDark={true} rightDark={true} />
 			<StyledTitle>
 					<h1><span>my<br/></span> skills.</h1>
 					<p>Over the course of my 
 						<br/>degrees, I have built up a <br />
 						wide range of both <span>software <br/>
 						& hardware</span> experience, both <br />
-						through my studies and in <br />
-						personal projects.</p>
+						through my work experience, studies  <br />
+						and personal projects.</p>
 				</StyledTitle>
 			<SkillsSection>
 				<div className="left-content">
@@ -267,20 +288,32 @@ const Skills = () => {
 						<p>Front-end Web <span>//</span></p>
 						<br />
 						<ol>
-							<li><Javascript size="55"/></li>
+							<li><TypeScript size="55"/></li>
 							<li><Reactlogo size="55"/></li>
 							<li><Gatsby size="55"/></li>
-							<li><Sass size="55"/></li>
 						</ol>
 					</div>
 
 					<div className="back-end">
-						<p>Back-end Web <span>//</span></p>
+						<p>Infrastructure <span>//</span></p>
 						<br />
 						<ol>
-							<li><Mongo size="55"/></li>
-							<li><Graphql size="55"/></li>
-							<li><Firebase size="55"/></li>
+							<li><AWS size="55"/></li>
+							<li><Terraform size="55"/></li>
+							{/* <li><Graphql size="55"/></li>*/}
+							<li><Linux size="55" /></li>
+							{/* <li><Firebase size="55"/></li>  */}
+						</ol>
+					</div>
+					<div className="back-end">
+						<p>Backend <span>//</span></p>
+						<br />
+						<ol>
+							<li><Kubernetes size="55"/></li>
+							<li><PostgreSQL size="55"/></li>
+							<li><Docker size="60" /></li>
+							{/* <li><Graphql size="55"/></li>
+							<li><Firebase size="55"/></li> */}
 						</ol>
 					</div>
 				</div>
@@ -290,27 +323,24 @@ const Skills = () => {
 						<br/>
 						<ol>
 							<li><Figma size="55" /></li>
-							{/* <Xd size="55" /> */}
+							<li><Xd size="55" /></li>
+							{/* <li><Ps size="55" /></li> */}
 							<li><Ai size="55" /></li>
-							<li><Ps size="55" /></li>
 						</ol>
 					</div>
 
 					<div className="technical" >
-						<p>Technical <span>//</span></p>
+						<p>Languages <span>//</span></p>
 						<br />
 						<ol>
 							<li><Python size="55" /></li>
 							<li><Cpp size="55" /></li>
-							<li><Java size="55" /></li>
+							<li><Arduino size="55" /></li>
+							{/* <li><Java size="55" /></li> */}
 							{/* <li><Pytorch size="55" /></li> */}
 						</ol>
-						<ol>
-							<li><Arduino size="55" /></li>
-							<li><Qt size="55" /></li>
-							<li><Opencv size="55" /></li>
-						</ol>
 					</div>
+					
 				</div>
 				<div className="skills-orbit">
 					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,6 +351,7 @@ const Skills = () => {
 					</svg>
 				</div>
 			</SkillsSection>
+			</div>
 		</>
 	);
 };

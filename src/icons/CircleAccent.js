@@ -3,8 +3,6 @@ import React from 'react';
 import theme from '../styles/theme'
 
 const StyledCircleAccent = styled.div`
-
-
 `;
 
 const CircleAccent = () => {

@@ -2,10 +2,17 @@
 import React from "react";
 import theme from '../styles/theme'
 import styled from 'styled-components';
+import Button from './Button';
 
 const StyledForm = styled.div`
 	
 	form {
+
+		Button {
+			display: block;
+			font-size: 0.8vw;
+		}
+
 		input, #message {
 			font-family: 'Roboto', sans-serif;
 			font-size: 2vw;
@@ -23,7 +30,7 @@ const StyledForm = styled.div`
 		}
 
 		#message {
-			height: 5.5vh;
+			height: 8vh;
 			display: inline-block;
 			width: 60%;
 			border: 2px solid ${theme.colours.darkGrey};
@@ -47,7 +54,6 @@ const StyledForm = styled.div`
 			width: 80%;
 			outline: 2px solid ${theme.colours.lightBlue};
 		}
-
 
 		// Text colours
 		input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -84,6 +90,12 @@ const StyledForm = styled.div`
 				width: 28vw;
 			}
 
+			Button {
+				height: 100%
+				display: block;
+				font-size: 2vw;
+			}
+
 		}
 
 		@media ${theme.sizes.mobile} {
@@ -103,6 +115,12 @@ const StyledForm = styled.div`
 				width: 70vw;
 			}
 
+			Button {
+				height: 100%
+				display: block;
+				font-size:1vw;
+			}
+
 		}
 	}
 `;
@@ -111,10 +129,11 @@ const Form = () => {
 	return (
 		<>
 			<StyledForm>
-				<form>
+				<form  method="post" action={process.env.FORM_API} >
 					<input type="text" id="name" name="name" placeholder="name"></input>
 					<input type="email" id="email" name="email" placeholder="email"></input>
 					<textarea type="textarea" id="message" name="message" placeholder="message"></textarea>
+					<Button type="submit" text="Send!" blueText=">" light={true} />	
 				</form>
 			</StyledForm>
 		</>
