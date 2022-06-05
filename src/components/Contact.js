@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../styles/theme';
-import Button from './Button';
 import Form from './Form';
 import Socials from './Socials';
 import SectionHeading from './SectionHeading';

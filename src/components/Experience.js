@@ -1,40 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import SectionHeading from './SectionHeading';
 import theme from '../styles/theme';
 
-import SkillsOrbit from '../icons/SkillsOrbit'
-
-// Turn skills logos into a component and iterate through
-// them to save code and improve reusability. 
-import TypeScript from '../icons/skills/TypeScript';
-import Reactlogo from '../icons/skills/Reactlogo';
-import Gatsby from '../icons/skills/Gatsby';  
-import Sass from '../icons/skills/Sass';  
-
-import AWS from '../icons/skills/AWS';
-import Graphql from '../icons/skills/Graphql';
-import Firebase from '../icons/skills/Firebase';
-import Terraform from '../icons/skills/Terraform';
-
-import PostgreSQL from '../icons/skills/PostgreSQL';
-import Kubernetes from '../icons/skills/Kubernetes';
-import Docker from '../icons/skills/Docker';
-import Linux from '../icons/skills/Linux';
-
-import Figma from '../icons/skills/Figma';
-// import Xd from '../icons/skills/Xd';
-import Ai from '../icons/skills/Ai';
-import Ps from '../icons/skills/Ps';
-
-import Python from '../icons/skills/Python'
-import Cpp from '../icons/skills/Cpp';
-import Java from '../icons/skills/Java';
-import Pytorch from '../icons/skills/Pytorch';
-
-import Arduino from '../icons/skills/Arduino'
-import Qt from '../icons/skills/Qt';
-import Opencv from '../icons/skills/Opencv';
 import HelloFresh from '../icons/HelloFresh';
 import Button from './Button';
 
