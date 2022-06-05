@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Socials from './Socials';
 import theme from '../styles/theme';
 import logo from "../images/Logo.png"
-import { HashLink } from 'react-router-hash-link';
 import { Link } from 'gatsby';
 
 const StyledFooter = styled.footer`
@@ -61,9 +60,9 @@ const Footer = () => {
 			<StyledFooter>
 				<div className="rect" />
 					<Link smooth to={"/#home"} style={{ textDecoration: 'none' }}>
-						<a>DESIGNED & DEVELOPED</a>
-						<a><br/>BY <span>ISAAC GRAY</span> ©</a></Link>
-					<Link smooth to={"/#home"}>	<img src={logo}  width="96" height="60" /></Link>
+						<a href="">DESIGNED & DEVELOPED</a>
+						<a href=""><br/>BY <span>ISAAC GRAY</span> ©</a></Link>
+					<Link smooth to={"/#home"}>	<img src={logo}  width="96" height="60" alt="Isaac Gray Logo"/></Link>
 				<div className="social" >
 					<Socials size={25} alt={false}/>
 				</div>

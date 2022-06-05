@@ -133,7 +133,7 @@ const Form = () => {
 					<input type="text" id="name" name="name" placeholder="name"></input>
 					<input type="email" id="email" name="email" placeholder="email"></input>
 					<textarea type="textarea" id="message" name="message" placeholder="message"></textarea>
-					<Button type="submit" text="Send!" blueText=">" light={true} />	
+					<Button name="Submit Button" type="submit" text="Send!" blueText=">" light={true} />	
 				</form>
 			</StyledForm>
 		</>

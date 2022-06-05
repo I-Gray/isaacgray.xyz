@@ -56,6 +56,26 @@ const StyledTyper = styled.div`
 			background-color: ${theme.colours.grey}; 
 		}
 	}
+
+	@media ${theme.sizes.mobile} {
+		.change-word {
+			font-size: 4em;
+		}
+	
+		.cursor {
+			font-size: 4em;
+		}
+	}
+
+	@media ${theme.sizes.tabletL} {
+		.change-word {
+			font-size: 1em;
+		}
+	
+		.cursor {
+			font-size: 1em;
+		}
+	}
 `;
 
 const Typer = ({text}) => {

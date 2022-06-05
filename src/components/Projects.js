@@ -585,7 +585,7 @@ const Projects = () => {
 				<p>Checkout <span>everything</span><br/>
 					else i’ve worked on!</p>
 				<div className="button-container">	
-					<Button text="View All" blueText=">" light={true}/>
+					<Button name="View All Button" text="View All" blueText=">" light={true}/>
 				</div>
 			</div> */}
 		</ProjectsSection>

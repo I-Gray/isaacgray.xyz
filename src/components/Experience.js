@@ -35,9 +35,8 @@ import Pytorch from '../icons/skills/Pytorch';
 import Arduino from '../icons/skills/Arduino'
 import Qt from '../icons/skills/Qt';
 import Opencv from '../icons/skills/Opencv';
-import HelloFresh from './HelloFresh';
+import HelloFresh from '../icons/HelloFresh';
 import Button from './Button';
-// import Ros from '../icons/skills/Ros';
 
 
 const StyledTitle = styled.div`
@@ -281,7 +280,7 @@ const Experience = () => {
 						<p>Nov. 2021 <span>// </span> Present</p>
 						<br />
 					</div>
-					<Button text="Show More" blueText=">" light={true} />	
+					<Button name="Show More Button" text="Show More" blueText=">" light={true} />	
 						<p id='description'>
 						Designed and implemented the <br />
 						cartonization service - a global <br />

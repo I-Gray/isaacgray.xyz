@@ -5,6 +5,8 @@ import NavbarLinks from '../constants/NavbarLinks'
 import { Link } from "gatsby"
 import { bool } from 'prop-types';
 import { useOnClickOutside } from './hooks/useOnClickOutside';
+import theme from '../styles/theme';
+
 
 const Sidebar = styled.nav`
 	position: fixed;
@@ -24,18 +26,18 @@ const Sidebar = styled.nav`
 		margin: 0;
 		margin-right: 0;
 		margin-left: 2em;
-		margin-top: 4vh;
-		display:block;
+		margin-top: 5vh;
+		display: block;
 		padding-left: 10vw;
-		padding-top: 5vh;
+		padding-top: 7vh;
 		font-weight: 600;
 
 		.links {
 			color: ${({ theme }) => theme.colours.white};
 			text-decoration: none;
 			display: inline-block;
-			padding: 1vh;
-			font-size: 8vw;
+			padding: 0.5vh;
+			font-size: 7vw;
 			text-align: right;
 			position: relative;
 
@@ -76,6 +78,55 @@ const Sidebar = styled.nav`
 			left: 0; 
 		}
 	}
+
+	@media ${theme.sizes.tabletS} {
+		width: 40%;
+
+		li {
+			margin-top: 5vh;
+			display: block;
+			padding-left: 10vw;
+			padding-top: 5vh;
+			float: right;
+
+			.links {
+				font-size: 8vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.tabletL} {
+		width: 40%;
+
+		li {
+
+			display: block;
+			padding-left: 10vw;
+			padding-top: 5vh;
+			float: right;
+
+			.links {
+				font-size: 6vw;
+			}
+		}
+	}
+
+	@media ${theme.sizes.mobile} {
+		width: 66%;
+
+		li {
+			display: block;
+			padding-left: 10vw;
+			padding-top: 5vh;
+			float: right;
+
+			.links {
+				font-size: 8vw;
+			}
+		}
+	}
+
+
 `;
 
 const MobileMenu = () => {

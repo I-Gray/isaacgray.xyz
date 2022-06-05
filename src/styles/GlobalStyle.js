@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import Fonts from './Fonts';
 import rootVars from './rootVars';
 
 const GlobalStyle = createGlobalStyle`
 	${rootVars};
+	${Fonts};
 
 	/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	
