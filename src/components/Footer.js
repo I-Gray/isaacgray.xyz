@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
 	width: 100%;
 	height: 100%;
 
-	p {
+	a {
 		color: ${theme.colours.grey};
 		text-align: right;
 		padding-right: 2vw;
@@ -41,7 +41,7 @@ const StyledFooter = styled.footer`
 		padding-top: 4vh;
 		flex-direction: column;
 
-		p {
+		a {
 			text-align: center;
 			font-size: 3vw;
 		}
@@ -60,8 +60,8 @@ const Footer = () => {
 			<StyledFooter>
 				<div className="rect" />
 					<Link smooth to={"/#home"} style={{ textDecoration: 'none' }}>
-						<p>DESIGNED & DEVELOPED</p>
-						<p><br/>BY <span>ISAAC GRAY</span> ©</p></Link>
+						<a>DESIGNED & DEVELOPED</a>
+						<a><br/>BY <span>ISAAC GRAY</span> ©</a></Link>
 					<Link smooth to={"/#home"}>	<img src={logo}  width="96" height="60" alt="Isaac Gray Logo"/></Link>
 				<div className="social" >
 					<Socials size={25} alt={false}/>
