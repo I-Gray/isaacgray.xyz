@@ -129,7 +129,7 @@ const Form = () => {
 	return (
 		<>
 			<StyledForm>
-				<form  method="post" action="https://api.getform.io/v1/forms/6c54e6b0-0ee0-4da7-b364-48b6a349b34b?token=Z9vHfqDqprRqZ4Ewn4ii5lrq0bRHbVo82Z2LOxPdnbEd0lTfIhtO370hegnW" >
+				<form  method="post" action="https://getform.io/f/6c54e6b0-0ee0-4da7-b364-48b6a349b34b" >
 					<input type="text" id="name" name="name" placeholder="name"></input>
 					<input type="email" id="email" name="email" placeholder="email"></input>
 					<textarea type="textarea" id="message" name="message" placeholder="message"></textarea>
