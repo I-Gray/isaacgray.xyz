@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../styles/theme';
-import Button from './Button';
 import Form from './Form';
 import Socials from './Socials';
 import SectionHeading from './SectionHeading';
@@ -44,7 +43,7 @@ const ContactSection = styled.section`
 		}
 
 		p {
-			font-size: 1.2vw;
+			font-size: 1.5vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};	
 			text-decoration: italic;
@@ -75,6 +74,12 @@ const ContactSection = styled.section`
 
 	@media ${theme.sizes.tabletL} {
 		background: ${theme.colours.darkGrey};
+
+		.contact-left-container {
+			p {
+				font-size: 3vw;
+			}
+		}
 
 		.contact-right-container {
 			height: 100%
@@ -108,7 +113,7 @@ const ContactSection = styled.section`
 				}
 			}
 
-			a {
+			p {
 				margin-bottom: 2vh;
 				margin-top: 2vh;
 				font-size: 5vw;

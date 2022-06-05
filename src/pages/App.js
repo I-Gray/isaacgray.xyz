@@ -12,6 +12,8 @@ const Main = styled.main`
 `;
 
 const App = () => (
+	<>
+		<title>Isaac Gray</title>
 		<Main>
 			<Hero />
 			<Projects />
@@ -20,6 +22,7 @@ const App = () => (
 			{/* <Experience /> */}
 			<Contact />
 		</Main>
+	</>
 )
 
 export default App

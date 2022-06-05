@@ -217,7 +217,7 @@ const Hero = () => {
 					creator.
 				</p>
 				
-				<Link smooth to={"/#contact"}><Button text="Reach Out!" blueText=">" light={true} className="reach-out-button" /></Link>
+				<Link smooth to={"/#contact"}><Button name="Reach Out Button" text="Reach Out!" blueText=">" light={true} className="reach-out-button" /></Link>
 			</div>
 			{/* <HeroOrbit /> */}
 			 <svg className="floating-icons" viewBox="0 0 827 708" fill="none" xmlns="http://www.w3.org/2000/svg">

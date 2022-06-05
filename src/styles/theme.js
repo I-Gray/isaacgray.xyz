@@ -1,9 +1,6 @@
-// Maybe add colour variables here too ??
+// TODO: Add dark theme ??
+
 const theme = {
-	// Fill in values in between for more devices later on
-	// https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/
-	// Add dark theme ??
-	// Change to em values ?
 	sizes : {	
 		burger: '(max-width: 1200px)',
 		widescreen: '(max-width: 2560px)',

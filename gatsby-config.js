@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Isaac Gray",
-	description: "Isaac Gray is a software & computer engineer who thrives off designing and implementing solutions to both software and hardware problems. ",
-	siteUrl: "http://www.grayisaac.com",
-	twitterUsername: "@shizza_1"
+	description: "Isaac Gray is a software engineer who designs and builds scalable software solutions. ",
+	siteUrl: "https://grayisaac.xyz",
+	image: '/og.png',
   },
   plugins: [
     "gatsby-plugin-sass",
