@@ -1,6 +1,3 @@
-import Tricep from '../images/TRICEP.png';
-import MarketMoo from '../images/MarketMoo.png';
-
 
 const Projects = [
 	{

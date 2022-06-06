@@ -1,13 +1,9 @@
 import React from "react"
-import HeroOrbit from '../icons/HeroOrbit'
-import FloatingIcons from '../icons/FloatingIcons'
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import Button from './Button';
 import { Link } from 'gatsby';
 
-import { gsap } from "gsap";
-import anime from 'animejs/lib/anime.es';
 
 const HeroSection = styled.section`	
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
@@ -190,17 +186,6 @@ const Hero = () => {
 		}
 	}
 
-	// var path = anime.path('.inner-follow');
-		
-	// anime({
-	// 	targets: '.white-ball',
-	// 	translateX: path('x'),
-	// 	translateY: path('y'),
-	// 	rotateZ: 45,
-	// 	easing: 'linear',
-	// 	duration: 2000,
-	// 	loop: true
-	// });
 
 	return (
 		<>
@@ -213,8 +198,8 @@ const Hero = () => {
 					<span>GRAY.</span>
 				</h1>
 				<p className="hero-description">
-					developer, designer & <br />
-					creator.
+					software engineer, <br />
+					designer & creator.
 				</p>
 				
 				<Link smooth to={"/#contact"}><Button name="Reach Out Button" text="Reach Out!" blueText=">" light={true} className="reach-out-button" /></Link>

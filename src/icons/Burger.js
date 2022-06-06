@@ -55,7 +55,7 @@ export const StyledBurger = styled.button`
 const Burger = ({ open, setOpen }) => {
 	return (
 		<>
-			<StyledBurger open={open} onClick={() => setOpen(!open)}>
+			<StyledBurger aria-label="Burger Menu" name="Burger Menu" open={open} onClick={() => setOpen(!open)}>
 				<div></div>
 				<div></div>
 				<div></div>

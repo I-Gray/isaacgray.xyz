@@ -60,8 +60,8 @@ const Footer = () => {
 			<StyledFooter>
 				<div className="rect" />
 					<Link smooth to={"/#home"} style={{ textDecoration: 'none' }}>
-						<a>DESIGNED & DEVELOPED</a>
-						<a><br/>BY <span>ISAAC GRAY</span> ©</a></Link>
+						<a to={"/#home"}>DESIGNED & DEVELOPED</a>
+						<a to={"/#home"}><br/>BY <span>ISAAC GRAY</span> ©</a></Link>
 					<Link smooth to={"/#home"}>	<img src={logo}  width="96" height="60" alt="Isaac Gray Logo"/></Link>
 				<div className="social" >
 					<Socials size={25} alt={false}/>
