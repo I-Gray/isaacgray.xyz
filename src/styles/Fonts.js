@@ -30,8 +30,8 @@ import RobotoRegularWoff2 from '../fonts/Roboto/roboto-v27-latin-regular.woff2'
 import RobotoRegularItalicWoff from '../fonts/Roboto/roboto-v27-latin-italic.woff'
 import RobotoRegularItalicWoff2 from '../fonts/Roboto/roboto-v27-latin-italic.woff2'
 
-import SpaceMonoRegularWoff1 from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff'
-import SpaceMonoRegularWoff2 from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff'
+import SpaceMonoRegularWoff from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff'
+import SpaceMonoRegularWoff2 from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff2'
 
 
 const regularWeights = {
@@ -53,7 +53,7 @@ const italicWeights = {
 
 
 const spaceMonoRegular = {
-	400: [SpaceMonoRegularWoff1, SpaceMonoRegularWoff2]
+	400: [SpaceMonoRegularWoff, SpaceMonoRegularWoff2]
 };
 
 
