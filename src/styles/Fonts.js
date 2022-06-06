@@ -30,6 +30,9 @@ import RobotoRegularWoff2 from '../fonts/Roboto/roboto-v27-latin-regular.woff2'
 import RobotoRegularItalicWoff from '../fonts/Roboto/roboto-v27-latin-italic.woff'
 import RobotoRegularItalicWoff2 from '../fonts/Roboto/roboto-v27-latin-italic.woff2'
 
+import SpaceMonoRegularWoff1 from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff'
+import SpaceMonoRegularWoff2 from '../fonts/Space_Mono/space-mono-v11-latin-regular.woff'
+
 
 const regularWeights = {
 	300: [Roboto300Woff, Roboto300Woff2],
@@ -49,11 +52,23 @@ const italicWeights = {
 };
 
 
+const spaceMonoRegular = {
+	400: [SpaceMonoRegularWoff1, SpaceMonoRegularWoff2]
+};
+
+
+const spacemono = {
+	name: 'Space Mono',
+	normal: spaceMonoRegular
+};
+
+
 const roboto = {
 	name: 'Roboto',
 	normal: regularWeights,
 	italic: italicWeights,
 };
+
 
 const createFontFaces = (family, style = 'normal') => {
 	let styles = '';
@@ -77,11 +92,14 @@ const createFontFaces = (family, style = 'normal') => {
 	return styles;
 };
 
+
 const robotoNormal = createFontFaces(roboto);
 const robotoItalic = createFontFaces(roboto, 'italic');
 
+const spacemonoNormal = createFontFaces(spacemono)
+
 const Fonts = css`
-	${robotoNormal + robotoItalic}
+	${robotoNormal + robotoItalic + spacemonoNormal}
 `;
 
 export default Fonts;
