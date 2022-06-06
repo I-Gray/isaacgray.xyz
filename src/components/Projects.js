@@ -121,7 +121,7 @@ const ProjectsSection = styled.section`
 			display: block;
 		}
 
-		h3 {
+		h2 {
 			color: ${theme.colours.white};
 			font-weight: bold;
 			font-size: 2em;
@@ -328,7 +328,7 @@ const ProjectsSection = styled.section`
 				font-size: 3vw;
 			}
 
-			h3 {
+			h2 {
 				color: ${theme.colours.darkGrey};
 				font-size: 6vw;
 			}
@@ -405,7 +405,7 @@ const ProjectsSection = styled.section`
 				font-size: 5vw;
 			}
 
-			h3 {
+			h2 {
 				font-size: 8vw;
 			}
 
@@ -539,9 +539,9 @@ const Projects = () => {
 					<>
 					<div className="projects-left-container">
 						<p>Featured Project</p>
-						<h3 key={key} class="animate" >{project.title}</h3>
+						<h2 key={key} class="animate" >{project.title}</h2>
 						<div key={key} className="image-container">
-							<StaticImage src='../images/TRICEP.png' alt={project.title} className="img" />
+							<StaticImage src='../images/TRICEP.webp' alt={project.title} className="img" />
 						</div>
 						<div className="rect" />
 					</div>
@@ -566,8 +566,8 @@ const Projects = () => {
 								</ol>
 							</div>
 							<div className="link-container">
-								<a className="github" href={project.github} target="_blank" rel="noopener noreferrer" alt=""><Github /></a>
-								<a className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt=""><Link /></a>
+								<a name="Github Repo Link" className="github" href={project.github} target="_blank" rel="noopener noreferrer" alt="Project Github Link"><Github /></a>
+								<a name="TRICEP Website Link" className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt="Project External Link"><Link /></a>
 							</div>
 						</div>
 						<div className="circle-accent" >
