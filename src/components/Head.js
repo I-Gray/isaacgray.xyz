@@ -14,13 +14,13 @@ const Head = ({ title, description, image }) => {
 	graphql`
 		query SEO {
 			site {
-			siteMetadata {
-				defaultTitle: title
-				defaultDescription: description
-				siteUrl: url
-				defaultImage: image
+				siteMetadata {
+					defaultTitle: title
+					defaultDescription: description
+					siteUrl
+					defaultImage: image
+					}
 				}
-			}
 		}
 	`
   );
