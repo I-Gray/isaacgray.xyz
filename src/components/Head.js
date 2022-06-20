@@ -3,26 +3,14 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@gatsbyjs/reach-router';
 import { useStaticQuery, graphql } from 'gatsby';
+import favicon from '../images/favicon.ico'
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
 
 const Head = ({ title, description, image }) => {
   const { pathname } = useLocation();
 
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            defaultDescription: description
-            siteUrl
-            defaultImage: image
-          }
-        }
-      }
-    `,
-  );
+  const { site } = useStaticQuery(query);
 
   const {
     defaultTitle,
@@ -39,15 +27,16 @@ const Head = ({ title, description, image }) => {
   };
 
   return (
-    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
-      <html lang="en" />
-
-      <meta name="description" content={seo.description} />
+    <Helmet title={seo.title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
+      <link rel="icon" href={favicon} />
+	  <html lang="en" />
+	  
+	  <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-
+	  
       <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:image" content={seo.image} />
+      {seo.description && <meta property="og:description" content={seo.description} />}
+      {seo.image && <meta property="og:image" content={seo.image} />}
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
 
@@ -69,3 +58,16 @@ Head.defaultProps = {
   description: null,
   image: null,
 };
+
+const query = graphql`
+  query SEO {
+	site {
+	  siteMetadata {
+		defaultTitle: title
+		defaultDescription: description
+		siteUrl: url
+		defaultImage: image
+		}
+	}
+  }
+`
