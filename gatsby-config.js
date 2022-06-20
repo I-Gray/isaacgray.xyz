@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Isaac Gray",
-	description: "Isaac Gray is a software engineer who designs and builds scalable software solutions. ",
-	siteUrl: "https://grayisaac.xyz",
+    title: 'Isaac Gray',
+	description: 'Isaac Gray is a software engineer who designs and builds scalable software solutions.',
+	siteUrl: 'https://grayisaac.xyz',
 	image: '/og.png',
   },
   plugins: [

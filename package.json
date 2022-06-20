@@ -1,9 +1,13 @@
 {
-  "name": "grayisaac",
+  "name": "isaacgray",
   "version": "1.0.0",
   "private": true,
-  "description": "grayisaac",
-  "author": "Isaac G",
+  "description": "Isaac Gray personal portfolio website. ",
+  "author": "Isaac Gray",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/I-Gray/isaacgray.xyz"
+  },
   "keywords": [
     "gatsby"
   ],
