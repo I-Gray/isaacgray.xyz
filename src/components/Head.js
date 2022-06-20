@@ -42,7 +42,14 @@ const Head = ({ title, description, image }) => {
   };
 
   return (
-    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
+    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}
+	meta={[
+        {
+            name: 'description',
+            content: description || site.siteMetadata.description,
+        },
+    ]}
+	>
       <html lang="en" />
 	  <link rel="icon" href={favicon} />
       <meta name="description" content={seo.description} />
