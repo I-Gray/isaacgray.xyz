@@ -71,3 +71,4 @@ Head.defaultProps = {
   description: null,
   image: null,
 };
+
