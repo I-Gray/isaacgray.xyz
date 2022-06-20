@@ -4,6 +4,7 @@ module.exports = {
 	description: 'Isaac Gray is a software engineer from Sydney who designs and builds scalable software solutions.',
 	siteUrl: 'https://grayisaac.xyz',
 	image: '/og.png',
+	twitterUsername: '@isaacgray_'
   },
   plugins: [
     "gatsby-plugin-sass",
