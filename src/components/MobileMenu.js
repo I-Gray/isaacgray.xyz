@@ -79,6 +79,21 @@ const Sidebar = styled.nav`
 		}
 	}
 
+	@media ${theme.sizes.burger} {
+		width: 35%;
+
+		li {
+			display: block;
+			padding-left: 10vw;
+			padding-top: 5vh;
+			float: right;
+
+			.links {
+				font-size: 4vw;
+			}
+		}
+	}
+
 	@media ${theme.sizes.tabletS} {
 		width: 40%;
 
@@ -96,17 +111,17 @@ const Sidebar = styled.nav`
 	}
 
 	@media ${theme.sizes.tabletL} {
-		width: 40%;
+		width: 50%;
 
 		li {
 
 			display: block;
 			padding-left: 10vw;
-			padding-top: 5vh;
+			padding-top: 4vh;
 			float: right;
 
 			.links {
-				font-size: 6vw;
+				font-size: 5vw;
 			}
 		}
 	}
@@ -125,6 +140,8 @@ const Sidebar = styled.nav`
 			}
 		}
 	}
+
+
 
 
 `;

@@ -15,7 +15,7 @@ const StyledTyper = styled.div`
 	display: flex;
 
 	.change-word {
-		font-size: 0.5em;
+		font-size: 2vw;
 		color: ${theme.colours.lightBlue};
 	}
 
@@ -57,16 +57,6 @@ const StyledTyper = styled.div`
 		}
 	}
 
-	@media ${theme.sizes.mobile} {
-		.change-word {
-			font-size: 4em;
-		}
-	
-		.cursor {
-			font-size: 4em;
-		}
-	}
-
 	@media ${theme.sizes.tabletL} {
 		.change-word {
 			font-size: 1em;
@@ -74,6 +64,16 @@ const StyledTyper = styled.div`
 	
 		.cursor {
 			font-size: 1em;
+		}
+	}
+
+	@media ${theme.sizes.mobile} {
+		.change-word {
+			font-size: 6vw;
+		}
+	
+		.cursor {
+			font-size: 6vw;
 		}
 	}
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import SectionHeading from './SectionHeading';
 import theme from '../styles/theme';
@@ -68,7 +68,7 @@ const StyledTitle = styled.div`
 		padding-bottom: 2vh;
 
 		h1 {
-			font-size: 20vw;
+			font-size: 14vw;
 			margin-left: 10vw;
 			span {
 				font-size: 18vw;
@@ -118,7 +118,7 @@ const ExperienceSection = styled.section`
 			filter: grayscale(1);
 			padding: 1vw;
 			transition: transform .2s ease-in-out;
-			margin-bottom: 3vh;
+			margin-bottom: 1vh;
 		}
 
 		li:hover {
@@ -128,10 +128,34 @@ const ExperienceSection = styled.section`
 		}
 	}
 
-	.description {
-		font-size: 1.1vw;
-		color: ${theme.colours.lightGrey};
+	.left-content {
+		z-index: 2;
+		padding-right: 15vw;
+		p {
+			padding-top: 2vh;
+			font-size: 2vw;
+		}
 
+		.HFMore {
+			padding-top: 2vh;
+			font-size: 1.5vw;
+			color: ${theme.colours.lightGrey};
+			
+			.span {
+				color: ${theme.colours.lightBlue};
+			}
+		}
+
+		Button {
+			font-size: 1.2vw;
+		}
+
+		.details {
+			.HFTime {
+				font-size: 1.5vw;
+				color: ${theme.colours.lightGrey};
+			}
+		}
 	}
 
 	.skills-orbit {
@@ -168,20 +192,55 @@ const ExperienceSection = styled.section`
 
 	@media ${theme.sizes.tabletS} {
 		.left-content {
-			padding-right: 0vw;
+			z-index: 2;
+			padding-right: 15vw;
 			p {
-				padding-top: 0vh;
-				font-size: 2.5vw;
+				padding-top: 3vh;
+				font-size: 5vw;
 			}
-		}
 
-		.right-content {
-			p {
-				padding-top: 0vh;
-				font-size: 2.5vw;
+			.HFMore {
+				font-size: 3vw;
+			}
+	
+			Button {
+				font-size: 3vw;
+			}
+	
+			.details {
+
+				.HFTime {
+					font-size: 4vw;
+				}
 			}
 		}
 	}
+
+	@media ${theme.sizes.tabletL} {
+		.left-content {
+			z-index: 2;
+			padding-right: 15vw;
+			p {
+				padding-top: 3vh;
+				font-size: 3vw;
+			}
+
+			.HFMore {
+				font-size: 2vw;
+			}
+	
+			Button {
+				font-size: 2vw;
+			}
+	
+			.details {
+				.HFTime {
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+
 
 	@media ${theme.sizes.mobile} {
 		display: flex;
@@ -189,20 +248,7 @@ const ExperienceSection = styled.section`
 		position: relative;
 		
 		h1 {
-			font-size: 3vw;
-		}
-
-		.skills-orbit {
-			z-index: 1;
-			display: flex;
-			transform: scale(0.5);
-			
-			svg {
-				position: absolute;
-				display: flex;
-				top: -20%;
-				left: 10%;
-			}
+			font-size: 1vw;
 		}
 
 		.left-content {
@@ -212,14 +258,20 @@ const ExperienceSection = styled.section`
 				padding-top: 3vh;
 				font-size: 5vw;
 			}
-		}
 
-		.right-content {
-			z-index: 2;
-			padding-left: 0;
-			p {
-				padding-top: 3vh;
-				font-size: 5vw;
+			.HFMore {
+				font-size: 3vw;
+			}
+	
+			Button {
+				font-size: 3vw;
+			}
+	
+			.details {
+				
+				.HFTime {
+					font-size: 4vw;
+				}
 			}
 		}
 
@@ -230,6 +282,8 @@ const ExperienceSection = styled.section`
 `;
 
 const Experience = () => {
+	const [showMore, setShowMore] = useState(false);
+
 	return (
 		<>	
 			<div id="experience">
@@ -239,28 +293,40 @@ const Experience = () => {
 			</StyledTitle>
 			<ExperienceSection>
 				<div className="left-content">
-					<div className="front-end">
+					<div className="details">
 						<ol>
-							<li><HelloFresh size="70"/></li>
+							<li><a href="https://www.hellofresh.com.au/"><HelloFresh size="70"/></a></li>
 						</ol>
 						<p>Graduate Software Engineer <span>//</span></p>
 						<br />
-						<p>Nov. 2021 <span>// </span> Present</p>
+						<p class="HFTime">Nov. 2021 <span>-{'>'} </span> Present</p>
 						<br />
 					</div>
-					<Button name="Show More Button" text="Show More" blueText=">" light={true} />	
-						<p id='description'>
-						Designed and implemented the <br />
-						cartonization service - a global <br />
-						initiative created to optimise box <br />
+					
+					<Button
+					 class="showMoreButton"
+					 onClick={() => setShowMore(!showMore)}
+					 name="Show More Button" 
+					 text={showMore ? "Show Less" : "Show More"} 
+					 blueText={showMore ? "..." : ">"} 
+					 light={true} 
+					 />	
+
+					{showMore ? 
+						<p class='HFMore' >
+						<span>Designing and implementing</span> the <br />
+						cartonization service - a <span>global</span> <br />
+						initiative created to <span>optimise</span> <br />
 						packaging configuration. The role  <br />
-						included working directly with <br />
-						stakeholders in an operating  <br />
-						warehouse to provide a scalable <br />
+						involves working <span>directly with <br />
+						stakeholders</span> in an operating  <br />
+						warehouse to provide a <span>scalable</span> <br />
 						software solution to find the most <br />
-						appropriate materials to pack <br />
-						a customers order. 
+						suitable materials to pack a <br />
+						customer's order most <span>efficiently</span>. 
 						</p> 
+						: null 
+					}
 
 					
 				</div>
