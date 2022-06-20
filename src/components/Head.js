@@ -10,7 +10,20 @@ import favicon from '../images/favicon.ico'
 const Head = ({ title, description, image }) => {
   const { pathname } = useLocation();
 
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(
+	graphql`
+		query SEO {
+			site {
+			siteMetadata {
+				defaultTitle: title
+				defaultDescription: description
+				siteUrl: url
+				defaultImage: image
+				}
+			}
+		}
+	`
+  );
 
   const {
     defaultTitle,
@@ -58,16 +71,3 @@ Head.defaultProps = {
   description: null,
   image: null,
 };
-
-const query = graphql`
-  query SEO {
-	site {
-	  siteMetadata {
-		defaultTitle: title
-		defaultDescription: description
-		siteUrl: url
-		defaultImage: image
-		}
-	}
-  }
-`
