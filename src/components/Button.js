@@ -29,11 +29,11 @@ const StyledButton = styled.button`
 	}
 `;
 
-const Button = ({text, blueText, light}) => {
+const Button = ({text, blueText, light, ...buttonProps}) => {
 
 	return (
 		<>
-			<StyledButton light={light} >
+			<StyledButton light={light} {...buttonProps} >
 				{text} <span>{blueText}</span>
 			</StyledButton>
 		</>

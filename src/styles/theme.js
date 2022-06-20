@@ -2,7 +2,7 @@
 
 const theme = {
 	sizes : {	
-		burger: '(max-width: 1200px)',
+		burger: '(max-width: 1250px)',
 		widescreen: '(max-width: 2560px)',
 		desktop: '(max-width: 1920px)',
 		tabletL: '(max-width: 1120px)',

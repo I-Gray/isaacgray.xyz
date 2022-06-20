@@ -282,7 +282,7 @@ const ProjectsSection = styled.section`
 	.view-all-container {
 		margin-left: 10vw;
 		display: flex;
-		padding-bottom: 4vh;
+		padding-bottom: 1vh;
 		padding-top: 2vh;
 
 		.end-rect {
@@ -294,7 +294,7 @@ const ProjectsSection = styled.section`
 		}
 
 		p {
-			font-size: 2vw;
+			font-size: 1.5vw;
 			font-family: 'Space Mono', sans-serif;
 			color: ${theme.colours.lightGrey};
 			float: left;
@@ -507,7 +507,7 @@ const ProjectsSection = styled.section`
 			p {
 				padding-top: 2vh;
 				padding-right: 2vw;
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 
 			.button-container {
@@ -521,6 +521,20 @@ const ProjectsSection = styled.section`
 	}
 
 `;
+
+// TODO: Refactor this to import images from projects array
+// this is way too ugly 
+const testFunction = (number) => {
+	switch (number) {
+		case 0:
+			return (<StaticImage src={'../images/TRICEP.webp'} imgStyle={{ borderRadius: '2%' }} alt="TRICEP Photo" className="img" />)
+		case 1:
+			return (<StaticImage src={'../images/Website.webp'} imgStyle={{ borderRadius: '2%' }} alt="Personal Portfolio Photo" className="img" />)
+		case 2:
+			return (<StaticImage src={'../images/MarketMoo.webp'} alt="MarketMoo Photo" className="img" />)
+	}
+}
+
 
 const Projects = () => {
 	return (
@@ -541,7 +555,8 @@ const Projects = () => {
 						<p>Featured Project</p>
 						<h2 key={key} class="animate" >{project.title}</h2>
 						<div key={key} className="image-container">
-							<StaticImage src='../images/TRICEP.webp' alt={project.title} className="img" />
+							{/* <StaticImage src={'../images/TRICEP.webp'} alt={project.title} className="img" /> */}
+							{testFunction(key)}
 						</div>
 						<div className="rect" />
 					</div>
@@ -567,7 +582,7 @@ const Projects = () => {
 							</div>
 							<div className="link-container">
 								<a name="Github Repo Link" className="github" href={project.github} target="_blank" rel="noopener noreferrer" alt="Project Github Link"><Github /></a>
-								<a name="TRICEP Website Link" className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt="Project External Link"><Link /></a>
+								<a name="Website Link" className="link" href={project.link} target="_blank" rel="noopener noreferrer" alt="Project External Link"><Link /></a>
 							</div>
 						</div>
 						<div className="circle-accent" >
@@ -577,6 +592,7 @@ const Projects = () => {
 							</svg>
 						</div>
 					</div>
+					
 					</>
 				);
 			})}
@@ -588,6 +604,12 @@ const Projects = () => {
 					<Button name="View All Button" text="View All" blueText=">" light={true}/>
 				</div>
 			</div> */}
+			<div className="view-all-container">
+				<div className="end-rect" />
+				<p>I'm working on a few more <br/>
+				<span>exciting projects</span>. They'll <br />
+				be posted here when they're done!</p>
+			</div>
 		</ProjectsSection>
 		</div>
 		</>

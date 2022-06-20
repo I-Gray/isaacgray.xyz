@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import { ThemeProvider } from "styled-components";
-import Head from './Head'
 import GlobalStyle from "../styles/GlobalStyle";
 import theme from "../styles/theme";
 import styled from "styled-components";
@@ -58,8 +57,6 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-	  <Head />
-
       <div id="root">
         <ThemeProvider theme={theme}>
           <GlobalStyle />
