@@ -5,7 +5,7 @@ const SocialLinks = [
 	},
 	{
 	  name: "Twitter",
-	  url: "https://twitter.com/shizza_1",
+	  url: "https://twitter.com/isaacgray_",
 	},
 	{
 	  name: "Dribble",
