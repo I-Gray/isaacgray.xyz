@@ -1,6 +1,4 @@
-<h1 align="center">
-  SE Portfolio - isaacgray.xyz
-</h1>
+# SE Portfolio - isaacgray.xyz
 
 ![Site Screenshot](Website.png)
 ___
