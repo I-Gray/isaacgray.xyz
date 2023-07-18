@@ -9,13 +9,8 @@ import SkillsOrbit from '../icons/SkillsOrbit'
 // them to save code and improve reusability. 
 import TypeScript from '../icons/skills/TypeScript';
 import Reactlogo from '../icons/skills/Reactlogo';
-import Gatsby from '../icons/skills/Gatsby';  
-import Sass from '../icons/skills/Sass';  
 
 import AWS from '../icons/skills/AWS';
-import Graphql from '../icons/skills/Graphql';
-import Firebase from '../icons/skills/Firebase';
-import Terraform from '../icons/skills/Terraform';
 
 import PostgreSQL from '../icons/skills/PostgreSQL';
 import Kubernetes from '../icons/skills/Kubernetes';
@@ -24,23 +19,14 @@ import Linux from '../icons/skills/Linux';
 
 import Figma from '../icons/skills/Figma';
 import Xd from '../icons/skills/Xd';
-import Ai from '../icons/skills/Ai';
-import Ps from '../icons/skills/Ps';
 
 import Python from '../icons/skills/Python'
-import Cpp from '../icons/skills/Cpp';
-import Java from '../icons/skills/Java';
-import Pytorch from '../icons/skills/Pytorch';
-
-import Arduino from '../icons/skills/Arduino'
-import Qt from '../icons/skills/Qt';
-import Opencv from '../icons/skills/Opencv';
-// import Ros from '../icons/skills/Ros';
+import GoLang from '../icons/skills/GoLang';
 
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	display flex;
+	display: flex;
 	height: 100%;
 	padding-bottom: 10vh;
 
@@ -275,72 +261,47 @@ const Skills = () => {
 			<SectionHeading section_num="03" leftDark={true} rightDark={true} />
 			<StyledTitle>
 					<h1><span>my<br/></span> skills.</h1>
-					<p>Over the course of my 
-						<br/>degrees, I have built up a <br />
-						wide range of both <span>software <br/>
-						& hardware</span> experience, both <br />
-						through my work experience, studies  <br />
-						and personal projects.</p>
 				</StyledTitle>
 			<SkillsSection>
 				<div className="left-content">
-					<div className="front-end">
-						<p>Front-end Web <span>//</span></p>
-						<br />
-						<ol>
-							<li><TypeScript size="55"/></li>
-							<li><Reactlogo size="55"/></li>
-							<li><Gatsby size="55"/></li>
-						</ol>
-					</div>
-
 					<div className="back-end">
-						<p>Infrastructure <span>//</span></p>
-						<br />
-						<ol>
-							<li><AWS size="55"/></li>
-							<li><Terraform size="55"/></li>
-							{/* <li><Graphql size="55"/></li>*/}
-							<li><Linux size="55" /></li>
-							{/* <li><Firebase size="55"/></li>  */}
-						</ol>
-					</div>
-					<div className="back-end">
-						<p>Backend <span>//</span></p>
+						<p>Back-end <span>//</span></p>
 						<br />
 						<ol>
 							<li><Kubernetes size="55"/></li>
-							<li><PostgreSQL size="55"/></li>
 							<li><Docker size="60" /></li>
-							{/* <li><Graphql size="55"/></li>
-							<li><Firebase size="55"/></li> */}
+							<li><PostgreSQL size="55"/></li>
+						</ol>
+					</div>
+					<div className="back-end">
+						<p>Infra. & CI/CD <span>//</span></p>
+						<br />
+						<ol>
+							<li><AWS size="55"/></li>
+							<li><Linux size="55" /></li>
 						</ol>
 					</div>
 				</div>
 				<div className="right-content">	
-					<div className="design">
-						<p>UI/UX Design <span>//</span></p>
-						<br/>
-						<ol>
-							<li><Figma size="55" /></li>
-							<li><Xd size="55" /></li>
-							{/* <li><Ps size="55" /></li> */}
-							<li><Ai size="55" /></li>
-						</ol>
-					</div>
-
 					<div className="technical" >
 						<p>Languages <span>//</span></p>
 						<br />
 						<ol>
 							<li><Python size="55" /></li>
-							<li><Cpp size="55" /></li>
-							<li><Arduino size="55" /></li>
-							{/* <li><Java size="55" /></li> */}
-							{/* <li><Pytorch size="55" /></li> */}
+							<li><GoLang size="75" /></li>
 						</ol>
 					</div>
-					
+
+					<div className="design">
+						<p>Front-end & UI/UX Design <span>//</span></p>
+						<br/>
+						<ol>
+							<li><Figma size="55" /></li>
+							<li><Xd size="55" /></li>
+							<li><Reactlogo size="55"/></li>
+							<li><TypeScript size="55"/></li>
+						</ol>
+					</div>
 				</div>
 				<div className="skills-orbit">
 					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">

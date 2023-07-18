@@ -18,9 +18,8 @@ const Projects = [
 		info : "Personal portfolio website designed and built from the ground up to display my capabilities.", 
 		tech : [
 			"React",
-			"Figma", 
 			"Gatsby", 
-			"GraphQL"
+			"Figma", 
 			], 
 		github : "https://github.com/I-Gray/isaacgray.xyz",
 		link : "https://isaacgray.xyz",

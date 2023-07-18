@@ -9,7 +9,7 @@ import Button from './Button';
 
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
-	display flex;
+	display: flex;
 	height: 100%;
 	padding-bottom: 2vh;
 
@@ -115,17 +115,23 @@ const ExperienceSection = styled.section`
 		align-items: center;
 
 		li {
-			filter: grayscale(1);
 			padding: 1vw;
 			transition: transform .2s ease-in-out;
 			margin-bottom: 1vh;
+
+			.experience-description {
+				display: block;
+				vertical-align: top;
+				margin: 0 auto;
+			}
 		}
 
 		li:hover {
-			filter: grayscale(0.2);
-			transform: scale(1.1);
+			transform: scale(1.05);
 			cursor: pointer;
 		}
+
+		
 	}
 
 	.left-content {
@@ -138,7 +144,7 @@ const ExperienceSection = styled.section`
 
 		.HFMore {
 			padding-top: 2vh;
-			font-size: 1.5vw;
+			font-size: 1vw;
 			color: ${theme.colours.lightGrey};
 			
 			.span {
@@ -154,6 +160,10 @@ const ExperienceSection = styled.section`
 			.HFTime {
 				font-size: 1.5vw;
 				color: ${theme.colours.lightGrey};
+			}
+			.location {
+				font-size: 1.5vw;
+				color: ${theme.colours.lightGrey}
 			}
 		}
 	}
@@ -212,6 +222,10 @@ const ExperienceSection = styled.section`
 				.HFTime {
 					font-size: 4vw;
 				}
+
+				.location {
+					font-size: 4vw;
+				}
 			}
 		}
 	}
@@ -235,6 +249,10 @@ const ExperienceSection = styled.section`
 	
 			.details {
 				.HFTime {
+					font-size: 3vw;
+				}
+
+				.location {
 					font-size: 3vw;
 				}
 			}
@@ -272,6 +290,11 @@ const ExperienceSection = styled.section`
 				.HFTime {
 					font-size: 4vw;
 				}
+
+				.location {
+					font-size: 4vw;
+				}
+				
 			}
 		}
 
@@ -297,9 +320,10 @@ const Experience = () => {
 						<ol>
 							<li><a href="https://www.hellofresh.com.au/"><HelloFresh size="70"/></a></li>
 						</ol>
-						<p>Graduate Software Engineer <span>//</span></p>
+						<p>Software Engineer<span> //</span></p>
+						<p class="location">Sydney, Australia</p>
 						<br />
-						<p class="HFTime">Nov. 2021 <span>-{'>'} </span> Present</p>
+						<p class="HFTime">Nov. 2021 <span>-{'>'} </span> June. 2023</p>
 						<br />
 					</div>
 					
@@ -314,16 +338,25 @@ const Experience = () => {
 
 					{showMore ? 
 						<p class='HFMore' >
-						<span>Designing and implementing</span> the <br />
-						cartonization service - a <span>global</span> <br />
-						initiative created to <span>optimise</span> <br />
-						packaging configuration. The role  <br />
-						involves working <span>directly with <br />
-						stakeholders</span> in an operating  <br />
-						warehouse to provide a <span>scalable</span> <br />
-						software solution to find the most <br />
-						suitable materials to pack a <br />
-						customer's order most <span>efficiently</span>. 
+						<span>Contributions</span> to internal  <br />
+						supply chain software such as: 
+						<br />
+						<br />
+						<ol>
+							<li class="experience-description"><span>Cartonization</span> -<br/>
+							A packaging optimisation solution<br/>
+							implemented in Australian warehouses<br/>
+							to reduce packaging waste and better<br/>
+							the customer experience.
+							</li>
+							<li class="experience-description"><span>Order Management</span> -<br/>
+							Worked in an operations team maintaining<br/>
+							business critical order systems in addition<br />
+							to migrating new operations systems as<br/>
+							a result of a recent brand acquisition.
+							</li>
+						</ol>
+						
 						</p> 
 						: null 
 					}

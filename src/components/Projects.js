@@ -12,7 +12,7 @@ import Button from './Button';
 const StyledTitle = styled.div`
 	background: linear-gradient(90deg, ${theme.colours.darkGrey} 70%, ${theme.colours.white} 30%);
 	height: 100%;
-	display flex;
+	display: flex;
 	padding-bottom: 5vh;
 
 	h1 {

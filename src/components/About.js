@@ -258,13 +258,13 @@ const About = () => {
 						Hi, I’m <span>Isaac</span>.
 						<br/>
 						<br/>
-						I am an Australian developer currently living in <span>Sydney</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as back-end web development, computer vision & hardware projects.
+						I am an Australian engineer currently living in <span>London</span> with a <span>B.E & B.CS.</span> I enjoy the design and development process in a range of topics such as back-end web development, computer vision & hardware projects.
 						<br/>
 						<br/>
 						I have experience creating things in teams as well as many solo-projects, all of which you can read about on this site!
 						<br/>
 						<br/>
-						<span>Other than tech</span>, I enjoy reading, traveling, running & making music. 
+						<span>Other than tech</span>, I enjoy traveling, running, reading & making music. 
 						<br/>
 						<br/>
 						Currently I am learning: 
