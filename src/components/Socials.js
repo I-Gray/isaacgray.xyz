@@ -3,9 +3,6 @@ import theme from '../styles/theme'
 import styled from 'styled-components';
 
 import Github from '../icons/Github';
-import Twitter from '../icons/Twitter';
-import Dribble from '../icons/Dribble';
-import SocialLinks from '../constants/SocialLinks';
 import LinkedIn from "../icons/LinkedIn";
 
 const StyledSocials = styled.ul`
@@ -68,11 +65,8 @@ const Socials = ({size, alt}) => {
 	return (
 		<>
 			<StyledSocials size={size} alt={alt}>
-					{/* Combine Icons with Social Links array to iterate over this*/}
 					<li><a href="https://github.com/I-Gray"><Github /></a></li>
-					<li><a href="https://www.twitter.com/isaacgray_"><Twitter /></a></li>
 					<li><a href="https://www.linkedin.com/in/isaacgray1/"><LinkedIn size={size}/></a></li>
-					{/* <li><a href="https://www.dribble.com"><Dribble /></a></li> */}
 			</StyledSocials>
 		</>
 	);
