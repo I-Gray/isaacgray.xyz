@@ -306,6 +306,7 @@ const ExperienceSection = styled.section`
 
 const Experience = () => {
 	const [showMore, setShowMore] = useState(false);
+	const [showMore2, setShowMore2] = useState(false);
 
 	return (
 		<>	
@@ -364,7 +365,7 @@ const Experience = () => {
 					
 				</div>
 				<div className="skills-orbit">
-					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="280" height="400" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#292626" stroke-width="4"/>
 						<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#292626" stroke-width="4"/>
 						<circle cx="60.5" cy="318.5" r="20.5" fill="#26C1E7"/>
@@ -372,6 +373,55 @@ const Experience = () => {
 					</svg>
 				</div>
 			</ExperienceSection>
+			<ExperienceSection>
+				<br/>
+				<br />
+				<div className="left-content">
+					<div className="details">
+						<p>Data Engineer<span> //</span></p>
+						<p class="location">London, United Kingdom</p>
+						<br />
+						<p class="HFTime">Aug. 2023 <span>-{'>'} </span> Present</p>
+						<br />
+					</div>
+					
+					<Button
+					 class="showMoreButton"
+					 onClick={() => setShowMore2(!showMore2)}
+					 name="Show More Button" 
+					 text={showMore2 ? "Show Less" : "Show More"} 
+					 blueText={showMore2 ? "..." : ">"} 
+					 light={true} 
+					 />	
+					
+					{showMore2 ? 
+						<p class='HFMore' >
+						<br />
+						<ol>
+							<li class="experience-description"><span>BI & Operations</span> -<br/>
+							Apart of the UK operations<br/>
+							team enabling business <br/>
+							initiatives through local<br/>
+							data pipelines.
+							</li>
+						</ol>
+						
+						</p> 
+						: null 
+					}
+
+					
+				</div>
+				<div className="skills-orbit">
+					<svg width="200" height="300" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#292626" stroke-width="4"/>
+						<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#292626" stroke-width="4"/>
+						<circle cx="60.5" cy="318.5" r="20.5" fill="white"/>
+						<path d="M234 21C234 31.5391 225.672 40 215.5 40C205.328 40 197 31.5391 197 21C197 10.4609 205.328 2 215.5 2C225.672 2 234 10.4609 234 21Z" fill="#26C1E7" stroke="#292626" stroke-width="4"/>
+					</svg>
+				</div>
+			</ExperienceSection>
+
 			</div>
 		</>
 	);
