@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import SectionHeading from './SectionHeading';
 import theme from '../styles/theme';
 
-import SkillsOrbit from '../icons/SkillsOrbit'
 
 // Turn skills logos into a component and iterate through
 // them to save code and improve reusability. 
@@ -304,7 +303,7 @@ const Skills = () => {
 					</div>
 				</div>
 				<div className="skills-orbit">
-					<svg width="305" height="616" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="280" height="570" viewBox="0 0 305 616" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M305 614C137.658 614 2 478.342 2 311C2 143.658 137.658 8 305 8" stroke="#292626" stroke-width="4"/>
 						<path d="M305 558C169.69 558 60 448.31 60 313C60 177.69 169.69 68 305 68" stroke="#292626" stroke-width="4"/>
 						<circle cx="60.5" cy="318.5" r="20.5" fill="#26C1E7"/>
